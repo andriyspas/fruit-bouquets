@@ -1,14 +1,6 @@
-.body {
-  margin: 0 !important;
-  padding: 0 !important; }
-
-.element {
-  height: 1000px;
-  background-color: #ededed;
-  font-size: 45px;
-  border-top: 1px solid #000;
-  padding-top: 55px;
-  padding-left: 10px; }
-
-.active {
-  color: red !important; }
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  padding: 0; }

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Header } from './components/index';
-
-import Scroll from 'react-scroll';
-let Element = Scroll.Element;
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 class App extends Component {
     render() {
@@ -10,17 +8,25 @@ class App extends Component {
             <div>
                 <Header/>
 
-                <Element name="test1" className="element">
-                    test 1
-                </Element>
+                <ScrollableAnchor id={'home'}>
+                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'red'}}> Hello World </div>
+                </ScrollableAnchor>
 
-                <Element name="test2" className="element">
-                    test 2
-                </Element>
+                <ScrollableAnchor id={'about-me'}>
+                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
+                </ScrollableAnchor>
 
-                <Element name="test3" className="element">
-                    test 3 (anchor)
-                </Element>
+                <ScrollableAnchor id={'products'}>
+                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
+                </ScrollableAnchor>
+
+                <ScrollableAnchor id={'reviews'}>
+                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
+                </ScrollableAnchor>
+
+                <ScrollableAnchor id={'contact'}>
+                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
+                </ScrollableAnchor>
             </div>
         )
     }

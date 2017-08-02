@@ -8,8 +8,7 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
-    "react-scripts": "1.0.10",
-    "react-scroll": "^1.5.4"
+    "react-scrollable-anchor": "^0.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

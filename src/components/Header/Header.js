@@ -1,38 +1,60 @@
-import React, { Component } from 'react';
-import Scroll from 'react-scroll';
-
-let Link = Scroll.Link;
-
-let scroll = Scroll.animateScroll;
+import React, { Component } from 'react'
+import { Navbar, NavItem, NavDropdown, MenuItem, Nav, OverlayTrigger } from  'react-bootstrap';
+import PopoverPhone from './Popover/Popover';
+// import { configureAnchors } from 'react-scrollable-anchor'
 
 class Header extends Component {
 
-    constructor() {
-        super();
-    }
-
-    scrollToTop = () => {
-        scroll.scrollToTop();
-    };
+    // componentWillMount() {
+    //     configureAnchors({
+    //         offset: -60
+    //     });
+    // }
 
     render() {
         return (
-            <div style={{ position : 'fixed' }}>
-                <Link activeClass="active" to="test1" spy={true} smooth={true} offset={50} duration={500} onSetActive={this.handleSetActive}>
-                    Test 1
-                </Link>
+            <Navbar fixedTop>
 
-                <Link activeClass="active" to="test2" spy={true} smooth={true} offset={50} duration={500}>
-                    Test 2 (delay)
-                </Link>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="/">Title</a>
+                    </Navbar.Brand>
 
-                <Link activeClass="active" to="test3" spy={true} smooth={true} offset={50} duration={500}>
-                    Test 3 (anchor)
-                </Link>
+                    <Navbar.Toggle />
+                </Navbar.Header>
 
-                <a onClick={ this.scrollToTop }>To the top!</a>
-            </div>
-        );
+                <Navbar.Collapse>
+                    <Nav pullRight>
+                        <NavItem eventKey={1} href="#home">Home</NavItem>
+                        <NavItem eventKey={2} href="#about-me">About Me</NavItem>
+                        <NavItem eventKey={3} href="#products">Products</NavItem>
+                        <NavItem eventKey={4} href="#reviews">Reviews</NavItem>
+                        <NavItem eventKey={5} href="#contact">Contact</NavItem>
+
+                        <NavItem>|</NavItem>
+
+                        <NavDropdown eventKey={6} title="UKR" id="dropdown">
+                            <MenuItem>ENG</MenuItem>
+                            <MenuItem>POL</MenuItem>
+                            <MenuItem>RUS</MenuItem>
+                        </NavDropdown>
+
+                        <OverlayTrigger
+                            rootClose
+                            trigger="click"
+                            placement="bottom"
+                            overlay={ PopoverPhone }
+                        >
+                            <NavItem eventKey={7}>
+                                <img src={require('../../images/phone-call-black.svg')} alt="" width='20px'/>
+                            </NavItem>
+                        </OverlayTrigger>
+
+                    </Nav>
+                </Navbar.Collapse>
+
+            </Navbar>
+        )
     }
 }
 
