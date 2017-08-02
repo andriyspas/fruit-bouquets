@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header } from './components/index';
+import { Header, Home, Contact } from './components/index';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
                 <Header/>
 
                 <ScrollableAnchor id={'home'}>
-                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'red'}}> Hello World </div>
+                    <Home/>
                 </ScrollableAnchor>
 
                 <ScrollableAnchor id={'about-me'}>
@@ -25,7 +25,7 @@ class App extends Component {
                 </ScrollableAnchor>
 
                 <ScrollableAnchor id={'contact'}>
-                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
+                    <Contact/>
                 </ScrollableAnchor>
             </div>
         )
