@@ -1,80 +1,99 @@
 [
   {
-    "featureType": "administrative",
-    "elementType": "labels.text.fill",
+    "featureType": "road",
     "stylers": [
       {
-        "color": "#444444"
-      }
-    ]
-  },
-  {
-    "featureType": "landscape",
-    "elementType": "all",
-    "stylers": [
+        "hue": "#5e00ff"
+      },
       {
-        "color": "#f2f2f2"
+        "saturation": -79
       }
     ]
   },
   {
     "featureType": "poi",
-    "elementType": "all",
     "stylers": [
       {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "all",
-    "stylers": [
-      {
-        "saturation": -100
+        "saturation": -78
       },
       {
-        "lightness": 45
-      }
-    ]
-  },
-  {
-    "featureType": "road.highway",
-    "elementType": "all",
-    "stylers": [
+        "hue": "#6600ff"
+      },
       {
-        "visibility": "simplified"
-      }
-    ]
-  },
-  {
-    "featureType": "road.arterial",
-    "elementType": "labels.icon",
-    "stylers": [
+        "lightness": -47
+      },
       {
         "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "lightness": 22
+      }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "hue": "#6600ff"
+      },
+      {
+        "saturation": -11
+      }
+    ]
+  },
+  {},
+  {},
+  {
+    "featureType": "water",
+    "stylers": [
+      {
+        "saturation": -65
+      },
+      {
+        "hue": "#1900ff"
+      },
+      {
+        "lightness": 8
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "stylers": [
+      {
+        "weight": 1.3
+      },
+      {
+        "lightness": 30
       }
     ]
   },
   {
     "featureType": "transit",
-    "elementType": "all",
     "stylers": [
       {
-        "visibility": "off"
+        "visibility": "simplified"
+      },
+      {
+        "hue": "#5e00ff"
+      },
+      {
+        "saturation": -16
       }
     ]
   },
   {
-    "featureType": "water",
-    "elementType": "all",
+    "featureType": "transit.line",
     "stylers": [
       {
-        "color": "#46bcec"
-      },
-      {
-        "visibility": "on"
+        "saturation": -72
       }
     ]
-  }
+  },
+  {}
 ]
