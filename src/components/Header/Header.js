@@ -13,49 +13,47 @@ class Header extends Component {
 
     render() {
         return (
-            <div className="navbar__component">
-                <Navbar fixedTop>
+            <Navbar fixedTop fluid>
 
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="/">Title</a>
-                        </Navbar.Brand>
+                <Navbar.Header>
+                    <Navbar.Brand>
+                        <a href="/">Title</a>
+                    </Navbar.Brand>
 
-                        <Navbar.Toggle />
-                    </Navbar.Header>
+                    <Navbar.Toggle />
+                </Navbar.Header>
 
-                    <Navbar.Collapse>
-                        <Nav pullRight>
-                            <NavItem eventKey={1} href="#home">Home</NavItem>
-                            <NavItem eventKey={2} href="#about-me">About Me</NavItem>
-                            <NavItem eventKey={3} href="#products">Products</NavItem>
-                            <NavItem eventKey={4} href="#reviews">Reviews</NavItem>
-                            <NavItem eventKey={5} href="#contact">Contact</NavItem>
+                <Navbar.Collapse>
+                    <Nav pullRight>
+                        <NavItem eventKey={1} href="#home">Home</NavItem>
+                        <NavItem eventKey={2} href="#about-me">About Me</NavItem>
+                        <NavItem eventKey={3} href="#products">Products</NavItem>
+                        <NavItem eventKey={4} href="#reviews">Reviews</NavItem>
+                        <NavItem eventKey={5} href="#contact">Contact</NavItem>
 
-                            <NavItem>|</NavItem>
+                        <NavItem>|</NavItem>
 
-                            <NavDropdown eventKey={6} title="UKR" id="dropdown">
-                                <MenuItem>ENG</MenuItem>
-                                <MenuItem>POL</MenuItem>
-                                <MenuItem>RUS</MenuItem>
-                            </NavDropdown>
+                        <NavDropdown eventKey={6} title="UKR" id="dropdown">
+                            <MenuItem>ENG</MenuItem>
+                            <MenuItem>POL</MenuItem>
+                            <MenuItem>RUS</MenuItem>
+                        </NavDropdown>
 
-                            <OverlayTrigger
-                                rootClose
-                                trigger="click"
-                                placement="bottom"
-                                overlay={ PopoverPhone }
-                            >
-                                <NavItem eventKey={7}>
-                                    <img src={require('../../images/phone-call-black.svg')} alt="" width='20px'/>
-                                </NavItem>
-                            </OverlayTrigger>
+                        <OverlayTrigger
+                            rootClose
+                            trigger="click"
+                            placement="bottom"
+                            overlay={ PopoverPhone }
+                        >
+                            <NavItem eventKey={7}>
+                                <img src={require('../../images/phone-call-black.svg')} alt="" width='20px'/>
+                            </NavItem>
+                        </OverlayTrigger>
 
-                        </Nav>
-                    </Navbar.Collapse>
+                    </Nav>
+                </Navbar.Collapse>
 
-                </Navbar>
-            </div>
+            </Navbar>
         )
     }
 }

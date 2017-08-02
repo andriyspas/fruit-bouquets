@@ -4,7 +4,9 @@ import Video from './Video/Video';
 class Home extends Component {
     render() {
         return (
-            <Video/>
+            <div className="home">
+                <Video/>
+            </div>
         )
     }
 }

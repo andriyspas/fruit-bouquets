@@ -6,4 +6,15 @@ body {
   padding: 0;
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+
 @import "../components/index";

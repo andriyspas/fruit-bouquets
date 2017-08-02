@@ -5,7 +5,41 @@ body {
   margin: 0;
   padding: 0; }
 
+html, body {
+  height: 100%;
+  width: 100%; }
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%; }
+
 .navbar {
   padding: 14px 15px; }
-  .navbar__component {
-    margin-top: 80px; }
+  .navbar-default {
+    background: transparent; }
+    .navbar-default .navbar-brand {
+      color: #fff; }
+    .navbar-default .navbar-nav > li > a {
+      color: #fff; }
+
+.scrolled {
+  padding: 6px 15px;
+  background: #fff; }
+
+.home {
+  background: rgba(0, 0, 0, 0.6);
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+
+video {
+  height: auto;
+  left: 50%;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: auto;
+  z-index: -1; }

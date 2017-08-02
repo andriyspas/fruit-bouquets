@@ -12,17 +12,17 @@ class App extends Component {
                     <Home/>
                 </ScrollableAnchor>
 
-                <ScrollableAnchor id={'about-me'}>
-                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
-                </ScrollableAnchor>
+                {/*<ScrollableAnchor id={'about-me'}>*/}
 
-                <ScrollableAnchor id={'products'}>
-                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
-                </ScrollableAnchor>
+                {/*</ScrollableAnchor>*/}
 
-                <ScrollableAnchor id={'reviews'}>
-                    <div style={{height: '500px', padding: '25px 85px', backgroundColor: 'yellow'}}> How are you world? </div>
-                </ScrollableAnchor>
+                {/*<ScrollableAnchor id={'products'}>*/}
+
+                {/*</ScrollableAnchor>*/}
+
+                {/*<ScrollableAnchor id={'reviews'}>*/}
+
+                {/*</ScrollableAnchor>*/}
 
                 <ScrollableAnchor id={'contact'}>
                     <Contact/>
