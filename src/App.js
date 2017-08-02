@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Home, Contact } from './components/index';
+import { Header, Home, Contact, Navigation } from './components/index';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 class App extends Component {
@@ -7,6 +7,8 @@ class App extends Component {
         return (
             <div>
                 <Header/>
+
+                <Navigation/>
 
                 <ScrollableAnchor id={'home'}>
                     <Home/>

@@ -1,8 +1,15 @@
 .navbar {
-  padding: 14px 15px;
+  padding: 13px 15px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 
   &-default {
     background: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #fff;
 
     .navbar-brand {
       color: #fff;
@@ -12,11 +19,6 @@
       color: #fff;
     }
   }
-}
-
-.scrolled {
-  padding: 6px 15px;
-  background: #fff;
 }
 
 //#7522ba test color

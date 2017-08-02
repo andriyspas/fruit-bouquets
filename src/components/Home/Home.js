@@ -1,12 +1,21 @@
 import React, { Component } from 'react'
 import Video from './Video/Video';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 class Home extends Component {
     render() {
         return (
-            <div className="home">
+            <section className="home">
                 <Video/>
-            </div>
+
+                <Grid fluid>
+                    <Row>
+                        <Col xs={12}>
+
+                        </Col>
+                    </Row>
+                </Grid>
+            </section>
         )
     }
 }
