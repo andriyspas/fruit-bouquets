@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Header, Home, Contact, Navigation } from './components/index';
-import ScrollableAnchor from 'react-scrollable-anchor'
+
+import Scroll from 'react-scroll';
+let Element    = Scroll.Element;
 
 class App extends Component {
     render() {
@@ -10,25 +12,14 @@ class App extends Component {
 
                 <Navigation/>
 
-                <ScrollableAnchor id={'home'}>
+                <Element name="home">
                     <Home/>
-                </ScrollableAnchor>
+                </Element>
 
-                {/*<ScrollableAnchor id={'about-me'}>*/}
-
-                {/*</ScrollableAnchor>*/}
-
-                {/*<ScrollableAnchor id={'products'}>*/}
-
-                {/*</ScrollableAnchor>*/}
-
-                {/*<ScrollableAnchor id={'reviews'}>*/}
-
-                {/*</ScrollableAnchor>*/}
-
-                <ScrollableAnchor id={'contact'}>
+                <Element name="contact">
                     <Contact/>
-                </ScrollableAnchor>
+                </Element>
+
             </div>
         )
     }

@@ -1,0 +1,47 @@
+.contact {
+  &__title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  &__information {
+    a {
+      display: inline-block;
+      color: #7522ba;
+    }
+  }
+
+  &__address {
+    margin-bottom: 10px;
+  }
+
+  &__phone {
+    margin-bottom: 10px;
+  }
+
+  &__email {
+    margin-bottom: 10px;
+
+    a {
+      color: #7522ba;
+    }
+  }
+
+  .container {
+    margin-bottom: 40px;
+  }
+
+  h4 {
+    margin: 20px 0;
+  }
+
+  //fixed
+  .row{
+    &:first-child {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+  }
+}
