@@ -21,7 +21,12 @@ class Navigation extends Component {
         this.setState({ active: to })
     };
 
+    handelHeightViewport = () => {
+        return (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2 * (-1);
+    };
+
     render() {
+
         return (
             <div className="navigation">
                 <Link
@@ -39,11 +44,27 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
+                    to="reviews"
+                    activeClass="navigation__href--active"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    onSetActive={ this.handleSetActive }
+                    className="navigation__href"
+                >
+                    <div className="navigation__dot"></div>
+                    <div className="navigation__dot--border"></div>
+                    <div className="navigation__section-name">Reviews</div>
+                </Link>
+
+
+                <Link
                     to="contact"
                     activeClass="navigation__href--active"
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={ this.handelHeightViewport() }
                     className="navigation__href"
                     onSetActive={ this.handleSetActive }
                 >
@@ -52,9 +73,9 @@ class Navigation extends Component {
                     <div className="navigation__section-name">Contact</div>
                 </Link>
 
-                <a onClick={ this.scrollTo } className="navigation__href">
-                    <div className="navigation__dot"></div>
-                </a>
+                {/*<a onClick={ this.scrollTo } className="navigation__href">*/}
+                    {/*<div className="navigation__dot"></div>*/}
+                {/*</a>*/}
 
             </div>
         );
