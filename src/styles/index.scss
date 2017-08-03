@@ -17,6 +17,9 @@ html, body {
   width: 100%;
 }
 
+section{
+  padding: 40px 0;
+}
+
 @import "../components/index";
-@import "form";
 @import "buttons";

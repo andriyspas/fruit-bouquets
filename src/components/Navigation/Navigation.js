@@ -49,6 +49,7 @@ class Navigation extends Component {
                     spy={true}
                     smooth={true}
                     duration={500}
+                    offset={ this.handelHeightViewport() }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
                 >

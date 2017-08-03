@@ -1,5 +1,5 @@
 .button {
-  background-color: #7522ba;
+  background-color: #8727d7;
   border: none;
   border-radius: 3px;
   color: #fff;
@@ -8,9 +8,10 @@
   margin-bottom: 20px;
   padding: 8px 15px;
   transition: background-color 0.2s ease;
+  font-size: 12px;
 
   &:hover {
-    background-color: #379c62;
+    background-color: #7522ba;
   }
 
   &:disabled {

@@ -1,4 +1,9 @@
 .contact {
+  &__details {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
   &__title {
     font-size: 26px;
     line-height: 34px;
@@ -8,8 +13,8 @@
 
   &__information {
     a {
-      display: inline-block;
       color: #7522ba;
+      display: inline-block;
     }
   }
 
@@ -29,19 +34,25 @@
     }
   }
 
+  &__form {
+    .form-control {
+      border: 1px solid #e7e7e7;
+      border-radius: 3px;
+      box-shadow: none;
+      font-size: 12px;
+    }
+
+    textarea {
+      height: 160px;
+      resize: none;
+    }
+  }
+
   .container {
     margin-bottom: 40px;
   }
 
   h4 {
     margin: 20px 0;
-  }
-
-  //fixed
-  .row{
-    &:first-child {
-      max-width: 1440px;
-      margin: 0 auto;
-    }
   }
 }

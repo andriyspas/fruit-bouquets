@@ -20,7 +20,7 @@ class Contact extends Component {
         return (
             <section className="contact">
                 <Grid fluid>
-                    <Row>
+                    <Row bsClass="contact__details">
                         <Col xs={12}>
                             <Row>
                                 <Col xs={6}>
@@ -67,7 +67,7 @@ class Contact extends Component {
                                 <Col xs={6}>
                                     <div className="contact__title">Contact Form</div>
 
-                                    <Form autoComplete="off" className="form">
+                                    <Form autoComplete="off" className="contact__form">
                                         <Row>
                                             <Col xs={6}>
                                                 <FormGroup controlId="nameText">
@@ -133,7 +133,7 @@ class Contact extends Component {
                         </Col>
                     </Row>
 
-                    <Row>
+                    <Row bsClass="contact__map">
                         <Col>
                             <Map/>
                         </Col>
