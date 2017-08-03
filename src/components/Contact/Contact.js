@@ -20,7 +20,7 @@ class Contact extends Component {
         return (
             <section className="contact">
                 <Grid fluid>
-                    <Row bsClass="contact__details">
+                    <Row bsClass="row contact__details">
                         <Col xs={12}>
                             <Row>
                                 <Col xs={6}>
@@ -133,7 +133,7 @@ class Contact extends Component {
                         </Col>
                     </Row>
 
-                    <Row bsClass="contact__map">
+                    <Row bsClass="row contact__map">
                         <Col>
                             <Map/>
                         </Col>
