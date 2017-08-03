@@ -12,7 +12,8 @@
     "react-id-swiper": "^1.4.0",
     "react-scripts": "1.0.10",
     "react-scroll": "^1.5.4",
-    "react-scrollable-anchor": "^0.4.2"
+    "react-scrollable-anchor": "^0.4.2",
+    "react-intl": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
