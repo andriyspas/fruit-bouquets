@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Header, Home, Contact, Navigation } from './components/index';
+import { Header, Home, Contact, Navigation, Reviews } from './components/index';
 
 import Scroll from 'react-scroll';
 let Element    = Scroll.Element;
@@ -14,6 +14,10 @@ class App extends Component {
 
                 <Element name="home">
                     <Home/>
+                </Element>
+
+                <Element name="reviews">
+                    <Reviews/>
                 </Element>
 
                 <Element name="contact">

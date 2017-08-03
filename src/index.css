@@ -133,6 +133,18 @@ video {
 .navigation__href:hover .navigation__section-name {
   display: block; }
 
+.swiper-container {
+  padding-bottom: 25px; }
+  .swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    background-size: contain;
+    bottom: 0;
+    right: 0;
+    top: auto;
+    width: 12px; }
+  .swiper-container .swiper-button-prev {
+    left: auto;
+    right: 50px; }
+
 .form button {
   font-size: 12px; }
 
