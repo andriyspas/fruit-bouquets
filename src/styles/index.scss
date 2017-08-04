@@ -15,8 +15,38 @@ body {
 }
 
 section{
-  padding: 40px 0;
+  position: relative;
 }
+
+@mixin triangle($border-color, $border-width, $top, $right, $bottom, $left) {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $border-color;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: 1;
+}
+
+//@mixin triangle($border-color) {
+//  content: '';
+//  display: block;
+//  width: 0;
+//  height: 0;
+//  border-style: solid;
+//  border-width: 0 0 7vh 100vw;
+//  border-color: transparent transparent transparent white;
+//  position: absolute;
+//  top: 0;
+//  right: 0;
+//  z-index: 1;
+//}
 
 @import "../components/index";
 @import "buttons";

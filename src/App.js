@@ -1,9 +1,9 @@
-import React, { Component} from 'react'
-import { Header, Home, Contact, Navigation, Reviews } from './components/index'
+import React, { Component } from 'react'
+import { Header, Home, Contact, Navigation, Reviews, Sales } from './components/index'
 
 import Scroll from 'react-scroll'
-import { IntlProvider } from 'react-intl';
-import { addLocaleData } from 'react-intl';
+import {IntlProvider} from 'react-intl';
+import {addLocaleData} from 'react-intl';
 import uk from 'react-intl/locale-data/uk';
 import pl from 'react-intl/locale-data/pl';
 
@@ -33,13 +33,13 @@ class App extends Component {
     handleLanguageChange = (lan) => {
         switch (lan) {
             case 'ua':
-                this.setState({ messages: messagesUa, locale: localeUa });
+                this.setState({messages: messagesUa, locale: localeUa});
                 break;
             case 'en':
-                this.setState({ messages: messagesEn, locale: localeEn });
+                this.setState({messages: messagesEn, locale: localeEn});
                 break;
             case 'pl':
-                this.setState({ messages: messagesPl, locale: localePl });
+                this.setState({messages: messagesPl, locale: localePl});
                 break;
         }
     };
@@ -50,24 +50,27 @@ class App extends Component {
                 locale={ this.state.locale }
                 messages={ this.state.messages }
             >
-              <div>
-                <Header onLanguageChange={ this.handleLanguageChange }/>
+                <div>
+                    <Header onLanguageChange={ this.handleLanguageChange }/>
 
-                <Navigation/>
+                    <Navigation/>
 
-                <Element name="home">
-                  <Home/>
-                </Element>
+                    <Element name="home">
+                        <Home/>
+                    </Element>
 
-                <Element name="reviews">
-                  <Reviews/>
-                </Element>
+                    <Element name="reviews">
+                        <Reviews/>
+                    </Element>
 
-                <Element name="contact">
-                  <Contact/>
-                </Element>
+                    <Element name="sale">
+                        <Sales/>
+                    </Element>
 
-              </div>
+                    <Element name="contact">
+                        <Contact/>
+                    </Element>
+                </div>
             </IntlProvider>
         )
     }

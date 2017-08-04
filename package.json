@@ -12,6 +12,7 @@
     "react-google-maps": "^7.2.0",
     "react-id-swiper": "^1.4.0",
     "react-intl": "^2.3.0",
+    "react-parallax": "^1.4.4",
     "react-scripts": "1.0.10",
     "react-scroll": "^1.5.4",
     "react-scrollable-anchor": "^0.4.2"
