@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Header, Home, Contact, Navigation, Reviews, Sales } from './components/index'
+import { Header, Home, Contact, Navigation, Reviews, Sales, Products } from './components/index'
 
 import Scroll from 'react-scroll'
 import {IntlProvider} from 'react-intl';
@@ -57,6 +57,10 @@ class App extends Component {
 
                     <Element name="home">
                         <Home/>
+                    </Element>
+
+                    <Element name="products">
+                        <Products/>
                     </Element>
 
                     <Element name="sale">
