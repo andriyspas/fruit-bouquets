@@ -6,10 +6,8 @@ class Reviews extends Component {
     render() {
         const params = {
             loop: true,
-            autoplay: 2500,
+            autoplay: 4000,
             autoplayDisableOnInteraction: false,
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
             spaceBetween: 30
         };
 
@@ -17,31 +15,48 @@ class Reviews extends Component {
             'typesetting industry. Lorem Ipsum has been the industrys standard dummy' +
             ' text ever since the 1500s, when an unknown printer took a galley of type and' +
             ' scrambled it to make a type specimen book. It has survived not only five centuries, ' +
-            'but also the leap into electronic typesetting, remaining essentially unchanged. ' +
-            'It was popularised in the 1960s with the release of Letraset sheets containing ' +
-            'Lorem Ipsum passages, and more recently with desktop publishing software like ' +
-            'Aldus PageMaker including versions of Lorem Ipsum.';
+            'but also the leap into electronic typesetting, remaining essentially unchanged.';
 
         return (
             <section className="reviews">
                 <Grid>
                     <Row>
+                        <Col xs={12}>
+                            <button className="button">Add review</button>
+                        </Col>
+                    </Row>
+                    <Row>
                         <Col sm={12}>
                             <Swiper { ...params }>
                                 <div>
-                                    <div className="reviews__single">{text}</div>
+                                    <div className="reviews__single">
+                                        <div className="reviews__description">{text}</div>
+                                        <div className="reviews__person">Name Surname</div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div className="reviews__single">{text}</div>
+                                    <div className="reviews__single">
+                                        <div className="reviews__description">{text}</div>
+                                        <div className="reviews__person">Name Surname</div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div className="reviews__single">{text}</div>
+                                    <div className="reviews__single">
+                                        <div className="reviews__description">{text}</div>
+                                        <div className="reviews__person">Name Surname</div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div className="reviews__single">{text}</div>
+                                    <div className="reviews__single">
+                                        <div className="reviews__description">{text}</div>
+                                        <div className="reviews__person">Name Surname</div>
+                                    </div>
                                 </div>
                                 <div>
-                                    <div className="reviews__single">{text}</div>
+                                    <div className="reviews__single">
+                                        <div className="reviews__description">{text}</div>
+                                        <div className="reviews__person">Name Surname</div>
+                                    </div>
                                 </div>
                             </Swiper>
                         </Col>

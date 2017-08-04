@@ -1,7 +1,26 @@
 .reviews {
+  position: relative;
+  padding: 70px 0;
+  text-align: center;
+
+  &__description {
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic;
+  }
+
+  &__person {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
   &__single {
     max-width: 768px;
     margin: 0 auto;
-    text-align: center;
+  }
+
+  .button {
+    
   }
 }

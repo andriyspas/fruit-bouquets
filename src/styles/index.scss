@@ -34,19 +34,5 @@ section{
   z-index: 1;
 }
 
-//@mixin triangle($border-color) {
-//  content: '';
-//  display: block;
-//  width: 0;
-//  height: 0;
-//  border-style: solid;
-//  border-width: 0 0 7vh 100vw;
-//  border-color: transparent transparent transparent white;
-//  position: absolute;
-//  top: 0;
-//  right: 0;
-//  z-index: 1;
-//}
-
 @import "../components/index";
 @import "buttons";

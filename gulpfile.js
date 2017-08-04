@@ -23,4 +23,4 @@ gulp.task('styles-autoprefixer', () =>
         .pipe(gulp.dest('./src'))
 );
 
-gulp.task('default', ['styles', 'styles-autoprefixer', 'styles-watch']);
+gulp.task('default', ['styles', 'styles-watch', 'styles-autoprefixer']);

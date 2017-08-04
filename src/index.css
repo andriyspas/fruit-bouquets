@@ -442,62 +442,55 @@ video {
   width: auto;
   z-index: -1; }
 
-.contact__details {
-  padding: 40px 0 0;
-  margin: 0 auto;
-  max-width: 1440px; }
-
-.contact__title {
-  font-size: 26px;
-  line-height: 34px;
-  margin-bottom: 10px;
-  text-align: left; }
-
-.contact__information a {
-  color: #7522ba;
-  display: inline-block; }
-
-.contact__address {
-  margin-bottom: 10px; }
-
-.contact__phone {
-  margin-bottom: 10px; }
-
-.contact__email {
-  margin-bottom: 10px; }
-  .contact__email a {
-    color: #7522ba; }
-
-.contact__form .form-control {
-  border: 1px solid #e7e7e7;
-  border-radius: 3px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  font-size: 12px; }
-
-.contact__form textarea {
-  height: 160px;
-  resize: none; }
-
-.contact__map {
+.contact {
   position: relative; }
-  .contact__map:before {
-    content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 100vw 7vh 0;
-    border-color: transparent #fff transparent transparent;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: auto;
-    left: auto;
-    z-index: 1; }
-
-.contact h4 {
-  margin: 20px 0; }
+  .contact__details {
+    padding: 40px 0 0;
+    margin: 0 auto;
+    max-width: 1440px; }
+  .contact__title {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 10px;
+    text-align: left; }
+  .contact__information a {
+    color: #7522ba;
+    display: inline-block; }
+  .contact__address {
+    margin-bottom: 10px; }
+  .contact__phone {
+    margin-bottom: 10px; }
+  .contact__email {
+    margin-bottom: 10px; }
+    .contact__email a {
+      color: #7522ba; }
+  .contact__form .form-control {
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px; }
+  .contact__form textarea {
+    height: 160px;
+    resize: none; }
+  .contact__map {
+    position: relative; }
+    .contact__map:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 100vw 6vh 0;
+      border-color: transparent #fff transparent transparent;
+      position: absolute;
+      top: -1px;
+      right: 0;
+      bottom: auto;
+      left: auto;
+      z-index: 1; }
+  .contact h4 {
+    margin: 20px 0; }
 
 .navigation {
   position: fixed;
@@ -573,27 +566,70 @@ video {
 .navigation__href:hover .navigation__section-name {
   display: block; }
 
-.reviews__single {
-  max-width: 768px;
-  margin: 0 auto;
-  text-align: center; }
-
-.sales img {
+.reviews {
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  padding: 70px 0;
+  text-align: center; }
+  .reviews__description {
+    font-size: 18px;
+    line-height: 30px;
+    font-style: italic; }
+  .reviews__person {
+    text-align: right;
+    margin-top: 20px;
+    font-weight: 500; }
+  .reviews__single {
+    max-width: 768px;
+    margin: 0 auto; }
 
-.sales__content {
-  background: rgba(0, 0, 0, 0.6); }
+.sales {
+  position: relative;
+  text-align: center; }
+  .sales:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 6vh 0;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    top: -1px;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 1; }
+  .sales:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6vh 100vw 0 0;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: -1px;
+    left: 0;
+    z-index: 1; }
+  .sales__content {
+    height: 500px;
+    background: rgba(0, 0, 0, 0.6); }
+  .sales__round {
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
 
-.sales__round {
-  width: 160px;
-  height: 160px;
-  background-color: #fff;
-  display: inline-block;
-  border-radius: 50%; }
+.react-parallax-background-children {
+  width: 100%; }
 
 .button {
   background-color: #8727d7;
@@ -601,7 +637,6 @@ video {
   border-radius: 3px;
   color: #fff;
   cursor: pointer;
-  float: right;
   font-size: 12px;
   margin-bottom: 20px;
   padding: 8px 15px;

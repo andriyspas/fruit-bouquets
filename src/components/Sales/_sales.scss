@@ -1,12 +1,17 @@
 .sales {
+  position: relative;
+  text-align: center;
 
-  img{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+  &:before {
+    @include triangle(transparent #fff transparent transparent, 0 100vw 6vh 0, -1px, auto, auto, 0);
+  }
+
+  &:after{
+    @include triangle(transparent #fff transparent transparent, 6vh 100vw 0 0, auto, auto, -1px, 0);
   }
 
   &__content {
+    height: 500px;
     background: rgba(0, 0, 0, 0.6);
   }
 
@@ -16,5 +21,12 @@
     background-color: #fff;
     display: inline-block;
     border-radius: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
+}
+
+.react-parallax-background-children {
+  width: 100%;
 }

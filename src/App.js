@@ -59,6 +59,10 @@ class App extends Component {
                         <Home/>
                     </Element>
 
+                    <Element name="sale">
+                        <Sales/>
+                    </Element>
+
                     <Element name="reviews">
                         <Reviews/>
                     </Element>
