@@ -13,93 +13,104 @@ class Products extends Component {
             },
             slidesPerView: 3,
             slidesPerColumn: 3,
-            spaceBetween: 30
+            breakpoints: {
+                992: {
+                    slidesPerView: 2,
+                    slidesPerColumn: 2,
+                },
+                768: {
+                    slidesPerView: 1,
+                    slidesPerColumn: 2,
+                },
+            }
         };
 
         return (
-            <Grid>
-                <Row>
-                    <Col sm={12}>
-                        <Swiper { ...params }>
-                            <div>
-                                <div className="products__tile">
-                                    test
+            <section className="products">
+                <Grid>
+                    <Row>
+                        <Col sm={12}>
+                            <Swiper { ...params }>
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div className="products__tile">
-                                    test
+                                <div>
+                                    <div className="products__tile">
+                                        test
+                                    </div>
                                 </div>
-                            </div>
-                        </Swiper>
-                    </Col>
-                </Row>
-            </Grid>
+                            </Swiper>
+                        </Col>
+                    </Row>
+                </Grid>
+            </section>
         )
     }
 }
