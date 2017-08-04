@@ -32,9 +32,9 @@ class Navigation extends Component {
                 <Link
                     to="home"
                     activeClass="navigation__href--active"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
+                    spy={ true }
+                    smooth={ true }
+                    duration={ 500 }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
                 >
@@ -46,9 +46,9 @@ class Navigation extends Component {
                 <Link
                     to="reviews"
                     activeClass="navigation__href--active"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
+                    spy={ true }
+                    smooth={ true }
+                    duration={ 500 }
                     offset={ this.handelHeightViewport() }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
@@ -62,9 +62,9 @@ class Navigation extends Component {
                 <Link
                     to="contact"
                     activeClass="navigation__href--active"
-                    spy={true}
-                    smooth={true}
-                    duration={500}
+                    spy={ true }
+                    smooth={ true }
+                    duration={ 500 }
                     offset={ this.handelHeightViewport() }
                     className="navigation__href"
                     onSetActive={ this.handleSetActive }

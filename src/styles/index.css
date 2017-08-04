@@ -64,7 +64,6 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -278,7 +277,6 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -314,7 +312,6 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -436,8 +433,6 @@ video {
   min-width: 100%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   width: auto;
   z-index: -1; }
@@ -470,7 +465,6 @@ video {
 .contact__form .form-control {
   border: 1px solid #e7e7e7;
   border-radius: 3px;
-  -webkit-box-shadow: none;
   box-shadow: none;
   font-size: 12px; }
 
@@ -489,8 +483,6 @@ video {
   right: 50px;
   top: 50%;
   z-index: 1;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
   .navigation__href {
     position: relative;
@@ -505,14 +497,8 @@ video {
     border-radius: 50%;
     position: relative;
     z-index: 1;
-    -webkit-transform: scale(0.7);
-    -ms-transform: scale(0.7);
     transform: scale(0.7);
-    -webkit-transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
-    transition: -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease;
-    -o-transition: transform 0.2s ease, box-shadow 0.2s ease;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, -webkit-transform 0.2s ease, -webkit-box-shadow 0.2s ease; }
+    transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .navigation__dot--border {
       content: '';
       display: block;
@@ -521,14 +507,8 @@ video {
       height: 40px;
       border: 1px solid #7522ba;
       border-radius: 50%;
-      -webkit-transform: scale(0);
-      -ms-transform: scale(0);
       transform: scale(0);
-      -webkit-transition: -webkit-transform 0.2s ease;
-      transition: -webkit-transform 0.2s ease;
-      -o-transition: transform 0.2s ease;
       transition: transform 0.2s ease;
-      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
       top: -12px;
       right: -12px; }
   .navigation__section-name {
@@ -542,16 +522,11 @@ video {
 
 .navigation__href--active .navigation__dot--border,
 .navigation__href:hover .navigation__dot--border {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1); }
 
 .navigation__href--active .navigation__dot,
 .navigation__href:hover .navigation__dot {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
   transform: scale(1);
-  -webkit-box-shadow: 0 0 20px 3px #7522ba;
   box-shadow: 0 0 20px 3px #7522ba; }
 
 .navigation__href--active .navigation__section-name,
@@ -573,8 +548,6 @@ video {
   font-size: 12px;
   margin-bottom: 20px;
   padding: 8px 15px;
-  -webkit-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease; }
   .button:hover {
     background-color: #7522ba; }
