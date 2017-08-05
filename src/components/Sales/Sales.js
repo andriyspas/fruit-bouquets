@@ -11,9 +11,36 @@ class Sales  extends Component {
                     </Background>
 
                     <div className="sales__content">
-                        <div className="sales__round"></div>
-                        <div className="sales__round"></div>
-                        <div className="sales__round"></div>
+
+                        <div className="sales__single">
+                            <div className="sales__round">
+                                <img src="" alt=""/>
+                            </div>
+                            <div>
+                                <div className="sales__name">Lorem ipsum</div>
+                                <div className="sales__details">Lorem ipsum doloresm test big name</div>
+                            </div>
+                        </div>
+
+                        <div className="sales__single">
+                            <div className="sales__round">
+                                <img src="" alt=""/>
+                            </div>
+                            <div>
+                                <div className="sales__name">Lorem ipsum</div>
+                                <div className="sales__details">Lorem ipsum doloresm test big name</div>
+                            </div>
+                        </div>
+
+                        <div className="sales__single">
+                            <div className="sales__round">
+                                <img src="" alt=""/>
+                            </div>
+                            <div>
+                                <div className="sales__name">Lorem ipsum</div>
+                                <div className="sales__details">Lorem ipsum doloresm test big name</div>
+                            </div>
+                        </div>
                     </div>
                 </Parallax>
             </div>

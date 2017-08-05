@@ -556,10 +556,15 @@ video {
   .reviews__single {
     max-width: 768px;
     margin: 0 auto; }
+  .reviews .button {
+    padding: 12px 60px;
+    font-size: 16px;
+    margin-bottom: 40px; }
 
 .sales {
   position: relative;
-  text-align: center; }
+  text-align: center;
+  color: #fff; }
   .sales:before {
     content: '';
     display: block;
@@ -589,20 +594,33 @@ video {
     left: 0;
     z-index: 1; }
   .sales__content {
-    height: 500px;
+    height: 700px;
     background: rgba(0, 0, 0, 0.6); }
+  .sales__single {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 40px; }
   .sales__round {
+    display: inline-block;
     width: 160px;
     height: 160px;
     background-color: #fff;
-    display: inline-block;
     border-radius: 50%;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%); }
+    margin-bottom: 20px; }
+  .sales__name {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 500; }
+  .sales__details {
+    max-width: 200px;
+    font-size: 16px; }
 
 .react-parallax-background-children {
   width: 100%; }
+  .react-parallax-background-children img {
+    width: 100%; }
 
 .products {
   padding: 40px 0; }

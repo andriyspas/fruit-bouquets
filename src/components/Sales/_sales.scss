@@ -1,32 +1,54 @@
 .sales {
   position: relative;
   text-align: center;
+  color: #fff;
 
   &:before {
     @include triangle(transparent #fff transparent transparent, 0 100vw 6vh 0, -1px, auto, auto, 0);
   }
 
-  &:after{
+  &:after {
     @include triangle(transparent #fff transparent transparent, 6vh 100vw 0 0, auto, auto, -1px, 0);
   }
 
   &__content {
-    height: 500px;
+    height: 700px;
     background: rgba(0, 0, 0, 0.6);
   }
 
-  &__round {
-    width: 160px;
-    height: 160px;
-    background-color: #fff;
+  &__single {
     display: inline-block;
-    border-radius: 50%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    margin: 0 40px;
+  }
+
+  &__round {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+
+  &__details {
+    max-width: 200px;
+    font-size: 16px;
   }
 }
 
 .react-parallax-background-children {
   width: 100%;
+
+  img {
+    width: 100%;
+  }
 }
