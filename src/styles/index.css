@@ -553,9 +553,31 @@ video {
     text-align: right;
     margin-top: 20px;
     font-weight: 500; }
-  .reviews__single {
+  .reviews__slider {
+    position: relative;
     max-width: 768px;
     margin: 0 auto; }
+    .reviews__slider:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -40px;
+      left: -60px;
+      background: url("./images/quote.svg");
+      background-size: contain; }
+    .reviews__slider:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: -40px;
+      right: -60px;
+      background: url("./images/quote.svg");
+      transform: rotate(180deg);
+      background-size: contain; }
   .reviews .button {
     padding: 12px 60px;
     font-size: 16px;
@@ -608,7 +630,8 @@ video {
     height: 160px;
     background-color: #fff;
     border-radius: 50%;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #8727d7; }
   .sales__name {
     font-size: 22px;
     margin-bottom: 5px;
@@ -627,7 +650,7 @@ video {
   .products__tile {
     height: 300px;
     background-color: #ff9529;
-    border: 1px solid #fff; }
+    margin: 10px; }
 
 .button {
   background-color: #8727d7;

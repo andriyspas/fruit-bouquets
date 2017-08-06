@@ -14,7 +14,7 @@ class Products extends Component {
             slidesPerView: 3,
             slidesPerColumn: 3,
             breakpoints: {
-                992: {
+                1200: {
                     slidesPerView: 2,
                     slidesPerColumn: 2,
                 },

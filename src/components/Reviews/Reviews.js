@@ -27,38 +27,40 @@ class Reviews extends Component {
                     </Row>
                     <Row>
                         <Col sm={12}>
-                            <Swiper { ...params }>
-                                <div>
-                                    <div className="reviews__single">
-                                        <div className="reviews__description">{text}</div>
-                                        <div className="reviews__person">Name Surname</div>
+                            <div className="reviews__slider">
+                                <Swiper { ...params }>
+                                    <div>
+                                        <div className="reviews__single">
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__person">Name Surname</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div className="reviews__single">
-                                        <div className="reviews__description">{text}</div>
-                                        <div className="reviews__person">Name Surname</div>
+                                    <div>
+                                        <div className="reviews__single">
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__person">Name Surname</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div className="reviews__single">
-                                        <div className="reviews__description">{text}</div>
-                                        <div className="reviews__person">Name Surname</div>
+                                    <div>
+                                        <div className="reviews__single">
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__person">Name Surname</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div className="reviews__single">
-                                        <div className="reviews__description">{text}</div>
-                                        <div className="reviews__person">Name Surname</div>
+                                    <div>
+                                        <div className="reviews__single">
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__person">Name Surname</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div>
-                                    <div className="reviews__single">
-                                        <div className="reviews__description">{text}</div>
-                                        <div className="reviews__person">Name Surname</div>
+                                    <div>
+                                        <div className="reviews__single">
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__person">Name Surname</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </Swiper>
+                                </Swiper>
+                            </div>
                         </Col>
                     </Row>
                 </Grid>

@@ -15,11 +15,37 @@
     font-weight: 500;
   }
 
-  &__single {
+  &__slider {
+    position: relative;
     max-width: 768px;
-    margin: 0 auto;
-  }
+      margin: 0 auto;
 
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      top: -40px;
+      left: -60px;
+      background: url("./images/quote.svg");
+      background-size: contain;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: -40px;
+      right: -60px;
+      background: url("./images/quote.svg");
+      transform: rotate(180deg);
+      background-size: contain;
+    }
+  }
+  
   .button {
     padding: 12px 60px;
     font-size: 16px;
