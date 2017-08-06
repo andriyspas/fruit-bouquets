@@ -33,77 +33,90 @@ class Products extends Component {
                             <Swiper { ...params }>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
-                                        test
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        test
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        test
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        test
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        test
+                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
+                                        <div className="products__tile--plug">
+                                            <button className="button">View details</button>
+                                        </div>
                                     </div>
                                 </div>
                             </Swiper>

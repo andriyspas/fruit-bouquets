@@ -15,7 +15,7 @@ class Sales  extends Component {
                         <div className="sales__single">
                             <div className="sales__round">
                                 <div>15</div>
-                                <div>%</div>
+                                <div>% off</div>
                             </div>
                             <div>
                                 <div className="sales__name">Lorem ipsum</div>

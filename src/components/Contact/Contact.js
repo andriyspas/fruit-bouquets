@@ -19,7 +19,7 @@ class Contact extends Component {
     render() {
         return (
             <section className="contact">
-                <Grid fluid>
+                <Grid>
                     <Row bsClass="row contact__details">
                         <Col xs={12}>
                             <Row>
@@ -132,13 +132,11 @@ class Contact extends Component {
                             </Row>
                         </Col>
                     </Row>
-
-                    <Row bsClass="row contact__map">
-                        <Col>
-                            <Map/>
-                        </Col>
-                    </Row>
                 </Grid>
+
+                <div className="row contact__map">
+                    <Map/>
+                </div>
             </section>
         )
     }
