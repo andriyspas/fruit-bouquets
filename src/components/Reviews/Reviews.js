@@ -6,8 +6,8 @@ class Reviews extends Component {
     render() {
         const params = {
             loop: true,
-            autoplay: 4000,
-            autoplayDisableOnInteraction: false,
+            // autoplay: 4000,
+            // autoplayDisableOnInteraction: false,
             spaceBetween: 30
         };
 

@@ -34,5 +34,16 @@ section{
   z-index: 1;
 }
 
+@mixin quote {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background: url("./images/quote.svg");
+  background-size: contain;
+  opacity: 0.2;
+}
+
 @import "../components/index";
 @import "buttons";
