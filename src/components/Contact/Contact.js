@@ -23,7 +23,7 @@ class Contact extends Component {
                     <Row bsClass="row contact__details">
                         <Col xs={12}>
                             <Row>
-                                <Col xs={6}>
+                                <Col xs={12} sm={6}>
                                     <div className="contact__title">Contact us</div>
 
                                     <div className="contact__information">
@@ -64,12 +64,12 @@ class Contact extends Component {
                                     </Row>
                                 </Col>
 
-                                <Col xs={6}>
+                                <Col xs={12} sm={6}>
                                     <div className="contact__title">Contact Form</div>
 
                                     <Form autoComplete="off" className="contact__form">
                                         <Row>
-                                            <Col xs={6}>
+                                            <Col xs={12} md={6}>
                                                 <FormGroup controlId="nameText">
                                                     <FormControl
                                                         type="text"
@@ -78,7 +78,7 @@ class Contact extends Component {
                                                 </FormGroup>
                                             </Col>
 
-                                            <Col xs={6}>
+                                            <Col xs={12} md={6}>
                                                 <FormGroup controlId="surnameText">
                                                     <FormControl
                                                         type="text"
@@ -88,7 +88,7 @@ class Contact extends Component {
 
                                             </Col>
 
-                                            <Col xs={6}>
+                                            <Col xs={12} md={6}>
                                                 <FormGroup controlId="phoneText">
                                                     <FormControl
                                                         type="text"
@@ -97,7 +97,7 @@ class Contact extends Component {
                                                 </FormGroup>
                                             </Col>
 
-                                            <Col xs={6}>
+                                            <Col xs={12} md={6}>
                                                 <FormGroup controlId="emailText">
                                                     <FormControl
                                                         type="email"

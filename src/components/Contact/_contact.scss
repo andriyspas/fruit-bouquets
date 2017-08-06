@@ -3,8 +3,12 @@
 
   &__details {
     padding: 40px 0 0;
+    max-width: 480px;
     margin: 0 auto;
-    max-width: 1440px;
+
+    @media (min-width: 768px) {
+      max-width: 1440px;
+    }
   }
 
   &__title {
