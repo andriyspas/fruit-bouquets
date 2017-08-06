@@ -2,8 +2,17 @@ import React, { Component } from 'react';
 import Swiper from 'react-id-swiper'
 import {Grid, Row, Col} from 'react-bootstrap';
 
-class Products extends Component {
+import ModalStructure from  '../Modal/Modal';
 
+const Description = {
+    title: "1",
+    name: '2',
+    button: 'View details'
+};
+
+const ClassName = 'products__tile--plug';
+
+class Products extends Component {
     render() {
         const params = {
             pagination: '.swiper-pagination',
@@ -34,95 +43,62 @@ class Products extends Component {
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <div className="products__tile--plug">
-                                            <button className="button">View details</button>
-                                        </div>
+                                        <ModalStructure description={ Description } className={ ClassName }/>
                                     </div>
                                 </div>
                             </Swiper>
                         </Col>
                     </Row>
                 </Grid>
+
             </section>
         )
     }

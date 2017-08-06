@@ -694,6 +694,8 @@ video {
       opacity: 1;
       transition: opacity 0.2s ease;
       visibility: visible; }
+  .products__modal {
+    height: 100%; }
   .products img {
     height: 100%; }
 
