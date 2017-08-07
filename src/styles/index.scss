@@ -45,5 +45,20 @@ section{
   opacity: 0.2;
 }
 
+
+.form {
+  .form-control {
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+    box-shadow: none;
+    font-size: 12px;
+  }
+
+  textarea {
+    height: 160px;
+    resize: none;
+  }
+}
+
 @import "../components/index";
 @import "buttons";

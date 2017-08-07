@@ -67,7 +67,7 @@ class Contact extends Component {
                                 <Col xs={12} sm={6}>
                                     <div className="contact__title">Contact Form</div>
 
-                                    <Form autoComplete="off" className="contact__form">
+                                    <Form autoComplete="off" className="form contact__form">
                                         <Row>
                                             <Col xs={12} md={6}>
                                                 <FormGroup controlId="nameText">

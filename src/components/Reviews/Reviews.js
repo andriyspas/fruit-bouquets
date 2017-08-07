@@ -1,6 +1,6 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import Swiper from 'react-id-swiper'
-import {Grid, Row, Col} from 'react-bootstrap';
+import { Grid, Modal, Form, FormGroup, FormControl, Row, Col } from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 
 const Description = {
@@ -9,6 +9,48 @@ const Description = {
 };
 
 const ClassName = 'reviews__modal';
+
+const ModalBody =
+    <Modal.Body className="clearfix form">
+        <Form autoComplete="off">
+            <Row>
+                <Col xs={6}>
+                    <FormGroup controlId="nameText">
+                        <FormControl
+                            type="text"
+                            placeholder="Name"
+                        />
+                    </FormGroup>
+                </Col>
+
+                <Col xs={6}>
+                    <FormGroup controlId="cityText">
+
+                        <FormControl
+                            type="text"
+                            placeholder="City"
+                        />
+                    </FormGroup>
+                </Col>
+
+                <Col xs={12}>
+                    <FormGroup controlId="messageText">
+                        <FormControl
+                            componentClass="textarea"
+                            placeholder="Message"
+                        />
+                    </FormGroup>
+                </Col>
+            </Row>
+
+            <button
+                className="button pull-right"
+                type="submit"
+            >
+                { Description.buttonClose }
+            </button>
+        </Form>
+    </Modal.Body>;
 
 class Reviews extends Component {
     render() {
@@ -30,7 +72,7 @@ class Reviews extends Component {
                 <Grid>
                     <Row>
                         <Col xs={12}>
-                            <ModalStructure description={ Description } className={ ClassName }/>
+                            <ModalStructure description={ Description } className={ ClassName } modalBody={ ModalBody }/>
                         </Col>
                     </Row>
                     <Row>
