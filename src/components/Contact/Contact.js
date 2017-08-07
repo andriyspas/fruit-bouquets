@@ -134,7 +134,7 @@ class Contact extends Component {
                     </Row>
                 </Grid>
 
-                <div className="row contact__map">
+                <div className="contact__map">
                     <Map/>
                 </div>
             </section>

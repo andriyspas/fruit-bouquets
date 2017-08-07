@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import Swiper from 'react-id-swiper'
-import {Grid, Row, Col} from 'react-bootstrap';
-
+import { Grid, Row, Col } from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 
 const Description = {
-    title: "1",
-    name: '2',
-    button: 'View details'
+    buttonAdd: 'View details',
+    buttonClose: 'Close'
 };
 
 const ClassName = 'products__tile--plug';

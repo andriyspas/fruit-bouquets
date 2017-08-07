@@ -68,14 +68,14 @@ class ModalStructure extends Component {
                                 className="button pull-right"
                                 type="submit"
                             >
-                                { this.props.description.button }
+                                { this.props.description.buttonClose }
                             </button>
                         </Form>
                     </Modal.Body>
 
                 </Modal>
 
-                <button className="button" onClick={ this.open }>{ this.props.description.button }</button>
+                <button className="button" onClick={ this.open }>{ this.props.description.buttonAdd }</button>
             </div>
         );
     }

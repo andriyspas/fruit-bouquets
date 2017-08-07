@@ -664,7 +664,12 @@ video {
     width: 100%; }
 
 .products {
-  padding: 40px 0; }
+  padding: 40px 0;
+  max-width: 480px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .products {
+      max-width: 100%; } }
   .products__tile {
     height: 400px;
     margin: 10px;

@@ -1,6 +1,14 @@
 import React, {Component} from 'react'
 import Swiper from 'react-id-swiper'
 import {Grid, Row, Col} from 'react-bootstrap';
+import ModalStructure from  '../Modal/Modal';
+
+const Description = {
+    buttonAdd: 'Add review',
+    buttonClose: 'Close'
+};
+
+const ClassName = 'reviews__modal';
 
 class Reviews extends Component {
     render() {
@@ -22,7 +30,7 @@ class Reviews extends Component {
                 <Grid>
                     <Row>
                         <Col xs={12}>
-                            <button className="button">Add review</button>
+                            <ModalStructure description={ Description } className={ ClassName }/>
                         </Col>
                     </Row>
                     <Row>
