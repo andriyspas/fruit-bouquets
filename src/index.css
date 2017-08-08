@@ -411,32 +411,48 @@ body {
   height: 160px;
   resize: none; }
 
-@media (min-width: 768px) {
-  .navbar {
-    padding: 4px 15px; } }
-
-.navbar-default {
-  background: transparent;
-  border: none; }
-  .navbar-default .navbar-brand {
-    color: #fff;
-    height: 100%; }
+.navbar {
+  box-shadow: 0 0 0 0 transparent;
+  transition: box-shadow 0.2s ease, background 0.2s ease; }
   @media (min-width: 768px) {
-    .navbar-default .navbar-nav > li:nth-child(-n+5) {
-      display: none; } }
-  .navbar-default .navbar-nav > li > a {
-    color: #fff; }
-
-.header__logo {
-  font-family: 'Comfortaa', cursive; }
-  .header__logo img {
-    width: 100%;
-    max-width: 56px;
-    display: inline-block; }
-  .header__logo div {
-    display: inline-block;
-    font-size: 18px;
-    margin-left: 10px; }
+    .navbar {
+      padding: 4px 15px; } }
+  .navbar-default {
+    background: transparent;
+    border: none; }
+    @media (min-width: 768px) {
+      .navbar-default .navbar-nav > li:nth-child(-n+5) {
+        display: none; } }
+    .navbar-default .navbar-nav > li > a {
+      color: #fff; }
+  .navbar-brand {
+    height: 100%;
+    font-family: 'Comfortaa', cursive;
+    transform: scale(1);
+    transition: padding 0.2s ease, transform 0.2s ease; }
+    .navbar-brand svg {
+      width: 56px;
+      height: 56px;
+      display: inline-block;
+      vertical-align: middle; }
+      .navbar-brand svg path {
+        transition: fill 0.2s ease; }
+    .navbar-brand div {
+      display: inline-block;
+      font-size: 18px;
+      margin-left: 10px;
+      color: #fff;
+      transition: color 0.2s ease; }
+  .navbar-minimized {
+    background: #fff;
+    box-shadow: 0 2px 10px 2px #e7e7e7; }
+    .navbar-minimized .navbar-brand {
+      padding: 0;
+      transform: scale(0.7); }
+      .navbar-minimized .navbar-brand svg path {
+        fill: #8727d7; }
+      .navbar-minimized .navbar-brand div {
+        color: #8727d7; }
 
 .home {
   background: rgba(0, 0, 0, 0.6);
@@ -532,6 +548,7 @@ video {
     display: none; }
   @media (min-width: 1200px) {
     .navigation__dot {
+      display: block;
       width: 16px;
       height: 16px;
       background: #fff;

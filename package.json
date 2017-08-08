@@ -24,7 +24,6 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-font": "^1.0.4"
+    "gulp-autoprefixer": "^4.0.0"
   }
 }
