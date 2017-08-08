@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Parallax, Background } from 'react-parallax';
+import React, {Component} from 'react';
+import {Parallax, Background} from 'react-parallax';
 
-class Sales  extends Component {
-    render () {
+class Sales extends Component {
+    render() {
         return (
             <div className="sales">
                 <Parallax strength={100}>
@@ -13,9 +13,11 @@ class Sales  extends Component {
                     <div className="sales__content">
 
                         <div className="sales__single">
-                            <div className="sales__round">
-                                <div>15</div>
-                                <div>% off</div>
+                            <div className="sales__round--wrapper">
+                                <div className="sales__round">
+                                    <div>15</div>
+                                    <div>% off</div>
+                                </div>
                             </div>
                             <div>
                                 <div className="sales__name">Lorem ipsum</div>
@@ -24,8 +26,11 @@ class Sales  extends Component {
                         </div>
 
                         <div className="sales__single">
-                            <div className="sales__round">
-                                <img src="" alt=""/>
+                            <div className="sales__round--wrapper">
+                                <div className="sales__round">
+                                    <div>15</div>
+                                    <div>% off</div>
+                                </div>
                             </div>
                             <div>
                                 <div className="sales__name">Lorem ipsum</div>
@@ -34,8 +39,11 @@ class Sales  extends Component {
                         </div>
 
                         <div className="sales__single">
-                            <div className="sales__round">
-                                <img src="" alt=""/>
+                            <div className="sales__round--wrapper">
+                                <div className="sales__round">
+                                    <div>15</div>
+                                    <div>% off</div>
+                                </div>
                             </div>
                             <div>
                                 <div className="sales__name">Lorem ipsum</div>

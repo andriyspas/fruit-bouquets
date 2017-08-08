@@ -30,19 +30,26 @@
     height: 160px;
     background-color: #fff;
     border-radius: 50%;
-    margin-bottom: 20px;
     color: #8727d7;
+
+    &--wrapper {
+      height: 140px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      border-bottom: 1px solid;
+    }
   }
 
   &__name {
-    font-size: 22px;
-    margin-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
     font-weight: 500;
+    text-transform: uppercase;
   }
 
   &__details {
     max-width: 200px;
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
