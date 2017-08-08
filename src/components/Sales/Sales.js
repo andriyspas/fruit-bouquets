@@ -15,8 +15,7 @@ class Sales extends Component {
                         <div className="sales__single">
                             <div className="sales__round--wrapper">
                                 <div className="sales__round">
-                                    <div>15</div>
-                                    <div>% off</div>
+                                    <img src={require('../../images/money-bag.svg')} alt=""/>
                                 </div>
                             </div>
                             <div>
@@ -28,8 +27,7 @@ class Sales extends Component {
                         <div className="sales__single">
                             <div className="sales__round--wrapper">
                                 <div className="sales__round">
-                                    <div>15</div>
-                                    <div>% off</div>
+                                    <img src={require('../../images/piggy-bank.svg')} alt=""/>
                                 </div>
                             </div>
                             <div>
@@ -41,8 +39,7 @@ class Sales extends Component {
                         <div className="sales__single">
                             <div className="sales__round--wrapper">
                                 <div className="sales__round">
-                                    <div>15</div>
-                                    <div>% off</div>
+                                    <img src={require('../../images/price-tag.svg')} alt=""/>
                                 </div>
                             </div>
                             <div>
