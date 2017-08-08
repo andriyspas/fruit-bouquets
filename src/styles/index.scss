@@ -14,10 +14,6 @@ body {
   width: 100%;
 }
 
-section{
-  position: relative;
-}
-
 @mixin triangle($border-color, $border-width, $top, $right, $bottom, $left) {
   content: '';
   display: block;

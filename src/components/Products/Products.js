@@ -18,6 +18,7 @@ class Products extends Component {
             paginationBulletRender: (swiper, index, className) => {
                 return '<span class="' + className + '">' + (index + 1) + '</span>';
             },
+            paginationType: 'fraction',
             slidesPerView: 3,
             slidesPerColumn: 3,
             breakpoints: {

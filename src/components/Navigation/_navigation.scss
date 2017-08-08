@@ -15,56 +15,67 @@
     }
   }
 
+  &__section-name,
   &__dot {
-    width: 16px;
-    height: 16px;
-    background: #fff;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    transform: scale(0.7);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-
-    &--border {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 40px;
-      height: 40px;
-      border: 1px solid #7522ba;
-      border-radius: 50%;
-      transform: scale(0);
-      transition: transform 0.2s ease;
-      top: -12px;
-      right: -12px;
-    }
-  }
-
-  &__section-name {
-    position: absolute;
-    right: 40px;
-    min-width: 60px;
-    text-align: right;
-    top: -3px;
     display: none;
-    color: #fff;
   }
-}
 
-.navigation__href--active,
-.navigation__href:hover {
-  .navigation {
-    &__dot--border {
-      transform: scale(1);
-    }
-
+  @media (min-width: 1200px) {
     &__dot {
-      transform: scale(1);
-      box-shadow: 0 0 20px 3px #7522ba;
+      width: 16px;
+      height: 16px;
+      background: #fff;
+      border-radius: 50%;
+      position: relative;
+      z-index: 1;
+      transform: scale(0.7);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &--border {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #7522ba;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.2s ease;
+        top: -12px;
+        right: -12px;
+      }
     }
 
     &__section-name {
-      display: block;
+      position: absolute;
+      right: 40px;
+      min-width: 60px;
+      text-align: right;
+      top: -3px;
+      display: none;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .navigation__href {
+    &--active,
+    &:hover {
+      .navigation {
+        &__dot--border {
+          transform: scale(1);
+        }
+
+        &__dot {
+          transform: scale(1);
+          box-shadow: 0 0 20px 3px #7522ba;
+        }
+
+        &__section-name {
+          display: block;
+        }
+      }
     }
   }
 }

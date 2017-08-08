@@ -6,6 +6,7 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^3.1.0",
     "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-dom": "^15.6.1",
@@ -14,8 +15,7 @@
     "react-intl": "^2.3.0",
     "react-parallax": "^1.4.4",
     "react-scripts": "1.0.10",
-    "react-scroll": "^1.5.4",
-    "react-scrollable-anchor": "^0.4.2"
+    "react-scroll": "^1.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,6 +24,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "gulp-autoprefixer": "^4.0.0"
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-font": "^1.0.4"
   }
 }

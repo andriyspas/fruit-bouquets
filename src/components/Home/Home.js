@@ -8,13 +8,11 @@ class Home extends Component {
             <section className="home">
                 <Video/>
 
-                <Grid fluid>
-                    <Row>
-                        <Col xs={12}>
-
-                        </Col>
-                    </Row>
-                </Grid>
+                <div className="home__logo">
+                    <img src={require('../../images/flower-bouquet.svg')} alt="" width='50px'/>
+                    <div className="home__name">bouquets of fruits</div>
+                    <div className="home__title">When an unknown printer. Took a galley of type</div>
+                </div>
             </section>
         )
     }

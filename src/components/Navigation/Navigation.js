@@ -26,7 +26,6 @@ class Navigation extends Component {
     };
 
     render() {
-
         return (
             <div className="navigation">
                 <Link
@@ -88,8 +87,8 @@ class Navigation extends Component {
                     <div className="navigation__section-name">Contact</div>
                 </Link>
 
-                {/*<a onClick={ this.scrollTo } className="navigation__href">*/}
-                    {/*<div className="navigation__dot"></div>*/}
+                {/*<a onClick={ this.scrollTop } className="navigation__href">*/}
+                    {/*Top*/}
                 {/*</a>*/}
 
             </div>

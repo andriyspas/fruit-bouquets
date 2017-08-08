@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Header, Home, Contact, Navigation, Reviews, Sales, Products } from './components/index'
+import React, {Component} from 'react'
+import {Header, Home, Contact, Navigation, Reviews, Sales, Products} from './components/index'
 
 import Scroll from 'react-scroll'
 import {IntlProvider} from 'react-intl';
@@ -27,7 +27,7 @@ class App extends Component {
         this.state = {
             locale: localeUa,
             messages: messagesUa
-        }
+        };
     }
 
     handleLanguageChange = (lan) => {
