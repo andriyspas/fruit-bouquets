@@ -607,6 +607,9 @@ video {
         line-height: 28px; } }
   .reviews__person {
     font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 22px; }
+  .reviews__date {
     margin-top: 20px; }
   .reviews__slider {
     margin: 0 auto;

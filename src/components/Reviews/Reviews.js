@@ -40,32 +40,37 @@ class Reviews extends Component {
                                 <Swiper { ...params }>
                                     <div>
                                         <div className="reviews__single">
-                                            <div className="reviews__description">{text}</div>
                                             <div className="reviews__person">Name Surname</div>
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__date">January 28, 2016</div>
                                         </div>
                                     </div>
                                     <div>
                                         <div className="reviews__single">
-                                            <div className="reviews__description">{text}</div>
                                             <div className="reviews__person">Name Surname</div>
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__date">January 28, 2016</div>
                                         </div>
                                     </div>
                                     <div>
                                         <div className="reviews__single">
-                                            <div className="reviews__description">{text}</div>
                                             <div className="reviews__person">Name Surname</div>
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__date">January 28, 2016</div>
                                         </div>
                                     </div>
                                     <div>
                                         <div className="reviews__single">
-                                            <div className="reviews__description">{text}</div>
                                             <div className="reviews__person">Name Surname</div>
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__date">January 28, 2016</div>
                                         </div>
                                     </div>
                                     <div>
                                         <div className="reviews__single">
-                                            <div className="reviews__description">{text}</div>
                                             <div className="reviews__person">Name Surname</div>
+                                            <div className="reviews__description">{text}</div>
+                                            <div className="reviews__date">January 28, 2016</div>
                                         </div>
                                     </div>
                                 </Swiper>
