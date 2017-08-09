@@ -1,5 +1,5 @@
 .reviews {
-  padding: 70px 0;
+  padding: 60px 0;
   position: relative;
   text-align: center;
 
@@ -22,9 +22,9 @@
   }
 
   &__person {
+    font-size: 22px;
     font-weight: 500;
     margin-bottom: 20px;
-    font-size: 22px;
   }
 
   &__date {

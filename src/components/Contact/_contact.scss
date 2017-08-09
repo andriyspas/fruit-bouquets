@@ -2,7 +2,7 @@
   position: relative;
 
   &__details {
-    padding: 70px 0;
+    padding: 50px 0;
   }
 
   &__title {
@@ -45,7 +45,7 @@
     position: relative;
 
     &:before {
-      @include triangle(transparent #fff transparent transparent, 0 100vw 6vh 0, -1px, 0, auto, auto);
+      @include triangle(transparent #fff transparent transparent, 0 100vw 4vh 0, 0, 0, auto, auto);
     }
   }
 

@@ -1,19 +1,19 @@
 .sales {
+  color: #fff;
   position: relative;
   text-align: center;
-  color: #fff;
 
   &:before {
-    @include triangle(transparent #fff transparent transparent, 0 100vw 6vh 0, -1px, auto, auto, 0);
+    @include triangle(transparent #fff transparent transparent, 0 100vw 4vh 0, 0, auto, auto, 0);
   }
 
   &:after {
-    @include triangle(transparent #fff transparent transparent, 6vh 100vw 0 0, auto, auto, -1px, 0);
+    @include triangle(transparent #fff transparent transparent, 4vh 100vw 0 0, auto, auto, 0, 0);
   }
 
   &__content {
-    padding: 70px 15px;
     background: rgba(0, 0, 0, 0.6);
+    padding: 70px 15px;
 
     @media (min-width: 768px) {
       padding: 100px 15px;
@@ -21,60 +21,73 @@
   }
 
   &__single {
-    position: relative;
-    display: inline-block;
-    margin: 20px;
+    margin: 0 auto;
     max-width: 160px;
+    width: 100%;
 
     @media (min-width: 768px) {
       max-width: 200px;
-      top: 20px;
     }
 
-    &:nth-of-type(even) {
+    &--wrapper {
+      display: inline-block;
+      margin: 20px 0;
+      position: relative;
+      width: 50%;
+
       @media (min-width: 768px) {
-        top: -20px;
+        top: 20px;
+        margin: 0;
+        width: 30%;
       }
-    }
 
-    &:nth-of-type(odd) {
-      .sales__round {
-        //transition: transform 0.2s 0.2s;
+      &:nth-of-type(even) {
+        @media (min-width: 768px) {
+          top: -20px;
+        }
+      }
+
+      &:nth-of-type(odd) {
+        .sales__round {
+          //transition: transform 0.2s 0.2s;
+        }
       }
     }
   }
 
   &__round {
-    display: inline-block;
-    width: 120px;
-    height: 120px;
     background-color: #fff;
     border-radius: 50%;
     color: #8727d7;
+    display: inline-block;
+    height: 120px;
+    width: 120px;
     //transition: transform 0.2s;
     //transform: translateY(100%);
 
-    @media (min-width: 768px) {
+    @media (min-width: 576px) {
       width: 160px;
       height: 160px;
     }
 
     &--wrapper {
+      border-bottom: 1px solid;
+      display: inline-block;
       height: 100px;
       overflow: hidden;
-      border-bottom: 1px solid;
+      width: 100%;
 
-      @media (min-width: 768px) {
+      @media (min-width: 576px) {
         height: 140px;
       }
     }
 
     img {
+      margin: 20px;
       max-width: 60px;
       position: relative;
-      margin: 20px;
 
-      @media (min-width: 768px) {
+      @media (min-width: 576px) {
         max-width: 80px;
         margin: 30px;
       }
@@ -83,8 +96,8 @@
 
   &__name {
     font-size: 16px;
-    margin: 10px 0;
     font-weight: 500;
+    margin: 10px 0;
     text-transform: uppercase;
 
     @media (min-width: 768px) {
@@ -101,13 +114,3 @@
     }
   }
 }
-//
-//.react-parallax-background-children {
-//  width: 100%;
-//  height: 100%;
-//
-//  img {
-//    width: 100%;
-//    height: 100%;
-//  }
-//}
