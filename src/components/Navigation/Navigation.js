@@ -43,6 +43,34 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
+                    to="products"
+                    activeClass="navigation__href--active"
+                    spy={ true }
+                    smooth={ true }
+                    duration={ 500 }
+                    onSetActive={ this.handleSetActive }
+                    className="navigation__href"
+                >
+                    <div className="navigation__dot"></div>
+                    <div className="navigation__dot--border"></div>
+                    <div className="navigation__section-name">Products</div>
+                </Link>
+
+                <Link
+                    to="about-us"
+                    activeClass="navigation__href--active"
+                    spy={ true }
+                    smooth={ true }
+                    duration={ 500 }
+                    onSetActive={ this.handleSetActive }
+                    className="navigation__href"
+                >
+                    <div className="navigation__dot"></div>
+                    <div className="navigation__dot--border"></div>
+                    <div className="navigation__section-name">About Us</div>
+                </Link>
+
+                <Link
                     to="reviews"
                     activeClass="navigation__href--active"
                     spy={ true }
@@ -58,18 +86,17 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
-                    to="sale"
+                    to="sales"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
                     duration={ 500 }
-                    offset={ this.handelHeightViewport() }
                     className="navigation__href"
                     onSetActive={ this.handleSetActive }
                 >
                     <div className="navigation__dot"></div>
                     <div className="navigation__dot--border"></div>
-                    <div className="navigation__section-name">Sale</div>
+                    <div className="navigation__section-name">Sales</div>
                 </Link>
 
                 <Link
@@ -78,7 +105,6 @@ class Navigation extends Component {
                     spy={ true }
                     smooth={ true }
                     duration={ 500 }
-                    offset={ this.handelHeightViewport() }
                     className="navigation__href"
                     onSetActive={ this.handleSetActive }
                 >

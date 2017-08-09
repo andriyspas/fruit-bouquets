@@ -63,7 +63,7 @@ class App extends Component {
                         <Products/>
                     </Element>
 
-                    <Element name="sale">
+                    <Element name="about-us">
                         <AboutUs/>
                     </Element>
 
@@ -71,7 +71,7 @@ class App extends Component {
                         <Reviews/>
                     </Element>
 
-                    <Element name="sale">
+                    <Element name="sales">
                         <Sales/>
                     </Element>
 
