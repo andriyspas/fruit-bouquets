@@ -1,4 +1,5 @@
-.sales {
+.sales,
+.about-us {
   color: #fff;
   position: relative;
   text-align: center;
@@ -31,9 +32,13 @@
 
     &--wrapper {
       display: inline-block;
-      margin: 20px 0;
+      margin: 20px;
       position: relative;
-      width: 50%;
+
+      @media (min-width: 576px) {
+        margin: 20px 4%;
+        width:  calc(50% - 8%);
+      }
 
       @media (min-width: 768px) {
         top: 20px;

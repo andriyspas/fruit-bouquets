@@ -5,7 +5,8 @@ import Navigation from './Navigation/Navigation';
 import Reviews from './Reviews/Reviews';
 import Sales from './Sales/Sales';
 import Products from './Products/Products';
+import AboutUs from './AboutUs/AboutUs';
 
 export {
-    Header, Home, Contact, Navigation, Reviews, Sales, Products
+    Header, Home, Contact, Navigation, Reviews, Sales, Products, AboutUs
 }

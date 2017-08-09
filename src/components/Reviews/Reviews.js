@@ -31,7 +31,7 @@ class Reviews extends Component {
                 <Grid>
                     <Row>
                         <Col xs={12}>
-                            <ModalStructure description={ Description } className={ ClassName } modalBody={ ModalWindow }/>
+                            <div className="reviews__title">Testimonials</div>
                         </Col>
                     </Row>
                     <Row>
@@ -75,6 +75,11 @@ class Reviews extends Component {
                                     </div>
                                 </Swiper>
                             </div>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12}>
+                            <ModalStructure description={ Description } className={ ClassName } modalBody={ ModalWindow }/>
                         </Col>
                     </Row>
                 </Grid>

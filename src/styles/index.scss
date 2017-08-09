@@ -46,6 +46,23 @@ body {
   }
 }
 
+@mixin title($background) {
+  line-height: 46px;
+  font-size: 38px;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 40px;
+
+  &:after {
+    content: '';
+    display: block;
+    height:2px;
+    background: $background;
+    width: calc(100% - 60px);
+    margin: 6px auto 0;
+  }
+}
+
 
 .form {
   .form-control {

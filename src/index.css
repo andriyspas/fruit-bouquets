@@ -653,6 +653,19 @@ video {
   padding: 60px 0;
   position: relative;
   text-align: center; }
+  .reviews__title {
+    line-height: 46px;
+    font-size: 38px;
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 40px; }
+    .reviews__title:after {
+      content: '';
+      display: block;
+      height: 2px;
+      background: #000;
+      width: calc(100% - 60px);
+      margin: 6px auto 0; }
   .reviews__description {
     font-size: 14px;
     font-style: italic;
@@ -712,14 +725,16 @@ video {
           height: 70px; } }
   .reviews .button {
     font-size: 16px;
-    margin-bottom: 40px;
+    margin-top: 40px;
     padding: 12px 60px; }
 
-.sales {
+.sales,
+.about-us {
   color: #fff;
   position: relative;
   text-align: center; }
-  .sales:before {
+  .sales:before,
+  .about-us:before {
     content: '';
     display: block;
     width: 0;
@@ -733,7 +748,8 @@ video {
     bottom: auto;
     left: 0;
     z-index: 1; }
-  .sales:after {
+  .sales:after,
+  .about-us:after {
     content: '';
     display: block;
     width: 0;
@@ -747,33 +763,45 @@ video {
     bottom: 0;
     left: 0;
     z-index: 1; }
-  .sales__content {
+  .sales__content,
+  .about-us__content {
     background: rgba(0, 0, 0, 0.6);
     padding: 70px 15px; }
     @media (min-width: 768px) {
-      .sales__content {
+      .sales__content,
+      .about-us__content {
         padding: 100px 15px; } }
-  .sales__single {
+  .sales__single,
+  .about-us__single {
     margin: 0 auto;
     max-width: 160px;
     width: 100%; }
     @media (min-width: 768px) {
-      .sales__single {
+      .sales__single,
+      .about-us__single {
         max-width: 200px; } }
-    .sales__single--wrapper {
+    .sales__single--wrapper,
+    .about-us__single--wrapper {
       display: inline-block;
-      margin: 20px 0;
-      position: relative;
-      width: 50%; }
+      margin: 20px;
+      position: relative; }
+      @media (min-width: 576px) {
+        .sales__single--wrapper,
+        .about-us__single--wrapper {
+          margin: 20px 4%;
+          width: calc(50% - 8%); } }
       @media (min-width: 768px) {
-        .sales__single--wrapper {
+        .sales__single--wrapper,
+        .about-us__single--wrapper {
           top: 20px;
           margin: 0;
           width: 30%; } }
       @media (min-width: 768px) {
-        .sales__single--wrapper:nth-of-type(even) {
+        .sales__single--wrapper:nth-of-type(even),
+        .about-us__single--wrapper:nth-of-type(even) {
           top: -20px; } }
-  .sales__round {
+  .sales__round,
+  .about-us__round {
     background-color: #fff;
     border-radius: 50%;
     color: #8727d7;
@@ -781,39 +809,48 @@ video {
     height: 120px;
     width: 120px; }
     @media (min-width: 576px) {
-      .sales__round {
+      .sales__round,
+      .about-us__round {
         width: 160px;
         height: 160px; } }
-    .sales__round--wrapper {
+    .sales__round--wrapper,
+    .about-us__round--wrapper {
       border-bottom: 1px solid;
       display: inline-block;
       height: 100px;
       overflow: hidden;
       width: 100%; }
       @media (min-width: 576px) {
-        .sales__round--wrapper {
+        .sales__round--wrapper,
+        .about-us__round--wrapper {
           height: 140px; } }
-    .sales__round img {
+    .sales__round img,
+    .about-us__round img {
       margin: 20px;
       max-width: 60px;
       position: relative; }
       @media (min-width: 576px) {
-        .sales__round img {
+        .sales__round img,
+        .about-us__round img {
           max-width: 80px;
           margin: 30px; } }
-  .sales__name {
+  .sales__name,
+  .about-us__name {
     font-size: 16px;
     font-weight: 500;
     margin: 10px 0;
     text-transform: uppercase; }
     @media (min-width: 768px) {
-      .sales__name {
+      .sales__name,
+      .about-us__name {
         font-size: 18px;
         margin: 20px 0; } }
-  .sales__details {
+  .sales__details,
+  .about-us__details {
     font-size: 14px; }
     @media (min-width: 768px) {
-      .sales__details {
+      .sales__details,
+      .about-us__details {
         font-size: 18px; } }
 
 .products {
@@ -859,6 +896,27 @@ video {
     position: relative;
     left: 50%;
     transform: translateX(-50%); }
+
+.about-us__title {
+  line-height: 46px;
+  font-size: 38px;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 40px; }
+  .about-us__title:after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #fff;
+    width: calc(100% - 60px);
+    margin: 6px auto 0; }
+
+.about-us__description {
+  margin: 0 auto 80px;
+  max-width: 768px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 26px; }
 
 .button {
   background-color: #8727d7;

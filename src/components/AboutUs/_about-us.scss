@@ -1,0 +1,13 @@
+.about-us {
+  &__title {
+    @include title(#fff);
+  }
+
+  &__description {
+    margin: 0 auto 80px;
+    max-width: 768px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
