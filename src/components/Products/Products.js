@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import Swiper from 'react-id-swiper'
 import { Grid, Row, Col } from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
+import ModalBody from './ModalBody/ModalBody'
 
 const Description = {
     buttonAdd: 'View details',
     buttonClose: 'Close'
 };
-
 const ClassName = 'products__tile--plug';
+const ModalWindow = <ModalBody/>;
 
 class Products extends Component {
     render() {
@@ -42,7 +43,7 @@ class Products extends Component {
                                 <div>
                                     <div className="products__tile">
                                         <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
+                                        <ModalStructure description={ Description } className={ ClassName } modalBody={ ModalWindow }/>
                                     </div>
                                 </div>
                                 <div>

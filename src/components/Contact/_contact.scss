@@ -1,11 +1,18 @@
 .contact {
   position: relative;
+  text-align: center;
+  padding-top: 50px;
 
   &__details {
-    padding: 50px 0;
+    text-align: left;
+    padding-bottom: 50px;
   }
 
   &__title {
+    @include title(#000)
+  }
+
+  &__subtitle {
     font-size: 26px;
     line-height: 34px;
     margin-bottom: 10px;

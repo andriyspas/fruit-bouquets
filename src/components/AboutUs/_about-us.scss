@@ -1,7 +1,28 @@
 .about-us {
-  &__title {
-    @include title(#fff);
+  color: #fff;
+  position: relative;
+  text-align: center;
+
+  &:before {
+    @include triangle(transparent #fff transparent transparent, 0 100vw 4vh 0, 0, auto, auto, 0);
   }
+
+  &:after {
+    @include triangle(transparent #fff transparent transparent, 4vh 100vw 0 0, auto, auto, 0, 0);
+  }
+
+  &__content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 70px 15px 90px;
+
+    @media (min-width: 768px) {
+      padding: 100px 15px 120px;
+    }
+  }
+
+  &__title {
+      @include title(#fff);
+    }
 
   &__description {
     margin: 0 auto 80px;

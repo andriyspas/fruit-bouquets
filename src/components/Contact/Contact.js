@@ -20,11 +20,17 @@ class Contact extends Component {
         return (
             <section className="contact">
                 <Grid>
+                    <Row>
+                        <Col xs={12}>
+                            <div className="contact__title">Contact</div>
+                        </Col>
+                    </Row>
+
                     <Row bsClass="row contact__details">
                         <Col xs={12}>
                             <Row>
                                 <Col xs={12} sm={6}>
-                                    <div className="contact__title">Contact us</div>
+                                    <div className="contact__subtitle">Contact us</div>
 
                                     <div className="contact__information">
                                         <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </span>
@@ -65,7 +71,7 @@ class Contact extends Component {
                                 </Col>
 
                                 <Col xs={12} sm={6}>
-                                    <div className="contact__title">Contact Form</div>
+                                    <div className="contact__subtitle">Contact Form</div>
 
                                     <Form autoComplete="off" className="form contact__form">
                                         <Row>

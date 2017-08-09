@@ -1,5 +1,4 @@
-.sales,
-.about-us {
+.sales {
   color: #fff;
   position: relative;
   text-align: center;
@@ -14,108 +13,15 @@
 
   &__content {
     background: rgba(0, 0, 0, 0.6);
-    padding: 70px 15px;
+    padding: 70px 15px 90px;
 
     @media (min-width: 768px) {
-      padding: 100px 15px;
+      padding: 100px 15px 120px;
     }
   }
 
-  &__single {
-    margin: 0 auto;
-    max-width: 160px;
-    width: 100%;
-
-    @media (min-width: 768px) {
-      max-width: 200px;
-    }
-
-    &--wrapper {
-      display: inline-block;
-      margin: 20px;
-      position: relative;
-
-      @media (min-width: 576px) {
-        margin: 20px 4%;
-        width:  calc(50% - 8%);
-      }
-
-      @media (min-width: 768px) {
-        top: 20px;
-        margin: 0;
-        width: 30%;
-      }
-
-      &:nth-of-type(even) {
-        @media (min-width: 768px) {
-          top: -20px;
-        }
-      }
-
-      &:nth-of-type(odd) {
-        .sales__round {
-          //transition: transform 0.2s 0.2s;
-        }
-      }
-    }
-  }
-
-  &__round {
-    background-color: #fff;
-    border-radius: 50%;
-    color: #8727d7;
-    display: inline-block;
-    height: 120px;
-    width: 120px;
-    //transition: transform 0.2s;
-    //transform: translateY(100%);
-
-    @media (min-width: 576px) {
-      width: 160px;
-      height: 160px;
-    }
-
-    &--wrapper {
-      border-bottom: 1px solid;
-      display: inline-block;
-      height: 100px;
-      overflow: hidden;
-      width: 100%;
-
-      @media (min-width: 576px) {
-        height: 140px;
-      }
-    }
-
-    img {
-      margin: 20px;
-      max-width: 60px;
-      position: relative;
-
-      @media (min-width: 576px) {
-        max-width: 80px;
-        margin: 30px;
-      }
-    }
-  }
-
-  &__name {
-    font-size: 16px;
-    font-weight: 500;
-    margin: 10px 0;
-    text-transform: uppercase;
-
-    @media (min-width: 768px) {
-      font-size: 18px;
-      margin: 20px 0;
-    }
-  }
-
-  &__details {
-    font-size: 14px;
-
-    @media (min-width: 768px) {
-      font-size: 18px;
-    }
+  &__title {
+    @include title(#fff);
+    margin-bottom: 60px;
   }
 }

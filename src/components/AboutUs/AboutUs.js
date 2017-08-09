@@ -27,52 +27,52 @@ class AboutUs extends Component {
 
                             <Row>
                                 <Col xs={12}>
-                                    <div className="about-us__single--wrapper">
-                                        <div className="about-us__single">
-                                            <div className="about-us__round--wrapper">
-                                                <div className="about-us__round">
+                                    <div className="round-item__wrapper">
+                                        <div className="round-item">
+                                            <div className="round-item__image--wrapper">
+                                                <div className="round-item__image">
                                                     <img src={require('../../images/money-bag.svg')} alt=""/>
                                                 </div>
                                             </div>
 
-                                            <div className="about-us__description">
-                                                <div className="about-us__name">24/7 Support</div>
-                                                <div className="about-us__details">Lorem ipsum dolor sit amet,
-                                                    consectetur adipisicing elit, sed do eiusmod
+                                            <div className="round-item__description">
+                                                <div className="round-item__name">24/7 Support</div>
+                                                <div className="round-item__details">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="about-us__single--wrapper">
-                                        <div className="about-us__single">
-                                            <div className="about-us__round--wrapper">
-                                                <div className="about-us__round">
-                                                    <img src={require('../../images/piggy-bank.svg')} alt=""/>
+                                    <div className="round-item__wrapper">
+                                        <div className="round-item">
+                                            <div className="round-item__image--wrapper">
+                                                <div className="round-item__image">
+                                                    <img src={require('../../images/idea.svg')} alt=""/>
                                                 </div>
                                             </div>
 
-                                            <div className="about-us__description">
-                                                <div className="about-us__name">Great Ideas</div>
-                                                <div className="about-us__details">Lorem ipsum dolor sit amet,
-                                                    consectetur adipisicing elit, sed do eiusmod
+                                            <div className="round-item__description">
+                                                <div className="round-item__name">24/7 Support</div>
+                                                <div className="round-item__details">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div className="about-us__single--wrapper">
-                                        <div className="about-us__single">
-                                            <div className="about-us__round--wrapper">
-                                                <div className="about-us__round">
-                                                    <img src={require('../../images/price-tag.svg')} alt=""/>
+                                    <div className="round-item__wrapper">
+                                        <div className="round-item">
+                                            <div className="round-item__image--wrapper">
+                                                <div className="round-item__image">
+                                                    <img src={require('../../images/money-bag.svg')} alt=""/>
                                                 </div>
                                             </div>
 
-                                            <div className="about-us__description">
-                                                <div className="about-us__name">Unique Design</div>
-                                                <div className="about-us__details">Lorem ipsum dolor sit amet,
-                                                    consectetur adipisicing elit, sed do eiusmod /div>
+                                            <div className="round-item__description">
+                                                <div className="round-item__name">24/7 Support</div>
+                                                <div className="round-item__details">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 </div>
                                             </div>
                                         </div>
