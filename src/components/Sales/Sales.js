@@ -5,7 +5,7 @@ class Sales extends Component {
     render() {
         return (
             <div className="sales">
-                <Parallax strength={100} bgHeight='100%'>
+                <Parallax strength={300} bgHeight='100%'>
                     <Background>
                         <img src={require('../../images/bouquet.jpg')}/>
                     </Background>

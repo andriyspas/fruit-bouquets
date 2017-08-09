@@ -740,40 +740,63 @@ video {
     left: 0;
     z-index: 1; }
   .sales__content {
-    padding: 100px 0;
+    padding: 70px 15px;
     background: rgba(0, 0, 0, 0.6); }
+    @media (min-width: 768px) {
+      .sales__content {
+        padding: 100px 15px; } }
   .sales__single {
-    display: inline-block; }
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    max-width: 160px; }
+    @media (min-width: 768px) {
+      .sales__single {
+        max-width: 200px;
+        top: 20px; } }
     @media (min-width: 768px) {
       .sales__single:nth-of-type(even) {
-        top: 30%; } }
-    .sales__single:nth-of-type(odd) .sales__round {
-      transition: transform 0.2s 0.2s; }
+        top: -20px; } }
   .sales__round {
     display: inline-block;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
     background-color: #fff;
     border-radius: 50%;
-    color: #8727d7;
-    transition: transform 0.2s; }
+    color: #8727d7; }
+    @media (min-width: 768px) {
+      .sales__round {
+        width: 160px;
+        height: 160px; } }
     .sales__round--wrapper {
-      height: 140px;
-      margin-bottom: 20px;
+      height: 100px;
       overflow: hidden;
       border-bottom: 1px solid; }
+      @media (min-width: 768px) {
+        .sales__round--wrapper {
+          height: 140px; } }
     .sales__round img {
-      max-width: 80px;
+      max-width: 60px;
       position: relative;
-      margin: 30px; }
+      margin: 20px; }
+      @media (min-width: 768px) {
+        .sales__round img {
+          max-width: 80px;
+          margin: 30px; } }
   .sales__name {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin: 10px 0;
     font-weight: 500;
     text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .sales__name {
+        font-size: 18px;
+        margin: 20px 0; } }
   .sales__details {
-    max-width: 200px;
-    font-size: 18px; }
+    font-size: 14px; }
+    @media (min-width: 768px) {
+      .sales__details {
+        font-size: 18px; } }
 
 .products {
   padding: 40px 0;
