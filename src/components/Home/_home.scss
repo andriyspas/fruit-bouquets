@@ -12,24 +12,37 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    padding: 15px;
 
     img {
-      width: 200px;
+      width: 120px;
+
+      @media (min-width: 576px) {
+        width: 200px;
+      }
     }
   }
 
   &__name {
     margin-top: 20px;
-    font-size: 50px;
-    line-height: 50px;
-    text-align: center;
+    font-size: 30px;
+    line-height: 38px;
+
+    @media (min-width: 576px) {
+      font-size: 50px;
+      line-height: 50px;
+    }
   }
 
   &__title {
     margin-top: 20px;
-    font-size: 24px;
-    line-height: 30px;
-    text-align: center;
+    font-size: 18px;
+    line-height: 26px;
+
+    @media (min-width: 576px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
   }
 }
 
