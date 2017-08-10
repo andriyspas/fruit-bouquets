@@ -9,7 +9,9 @@ class ModalBody extends Component {
             paginationClickable: true,
             paginationBulletRender: (swiper, index, className) => {
                 return '<span class="' + className + '"><img src="' + this.props.productsDetails.gallery[index] + '" alt="" /></span>';
-            }
+            },
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
         };
 
         return (
@@ -17,7 +19,7 @@ class ModalBody extends Component {
                 <Swiper { ...params }>
                     {
                         this.props.productsDetails.gallery.map((image, index) => (
-                            <div style={{height: '200px'}} key={ index }>
+                            <div key={ index }>
                                 <img src={ image } alt=""/>
                             </div>
                         ))

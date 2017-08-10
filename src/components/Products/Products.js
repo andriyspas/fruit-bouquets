@@ -3,7 +3,7 @@ import Swiper from 'react-id-swiper'
 import {Grid, Row, Col} from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
-import ProductsData from '../../constants/Products';
+import ProductsData from '../../constants/ProductsData';
 
 const Description = {
     buttonAdd: 'View details',
@@ -20,6 +20,7 @@ class Products extends Component {
                 return '<span class="' + className + '">' + (index + 1) + '</span>';
             },
             paginationType: 'fraction',
+            spaceBetween: 15,
             slidesPerView: 3,
             slidesPerColumn: 3,
             breakpoints: {
@@ -38,13 +39,20 @@ class Products extends Component {
             <section className="products">
                 <Grid>
                     <Row>
+                        <Col xs={12}>
+                            <div className="products__title">Our Production</div>
+                        </Col>
+                    </Row>
+                    <Row>
                         <Col sm={12}>
                             <Swiper { ...params }>
                                 {
                                     ProductsData.map((item, index) => (
                                         <div key={ index }>
                                             <div className="products__tile">
-                                                <img src={ item.image } alt=""/>
+                                                <div className="products__thumb--wrapper">
+                                                    <div className="products__thumb" style={{backgroundImage: 'url(' + item.image + ')'}}></div>
+                                                </div>
 
                                                 <ModalStructure
                                                     description={ Description }
