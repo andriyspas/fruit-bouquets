@@ -28,7 +28,7 @@ class Products extends Component {
                     slidesPerView: 2,
                     slidesPerColumn: 2,
                 },
-                768: {
+                767: {
                     slidesPerView: 1,
                     slidesPerColumn: 2,
                 },

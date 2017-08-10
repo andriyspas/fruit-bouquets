@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Swiper from 'react-id-swiper';
-import { Modal } from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 
 class ModalBody extends Component {
     constructor(props) {
@@ -16,8 +16,6 @@ class ModalBody extends Component {
 
     render() {
         const params = {
-            pagination: '.swiper-pagination',
-            paginationClickable: true,
             runCallbacksOnInit: true,
             onInit: swiper => {
                 this._swiper = swiper;
@@ -29,10 +27,22 @@ class ModalBody extends Component {
             prevButton: '.swiper-button-prev',
             spaceBetween: 10,
             centeredSlides: true,
-            slidesPerView: 4,
+            slidesPerView: 'auto',
             touchRatio: 0.2,
             slideToClickedSlide: true,
-            runCallbacksOnInit: true,
+            // slideToClickedSlide: true,
+            // runCallbacksOnInit: true,
+            // breakpoints: {
+            //     1200: {
+            //         slidesPerView: 4,
+            //     },
+            //     992: {
+            //         slidesPerView: 3,
+            //     },
+            //     576: {
+            //         slidesPerView: 2,
+            //     },
+            // },
             onInit: swiper => {
                 this._swiperThumbs = swiper;
                 this.handleThumbsInit();
@@ -41,25 +51,29 @@ class ModalBody extends Component {
 
         return (
             <Modal.Body>
-                <Swiper { ...params }>
-                    {
-                        this.props.productsDetails.gallery.map((image, index) => (
-                            <div key={ index }>
-                                <img src={ image } alt=""/>
-                            </div>
-                        ))
-                    }
-                </Swiper>
+                <div className="swiper-product">
+                    <Swiper { ...params }>
+                        {
+                            this.props.productsDetails.gallery.map((image, index) => (
+                                <div key={ index }>
+                                    <img src={ image } alt=""/>
+                                </div>
+                            ))
+                        }
+                    </Swiper>
+                </div>
 
-                <Swiper { ...paramsThumbs }>
-                    {
-                        this.props.productsDetails.gallery.map((image, index) => (
-                            <div key={ index }>
-                                <img src={ image } alt=""/>
-                            </div>
-                        ))
-                    }
-                </Swiper>
+                <div className="swiper-thumbs">
+                    <Swiper { ...paramsThumbs }>
+                        {
+                            this.props.productsDetails.gallery.map((image, index) => (
+                                <div key={ index }>
+                                    <img src={ image } alt=""/>
+                                </div>
+                            ))
+                        }
+                    </Swiper>
+                </div>
 
                 <div className="products__details">
                     <div>

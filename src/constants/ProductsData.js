@@ -4,6 +4,12 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
