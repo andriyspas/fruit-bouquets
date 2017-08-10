@@ -969,6 +969,7 @@ video {
     height: 100px;
     padding: 0 40px; }
   .swiper-thumbs .swiper-slide {
+    cursor: pointer;
     height: 100%;
     opacity: 0.5;
     text-align: center;
