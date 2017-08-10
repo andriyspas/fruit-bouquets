@@ -51,6 +51,14 @@ class Contact extends Component {
             { method: 'GET' })
             .then((res) => {
                 alert(res.status);
+
+                this.setState({
+                    name: '',
+                    surname: '',
+                    phone: '',
+                    email: '',
+                    message: ''
+                })
             });
 
         e.preventDefault()

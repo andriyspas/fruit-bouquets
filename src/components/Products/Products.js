@@ -3,32 +3,7 @@ import Swiper from 'react-id-swiper'
 import {Grid, Row, Col} from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
-
-const slides = [
-    {
-        image: 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-        modal: {
-            gallery: [
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90'
-            ],
-            title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi'
-        }
-    },
-    {
-        image: 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-        modal: {
-            gallery: [
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90',
-                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90'
-            ],
-            title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
-        }
-    },
-];
+import ProductsData from '../../constants/Products';
 
 const Description = {
     buttonAdd: 'View details',
@@ -66,15 +41,15 @@ class Products extends Component {
                         <Col sm={12}>
                             <Swiper { ...params }>
                                 {
-                                    slides.map((slide, index) => (
+                                    ProductsData.map((item, index) => (
                                         <div key={ index }>
                                             <div className="products__tile">
-                                                <img src={ slide.image } alt=""/>
+                                                <img src={ item.image } alt=""/>
 
                                                 <ModalStructure
                                                     description={ Description }
                                                     className={ ClassName }
-                                                    modalBody={ <ModalBody dataModal={ slide.modal }/> }
+                                                    modalBody={ <ModalBody productsDetails={ item.modal }/> }
                                                 />
                                             </div>
                                         </div>
