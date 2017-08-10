@@ -24,16 +24,14 @@ class Notification extends Component {
             return;
         }
 
-        console.log(nextProps);
-
         if (nextProps.success === true) {
-            let message = 'success';
+            let message = 'Your message has been successfully sent. We will contact you very soon!';
             this.addNotification('success', message);
         }
 
         if (nextProps.error === true) {
             let message = 'error';
-            this.addNotification('error', message);
+            this.addNotification('Failed to send your message. Please try later or contact administrator by other way.', message);
         }
     };
 
