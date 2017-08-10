@@ -30,19 +30,6 @@ class ModalBody extends Component {
             slidesPerView: 'auto',
             touchRatio: 0.2,
             slideToClickedSlide: true,
-            // slideToClickedSlide: true,
-            // runCallbacksOnInit: true,
-            // breakpoints: {
-            //     1200: {
-            //         slidesPerView: 4,
-            //     },
-            //     992: {
-            //         slidesPerView: 3,
-            //     },
-            //     576: {
-            //         slidesPerView: 2,
-            //     },
-            // },
             onInit: swiper => {
                 this._swiperThumbs = swiper;
                 this.handleThumbsInit();

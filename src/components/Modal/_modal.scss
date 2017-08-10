@@ -1,3 +1,10 @@
-.modal-header {
-  border: none;
+.modal {
+  &-header {
+    border: none;
+    padding: 30px;
+  }
+
+  &-body {
+    padding: 0 30px 30px 30px;
+  }
 }

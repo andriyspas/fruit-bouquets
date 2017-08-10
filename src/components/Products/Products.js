@@ -5,11 +5,9 @@ import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
 import ProductsData from '../../constants/ProductsData';
 
-const Description = {
-    buttonAdd: 'View details',
-    buttonClose: 'Close'
-};
+const Description = { openModal: 'View details' };
 const ClassName = 'products__tile--plug';
+const size = 'large';
 
 class Products extends Component {
     render() {
@@ -57,6 +55,7 @@ class Products extends Component {
                                                 <ModalStructure
                                                     description={ Description }
                                                     className={ ClassName }
+                                                    size={ size }
                                                     modalBody={ <ModalBody productsDetails={ item.modal }/> }
                                                 />
                                             </div>

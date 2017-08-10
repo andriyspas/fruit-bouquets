@@ -7,7 +7,7 @@ class ModalBody extends Component {
             <Modal.Body className="clearfix form">
                 <Form autoComplete="off">
                     <Row>
-                        <Col xs={6}>
+                        <Col xs={12}>
                             <FormGroup controlId="nameText">
                                 <FormControl
                                     type="text"
@@ -16,7 +16,7 @@ class ModalBody extends Component {
                             </FormGroup>
                         </Col>
 
-                        <Col xs={6}>
+                        <Col xs={12}>
                             <FormGroup controlId="cityText">
 
                                 <FormControl
@@ -40,7 +40,7 @@ class ModalBody extends Component {
                         className="button pull-right"
                         type="submit"
                     >
-                        { this.props.buttonClose }
+                        { this.props.addReview }
                     </button>
                 </Form>
             </Modal.Body>

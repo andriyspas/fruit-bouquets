@@ -24,7 +24,7 @@ class ModalStructure extends Component {
                 <Modal
                     show={ this.state.show }
                     onHide={ this.close }
-                    bsSize="large"
+                    bsSize={ this.props.size }
                     aria-labelledby="contained-modal-title-lg"
                 >
 
@@ -36,7 +36,7 @@ class ModalStructure extends Component {
 
                 </Modal>
 
-                <button className="button" onClick={ this.open }>{ this.props.description.buttonAdd }</button>
+                <button className="button" onClick={ this.open }>{ this.props.description.openModal }</button>
             </div>
         );
     }

@@ -5,11 +5,11 @@ import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
 
 const Description = {
-    buttonAdd: 'Add review',
-    buttonClose: 'Close'
+    addReview: 'Submit review',
+    openModal: 'Add review',
 };
 const ClassName = 'reviews__modal';
-const ModalWindow = <ModalBody buttonClose={ Description.buttonClose }/>;
+const ModalWindow = <ModalBody addReview={ Description.addReview }/>;
 
 class Reviews extends Component {
     render() {
