@@ -1,20 +1,60 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Map from './Map/Map';
-import { Grid, Row, Col, Form, FormGroup, FormControl } from 'react-bootstrap';
+import {Grid, Row, Col, Form, FormGroup, FormControl} from 'react-bootstrap';
 
 class Contact extends Component {
     constructor() {
         super();
 
         this.state = {
+            name: '',
+            surname: '',
+            phone: '',
+            email: '',
+            message: '',
             visibility: false
         }
     }
+
+    handleNameChange = (event) => {
+        this.setState({name: event.target.value})
+    };
+
+    handleSurnameChange = (event) => {
+        this.setState({surname: event.target.value})
+    };
+
+    handlePhoneChange = (event) => {
+        this.setState({phone: event.target.value})
+    };
+
+    handleEmailChange = (event) => {
+        this.setState({email: event.target.value})
+    };
+
+    handleMessageChange = (event) => {
+        this.setState({message: event.target.value})
+    };
 
     // toggleClass = () => {
     //     const currentState = this.state.visibility;
     //     this.setState({ visibility: !currentState });
     // };
+
+    sendEmail = (e) => {
+        fetch('https://script.google.com/macros/s/AKfycbyJHc7kems_1GwmiIXGZhirbteTfDtSZzSyELx6BfCbbfj7h-Y/exec?' +
+            'name=' + this.state.name +
+            '&mail=' + this.state.email +
+            '&message=' + this.state.message +
+            '&surname=' + this.state.surname +
+            '&phone=' + this.state.phone,
+            { method: 'GET' })
+            .then((res) => {
+                alert(res.status);
+            });
+
+        e.preventDefault()
+    };
 
     render() {
         return (
@@ -73,13 +113,15 @@ class Contact extends Component {
                                 <Col xs={12} sm={6}>
                                     <div className="contact__subtitle">Contact Form</div>
 
-                                    <Form autoComplete="off" className="form contact__form">
+                                    <Form autoComplete="off" className="form contact__form" onSubmit={ this.sendEmail }>
                                         <Row>
                                             <Col xs={12} md={6}>
                                                 <FormGroup controlId="nameText">
                                                     <FormControl
                                                         type="text"
                                                         placeholder="Name"
+                                                        value={ this.state.name }
+                                                        onChange={ this.handleNameChange }
                                                     />
                                                 </FormGroup>
                                             </Col>
@@ -89,6 +131,8 @@ class Contact extends Component {
                                                     <FormControl
                                                         type="text"
                                                         placeholder="Surname"
+                                                        value={ this.state.surname }
+                                                        onChange={ this.handleSurnameChange }
                                                     />
                                                 </FormGroup>
 
@@ -99,6 +143,8 @@ class Contact extends Component {
                                                     <FormControl
                                                         type="text"
                                                         placeholder="Phone"
+                                                        value={ this.state.phone }
+                                                        onChange={ this.handlePhoneChange }
                                                     />
                                                 </FormGroup>
                                             </Col>
@@ -108,6 +154,8 @@ class Contact extends Component {
                                                     <FormControl
                                                         type="email"
                                                         placeholder="Email"
+                                                        value={ this.state.email }
+                                                        onChange={ this.handleEmailChange }
                                                     />
                                                 </FormGroup>
                                             </Col>
@@ -118,12 +166,14 @@ class Contact extends Component {
                                                         componentClass="textarea"
                                                         maxLength="1000"
                                                         placeholder="Message"
+                                                        value={ this.state.message }
+                                                        onChange={ this.handleMessageChange }
                                                     />
                                                 </FormGroup>
                                             </Col>
                                         </Row>
 
-                                        <Row className={ this.state.visibility ? 'hide__button': null } >
+                                        <Row className={ this.state.visibility ? 'hide__button' : null }>
                                             <Col xs={12}>
                                                 <button
                                                     className="button pull-right"

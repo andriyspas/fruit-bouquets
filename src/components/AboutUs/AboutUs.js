@@ -36,7 +36,7 @@ class AboutUs extends Component {
                                             </div>
 
                                             <div className="round-item__description">
-                                                <div className="round-item__name">24/7 Support</div>
+                                                <div className="round-item__name">Unique Design</div>
                                                 <div className="round-item__details">
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 </div>
@@ -53,7 +53,7 @@ class AboutUs extends Component {
                                             </div>
 
                                             <div className="round-item__description">
-                                                <div className="round-item__name">24/7 Support</div>
+                                                <div className="round-item__name">Great Ideas</div>
                                                 <div className="round-item__details">
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 </div>

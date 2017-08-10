@@ -1,15 +1,40 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Swiper from 'react-id-swiper'
-import { Grid, Row, Col } from 'react-bootstrap';
+import {Grid, Row, Col} from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
+
+const slides = [
+    {
+        image: 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+        modal: {
+            gallery: [
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90'
+            ],
+            title: 'Lorem ipsum dolor',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi'
+        }
+    },
+    {
+        image: 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+        modal: {
+            gallery: [
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ICJulf-eQTt5u2AmnU4ClH6Zo7WUeqTkm1Ws9KvlHn0m2EiXCXr3v90'
+            ],
+            title: 'Lorem ipsum dolor',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
+        }
+    },
+];
 
 const Description = {
     buttonAdd: 'View details',
     buttonClose: 'Close'
 };
 const ClassName = 'products__tile--plug';
-const ModalWindow = <ModalBody/>;
 
 class Products extends Component {
     render() {
@@ -40,60 +65,21 @@ class Products extends Component {
                     <Row>
                         <Col sm={12}>
                             <Swiper { ...params }>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName } modalBody={ ModalWindow }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="products__tile">
-                                        <img src={require('../../images/bouquet_simple.jpg')} alt=""/>
-                                        <ModalStructure description={ Description } className={ ClassName }/>
-                                    </div>
-                                </div>
+                                {
+                                    slides.map((slide, index) => (
+                                        <div key={ index }>
+                                            <div className="products__tile">
+                                                <img src={ slide.image } alt=""/>
+
+                                                <ModalStructure
+                                                    description={ Description }
+                                                    className={ ClassName }
+                                                    modalBody={ <ModalBody dataModal={ slide.modal }/> }
+                                                />
+                                            </div>
+                                        </div>
+                                    ))
+                                }
                             </Swiper>
                         </Col>
                     </Row>

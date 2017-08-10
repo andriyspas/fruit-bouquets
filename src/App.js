@@ -20,7 +20,6 @@ let localePl = 'pl';
 let Element = Scroll.Element;
 
 class App extends Component {
-
     constructor() {
         super();
 
