@@ -574,11 +574,11 @@ body {
 
 .home {
   background: rgba(0, 0, 0, 0.6);
+  color: #fff;
   height: 100vh;
   overflow: hidden;
   position: relative;
-  text-align: center;
-  color: #fff; }
+  text-align: center; }
   .home:after {
     content: '';
     display: block;
@@ -596,31 +596,41 @@ body {
   .home__logo {
     font-family: 'Comfortaa', cursive;
     margin: 0 auto;
+    padding: 15px;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
-    padding: 15px; }
+    transform: translateY(-50%); }
     .home__logo img {
       width: 120px; }
       @media (min-width: 576px) {
         .home__logo img {
           width: 200px; } }
   .home__name {
-    margin-top: 20px;
     font-size: 30px;
-    line-height: 38px; }
+    line-height: 38px;
+    margin-top: 20px; }
     @media (min-width: 576px) {
       .home__name {
         font-size: 50px;
         line-height: 50px; } }
   .home__title {
-    margin-top: 20px;
     font-size: 18px;
-    line-height: 26px; }
+    line-height: 26px;
+    margin-top: 20px; }
     @media (min-width: 576px) {
       .home__title {
         font-size: 24px;
         line-height: 30px; } }
+  .home__scroll-mouse {
+    background: url("./images/mouse.svg") 50%;
+    background-size: cover;
+    bottom: 60px;
+    height: 40px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    width: 40px; }
 
 video {
   height: auto;
@@ -634,12 +644,12 @@ video {
   z-index: -1; }
 
 .contact {
+  padding-top: 50px;
   position: relative;
-  text-align: center;
-  padding-top: 50px; }
+  text-align: center; }
   .contact__details {
-    text-align: left;
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    text-align: left; }
   .contact__title {
     line-height: 46px;
     font-size: 38px;
@@ -1057,11 +1067,11 @@ video {
       width: calc(100% - 60px);
       margin: 6px auto 0; }
   .about-us__description {
+    font-size: 18px;
+    line-height: 26px;
     margin: 0 auto 80px;
     max-width: 768px;
-    width: 100%;
-    font-size: 18px;
-    line-height: 26px; }
+    width: 100%; }
 
 .modal-header {
   border: none;

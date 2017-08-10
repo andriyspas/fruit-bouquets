@@ -13,6 +13,8 @@ class Home extends Component {
                     <div className="home__name">bouquets of fruits</div>
                     <div className="home__title">When an unknown printer. Took a galley of type</div>
                 </div>
+
+                <div className="home__scroll-mouse"></div>
             </section>
         )
     }
