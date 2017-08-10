@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Map from './Map/Map';
-import {Grid, Row, Col, Form, FormGroup, FormControl} from 'react-bootstrap';
+import Notification from '../Notification/Notification';
+import { Grid, Row, Col, Form, FormGroup, FormControl } from 'react-bootstrap';
 
 class Contact extends Component {
     constructor() {
@@ -12,9 +13,35 @@ class Contact extends Component {
             phone: '',
             email: '',
             message: '',
-            visibility: false
+            visibility: false,
+            success: false,
+            error: false,
+            submitted: false,
         }
     }
+
+    validateField = (value) => {
+        return value !== '' && value !== undefined;
+    };
+
+    validateFieldEmail = (email) => {
+        let regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        return regex.test(email);
+    };
+
+    validateFieldPhone = (phone) => {
+        if(phone !== '' && phone !== undefined) {
+            let regex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+            return regex.test(phone);
+        } else {
+            return false;
+        }
+    };
+
+    fieldValid = () => {
+        return this.validateFieldEmail(this.state.email) && this.validateField(this.state.name) && this.validateField(this.state.message) && this.validateFieldPhone(this.state.phone)
+    };
+
 
     handleNameChange = (event) => {
         this.setState({name: event.target.value})
@@ -36,12 +63,14 @@ class Contact extends Component {
         this.setState({message: event.target.value})
     };
 
-    // toggleClass = () => {
-    //     const currentState = this.state.visibility;
-    //     this.setState({ visibility: !currentState });
-    // };
+    handleHiddenButton = () => {
+        const currentState = this.state.visibility;
+        this.setState({ visibility: !currentState });
+    };
 
     sendEmail = (e) => {
+        this.handleHiddenButton();
+
         fetch('https://script.google.com/macros/s/AKfycbyJHc7kems_1GwmiIXGZhirbteTfDtSZzSyELx6BfCbbfj7h-Y/exec?' +
             'name=' + this.state.name +
             '&mail=' + this.state.email +
@@ -50,18 +79,25 @@ class Contact extends Component {
             '&phone=' + this.state.phone,
             { method: 'GET' })
             .then((res) => {
-                alert(res.status);
+                if(res.status === 200) {
+                    this.setState({ success: true, submitted: true, });
+                    this.handleHiddenButton();
+                } else {
+                    this.setState({ error: true, submitted: true, });
+                }
 
                 this.setState({
+                    success: false,
                     name: '',
                     surname: '',
                     phone: '',
                     email: '',
-                    message: ''
-                })
+                    message: '',
+                    submitted: false,
+                });
             });
 
-        e.preventDefault()
+        e.preventDefault();
     };
 
     render() {
@@ -181,11 +217,12 @@ class Contact extends Component {
                                             </Col>
                                         </Row>
 
-                                        <Row className={ this.state.visibility ? 'hide__button' : null }>
+                                        <Row className={ this.state.visibility ? 'button__hidden' : null }>
                                             <Col xs={12}>
                                                 <button
                                                     className="button pull-right"
                                                     type="submit"
+                                                    disabled={ !this.fieldValid() }
                                                 >
                                                     Send e-mail
                                                 </button>
@@ -201,6 +238,12 @@ class Contact extends Component {
                 <div className="contact__map">
                     <Map/>
                 </div>
+
+                <Notification
+                    success={ this.state.success }
+                    error={ this.state.error }
+                    submitted={ this.state.submitted }
+                />
             </section>
         )
     }

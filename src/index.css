@@ -954,7 +954,7 @@ video {
       margin-bottom: 14px; }
 
 .modal-body .swiper-container {
-  padding: 40px 0 76px; }
+  padding-bottom: 76px; }
 
 .modal-body .swiper-pagination-bullet {
   width: 100px;
@@ -1042,4 +1042,6 @@ video {
   .button:hover {
     background-color: #7522ba; }
   .button:disabled {
-    background-color: rgba(64, 181, 114, 0.5); }
+    background-color: rgba(135, 39, 215, 0.5); }
+  .button__hidden {
+    visibility: hidden; }
