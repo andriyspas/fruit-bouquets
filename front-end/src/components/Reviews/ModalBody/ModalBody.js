@@ -1,0 +1,125 @@
+import React, {Component} from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+import {Modal, Form, FormGroup, FormControl, Row, Col} from 'react-bootstrap';
+
+class ModalBody extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            captchaValue: '',
+            name: '',
+            surname: '',
+            city: '',
+            message: ''
+        }
+    };
+
+
+    // validateField = (value) => {
+    //     return value !== '' && value !== undefined;
+    // };
+    //
+    // fieldValid = () => {
+    //     return this.validateField(this.state.name) && this.validateField(this.state.message)
+    // };
+
+    handleNameChange = (event) => {
+        this.setState({name: event.target.value})
+    };
+
+    handleSurnameChange = (event) => {
+        this.setState({surname: event.target.value})
+    };
+
+    handleCityChange = (event) => {
+        this.setState({city: event.target.value})
+    };
+
+    handleMessageChange = (event) => {
+        this.setState({message: event.target.value})
+    };
+
+    onChange = (value) => {
+        this.setState({captchaValue: value});
+    };
+
+    submitReview = () => {
+        let data = {
+            name: this.state.name,
+            surname: this.state.surname,
+            city: this.state.city,
+            message: this.state.message,
+            date_post: new Date(),
+            recaptcha: this.state.captchaValue
+        };
+
+        fetch('http://localhost:8080/api/reviews',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(res => this.setState({captchaValid: res.success}))
+    };
+
+    render() {
+        return (
+            <Modal.Body className="clearfix form">
+                <Form autoComplete="off" onSubmit={ this.submitReview }>
+                    <Row>
+                        <Col xs={12}>
+                            <FormGroup controlId="nameText">
+                                <FormControl
+                                    type="text"
+                                    placeholder="Name"
+                                    onChange={ this.handleNameChange }
+                                />
+                            </FormGroup>
+                        </Col>
+
+                        <Col xs={12}>
+                            <FormGroup controlId="cityText">
+
+                                <FormControl
+                                    type="text"
+                                    placeholder="City"
+                                    onChange={ this.handleCityChange }
+                                />
+                            </FormGroup>
+                        </Col>
+
+                        <Col xs={12}>
+                            <FormGroup controlId="messageText">
+                                <FormControl
+                                    componentClass="textarea"
+                                    placeholder="Message"
+                                    onChange={ this.handleMessageChange }
+                                />
+                            </FormGroup>
+                        </Col>
+                    </Row>
+
+                    <button
+                        className="button pull-right"
+                        type="submit"
+                    >
+                        { this.props.addReview }
+                    </button>
+
+                    <ReCAPTCHA
+                        ref="recaptcha"
+                        sitekey="6LePfiwUAAAAAMtjzN666LlPkICwKkf4gaM_MQp9"
+                        onChange={ this.onChange }
+                    />
+                </Form>
+            </Modal.Body>
+        )
+    }
+}
+
+
+export default ModalBody;

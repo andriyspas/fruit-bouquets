@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Map from './Map/Map';
 import Notification from '../Notification/Notification';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { Grid, Row, Col, Form, FormGroup, FormControl } from 'react-bootstrap';
 
 class Contact extends Component {
@@ -17,6 +18,7 @@ class Contact extends Component {
             success: false,
             error: false,
             submitted: false,
+            captchaValid: false
         }
     }
 
@@ -39,9 +41,8 @@ class Contact extends Component {
     };
 
     fieldValid = () => {
-        return this.validateFieldEmail(this.state.email) && this.validateField(this.state.name) && this.validateField(this.state.message) && this.validateFieldPhone(this.state.phone)
+        return this.validateFieldEmail(this.state.email) && this.validateField(this.state.name) && this.validateField(this.state.message) && this.validateFieldPhone(this.state.phone) && this.state.captchaValid
     };
-
 
     handleNameChange = (event) => {
         this.setState({name: event.target.value})
@@ -98,6 +99,21 @@ class Contact extends Component {
             });
 
         e.preventDefault();
+    };
+
+    onChange = (value) => {
+        let data = { recaptcha: value };
+
+        fetch('http://localhost:8080/api/captcha',
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json', 'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(res => this.setState({captchaValid: res.success}))
     };
 
     render() {
@@ -218,6 +234,14 @@ class Contact extends Component {
                                         </Row>
 
                                         <Row className={ this.state.visibility ? 'button__hidden' : null }>
+                                            <script src='https://www.google.com/recaptcha/api.js' async></script>
+
+                                            <ReCAPTCHA
+                                                ref="recaptcha"
+                                                sitekey="6LePfiwUAAAAAMtjzN666LlPkICwKkf4gaM_MQp9"
+                                                onChange={ this.onChange }
+                                            />
+
                                             <Col xs={12}>
                                                 <button
                                                     className="button pull-right"
