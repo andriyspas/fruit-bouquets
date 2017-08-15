@@ -676,7 +676,7 @@ video {
   .contact__phone {
     margin-bottom: 10px; }
   .contact__email {
-    margin-bottom: 10px; }
+    margin-bottom: 30px; }
     .contact__email a {
       color: #7522ba; }
   .contact__form button {
@@ -699,6 +699,10 @@ video {
       z-index: 1; }
   .contact h4 {
     margin: 20px 0; }
+  .contact .recaptcha {
+    transform: scale(0.95);
+    transform-origin: top right;
+    margin: 0 15px 10px 0; }
 
 .navigation {
   position: fixed;

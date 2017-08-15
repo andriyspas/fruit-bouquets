@@ -237,6 +237,7 @@ class Contact extends Component {
                                             <script src='https://www.google.com/recaptcha/api.js' async></script>
 
                                             <ReCAPTCHA
+                                                className="recaptcha pull-right"
                                                 ref="recaptcha"
                                                 sitekey="6LePfiwUAAAAAMtjzN666LlPkICwKkf4gaM_MQp9"
                                                 onChange={ this.onChange }
