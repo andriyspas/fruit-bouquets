@@ -975,6 +975,43 @@ video {
       font-size: 20px;
       font-weight: 400;
       margin-bottom: 14px; }
+  .products .swiper-container {
+    padding-bottom: 60px; }
+    .products .swiper-container .swiper-pagination-fraction {
+      text-align: right;
+      color: #8727d7;
+      font-size: 22px;
+      bottom: 0; }
+      .products .swiper-container .swiper-pagination-fraction .swiper-pagination-current {
+        font-size: 42px; }
+    .products .swiper-container .swiper-button-next, .products .swiper-container .swiper-button-prev {
+      height: 40px;
+      width: 40px;
+      background-position-x: 50%;
+      background-size: 50%;
+      top: auto;
+      margin-top: 20px;
+      border: 1px solid #8727d7; }
+    .products .swiper-container .swiper-button-next {
+      right: auto;
+      left: 50px; }
+
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
+  background-color: #fff;
+  background-image: url("./images/arrow.svg");
+  background-position-x: 100%;
+  background-size: 70%;
+  height: 100%;
+  left: 0;
+  margin-top: 0;
+  top: 0;
+  transform: rotate(180deg); }
+
+.swiper-container .swiper-button-next {
+  left: auto;
+  right: 0;
+  transform: rotate(0); }
 
 .swiper-product .swiper-slide {
   height: 260px;
@@ -1012,21 +1049,6 @@ video {
     .swiper-thumbs .swiper-slide img {
       max-height: 100%;
       max-width: 100%; }
-  .swiper-thumbs .swiper-button-next,
-  .swiper-thumbs .swiper-button-prev {
-    background-color: #fff;
-    background-image: url("./images/arrow.svg");
-    background-position-x: 100%;
-    background-size: 70%;
-    height: 100%;
-    left: 0;
-    margin-top: 0;
-    top: 0;
-    transform: rotate(180deg); }
-  .swiper-thumbs .swiper-button-next {
-    left: auto;
-    right: 0;
-    transform: rotate(0); }
 
 .about-us {
   color: #fff;

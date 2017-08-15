@@ -12,6 +12,8 @@ const size = 'large';
 class Products extends Component {
     render() {
         const params = {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
             pagination: '.swiper-pagination',
             paginationClickable: true,
             paginationBulletRender: (swiper, index, className) => {
