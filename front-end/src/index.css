@@ -532,6 +532,12 @@ body {
       background: transparent; }
     .navbar-default .navbar-toggle .icon-bar {
       background: #8727d7; }
+  .navbar-default .navbar-nav > li .dropdown-menu {
+    min-width: 0;
+    background: #fff; }
+    .navbar-default .navbar-nav > li .dropdown-menu > li > a {
+      padding: 3px 16px;
+      color: #8727d7; }
   @media (min-width: 768px) {
     .navbar-default .navbar-nav > li:nth-child(-n+5) {
       display: none; } }
@@ -541,6 +547,16 @@ body {
     @media (min-width: 768px) {
       .navbar-default .navbar-nav > li > a {
         color: #fff; } }
+    .navbar-default .navbar-nav > li > a:hover {
+      color: #fff; }
+  .navbar-default .navbar-nav > .open > a {
+    background-color: transparent;
+    color: #fff; }
+    .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+      color: #fff;
+      background-color: transparent; }
+  .navbar-default .navbar-right {
+    margin: 0; }
 
 .navbar-header {
   padding: 5px 0;
@@ -571,6 +587,17 @@ body {
     fill: #8727d7; }
   .navbar-minimized .navbar-nav > li > a {
     color: #8727d7; }
+    .navbar-minimized .navbar-nav > li > a:focus, .navbar-minimized .navbar-nav > li > a:hover {
+      color: #8727d7; }
+  .navbar-minimized .navbar-nav > li.open > a {
+    background-color: transparent;
+    color: #8727d7; }
+    .navbar-minimized .navbar-nav > li.open > a:focus, .navbar-minimized .navbar-nav > li.open > a:hover {
+      color: #8727d7;
+      background-color: transparent; }
+
+.popover-content a {
+  color: #8727d7; }
 
 .home {
   background: rgba(0, 0, 0, 0.6);
@@ -735,7 +762,7 @@ video {
         position: absolute;
         width: 40px;
         height: 40px;
-        border: 1px solid #7522ba;
+        border: 1px solid #8727d7;
         border-radius: 50%;
         transform: scale(0);
         transition: transform 0.2s ease;
@@ -755,7 +782,7 @@ video {
     transform: scale(1); }
   .navigation__href--active .navigation__dot, .navigation__href:hover .navigation__dot {
     transform: scale(1);
-    box-shadow: 0 0 20px 3px #7522ba; }
+    box-shadow: 0 0 20px 3px #8727d7; }
   .navigation__href--active .navigation__section-name, .navigation__href:hover .navigation__section-name {
     display: block; } }
 
