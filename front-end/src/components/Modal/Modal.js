@@ -29,7 +29,7 @@ class ModalStructure extends Component {
                 >
 
                     <Modal.Header closeButton>
-                        <Modal.Title id="contained-modal-title-lg">{ this.props.description.review }</Modal.Title>
+                        <Modal.Title id="contained-modal-title-lg">{ this.props.description.title }</Modal.Title>
                     </Modal.Header>
 
                     { this.props.modalBody }

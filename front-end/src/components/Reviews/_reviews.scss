@@ -3,7 +3,6 @@
   position: relative;
   text-align: center;
 
-
   &__title {
     @include title(#000);
   }
@@ -64,4 +63,10 @@
     margin-top: 40px;
     padding: 12px 60px;
   }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
 }
+
+@import "ModalBody/modal_body";

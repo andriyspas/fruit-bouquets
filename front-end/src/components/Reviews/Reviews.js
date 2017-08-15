@@ -3,10 +3,12 @@ import Swiper from 'react-id-swiper'
 import { Grid, Row, Col } from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
+import Moment from 'react-moment';
 
 const Description = {
     addReview: 'Submit review',
     openModal: 'Add review',
+    title: 'Leave your review'
 };
 const ClassName = 'reviews__modal';
 const ModalWindow = <ModalBody addReview={ Description.addReview }/>;
@@ -18,6 +20,8 @@ class Reviews extends Component {
         this.state = {
             reviews: []
         };
+
+        this.getReviews();
     }
 
     getReviews = () => {
@@ -29,10 +33,6 @@ class Reviews extends Component {
             .then(res => { this.setState({ reviews: res.data }) })
     };
 
-    componentDidMount() {
-        this.getReviews();
-    };
-
     render() {
         const params = {
             loop: true,
@@ -40,14 +40,6 @@ class Reviews extends Component {
             autoplayDisableOnInteraction: false,
             spaceBetween: 30
         };
-
-        const text = 'Lorem Ipsum is simply dummy text of the printing and ' +
-            'typesetting industry. Lorem Ipsum has been the industrys standard dummy' +
-            ' text ever since the 1500s, when an unknown printer took a galley of type and' +
-            ' scrambled it to make a type specimen book. It has survived not only five centuries, ' +
-            'but also the leap into electronic typesetting, remaining essentially unchanged.';
-
-        console.log(this.state.reviews);
 
         return (
             <section className="reviews">
@@ -60,19 +52,24 @@ class Reviews extends Component {
                     <Row>
                         <Col sm={12}>
                             <div className="reviews__slider">
-                                <Swiper { ...params }>
-                                    {
-                                        this.state.reviews.map((item, index) => (
-                                            <div key={ index }>
-                                                <div className="reviews__single">
-                                                    <div className="reviews__person">{ item.name }</div>
-                                                    <div className="reviews__description">{ item.message }</div>
-                                                    <div className="reviews__date">{ item.date_post }</div>
+                                {
+                                    this.state.reviews.length !== 0 &&
+                                    <Swiper { ...params }>
+                                        {
+                                            this.state.reviews.map((item, index) => (
+                                                <div key={ index }>
+                                                    <div className="reviews__single">
+                                                        <div className="reviews__person">{ item.name }</div>
+                                                        <div className="reviews__description">{ item.message }</div>
+                                                        <div className="reviews__date">
+                                                            <Moment format="MMMM / DD / YYYY">{ item.date_post }</Moment>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        ))
-                                    }
-                                </Swiper>
+                                            ))
+                                        }
+                                    </Swiper>
+                                }
                             </div>
                         </Col>
                     </Row>

@@ -16,20 +16,16 @@ class ModalBody extends Component {
     };
 
 
-    // validateField = (value) => {
-    //     return value !== '' && value !== undefined;
-    // };
-    //
-    // fieldValid = () => {
-    //     return this.validateField(this.state.name) && this.validateField(this.state.message)
-    // };
+    validateField = (value) => {
+        return value !== '' && value !== undefined;
+    };
+
+    fieldValid = () => {
+        return this.validateField(this.state.name) && this.validateField(this.state.message)
+    };
 
     handleNameChange = (event) => {
         this.setState({name: event.target.value})
-    };
-
-    handleSurnameChange = (event) => {
-        this.setState({surname: event.target.value})
     };
 
     handleCityChange = (event) => {
@@ -72,17 +68,17 @@ class ModalBody extends Component {
                 <Form autoComplete="off" onSubmit={ this.submitReview }>
                     <Row>
                         <Col xs={12}>
-                            <FormGroup controlId="nameText">
+                            <FormGroup controlId="name">
                                 <FormControl
                                     type="text"
-                                    placeholder="Name"
+                                    placeholder="Full name"
                                     onChange={ this.handleNameChange }
                                 />
                             </FormGroup>
                         </Col>
 
                         <Col xs={12}>
-                            <FormGroup controlId="cityText">
+                            <FormGroup controlId="city">
 
                                 <FormControl
                                     type="text"
@@ -93,7 +89,7 @@ class ModalBody extends Component {
                         </Col>
 
                         <Col xs={12}>
-                            <FormGroup controlId="messageText">
+                            <FormGroup controlId="message">
                                 <FormControl
                                     componentClass="textarea"
                                     placeholder="Message"
@@ -103,18 +99,30 @@ class ModalBody extends Component {
                         </Col>
                     </Row>
 
-                    <button
-                        className="button pull-right"
-                        type="submit"
-                    >
-                        { this.props.addReview }
-                    </button>
+                    <Row>
+                        <Col xs={12}>
+                            <ReCAPTCHA
+                                className="pull-right recaptcha"
+                                ref="recaptcha"
+                                sitekey="6LePfiwUAAAAAMtjzN666LlPkICwKkf4gaM_MQp9"
+                                onChange={ this.onChange }
+                            />
 
-                    <ReCAPTCHA
-                        ref="recaptcha"
-                        sitekey="6LePfiwUAAAAAMtjzN666LlPkICwKkf4gaM_MQp9"
-                        onChange={ this.onChange }
-                    />
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col xs={12}>
+                            <button
+                                className="button pull-right"
+                                type="submit"
+                            >
+                                { this.props.addReview }
+                            </button>
+
+                        </Col>
+                    </Row>
+
                 </Form>
             </Modal.Body>
         )
