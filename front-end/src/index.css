@@ -499,13 +499,13 @@ body {
         transform: scale(1); } }
     .navbar-default .navbar-brand svg {
       display: inline-block;
-      height: 46px;
       vertical-align: middle;
+      height: 46px;
       width: 46px; }
       @media (min-width: 576px) {
         .navbar-default .navbar-brand svg {
-          width: 56px;
-          height: 56px; } }
+          height: 56px;
+          width: 56px; } }
     .navbar-default .navbar-brand div {
       color: #8727d7;
       display: inline-block;
@@ -523,50 +523,55 @@ body {
         fill: #fff; } }
   .navbar-default .navbar-toggle {
     border: none;
-    bottom: 0;
     margin: auto 0;
     position: absolute;
+    top: 0;
     right: 0;
-    top: 0; }
+    bottom: 0;
+    left: auto; }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
       background: transparent; }
     .navbar-default .navbar-toggle .icon-bar {
       background: #8727d7; }
-  .navbar-default .navbar-nav > li .dropdown-menu {
-    min-width: 0;
-    background: #fff; }
-    .navbar-default .navbar-nav > li .dropdown-menu > li > a {
-      padding: 3px 16px;
-      color: #8727d7; }
-  @media (min-width: 768px) {
-    .navbar-default .navbar-nav > li:nth-child(-n+6) {
-      display: none; } }
-  .navbar-default .navbar-nav > li > a {
-    color: #8727d7;
-    transition: color 0.2s ease;
-    font-size: 16px; }
+  .navbar-default .navbar-nav {
+    padding: 3px 0; }
+    .navbar-default .navbar-nav > li .dropdown-menu {
+      min-width: 0;
+      background: #fff; }
+      .navbar-default .navbar-nav > li .dropdown-menu > li > a {
+        padding: 3px 16px;
+        color: #8727d7; }
     @media (min-width: 768px) {
-      .navbar-default .navbar-nav > li > a {
-        color: #fff; } }
-    .navbar-default .navbar-nav > li > a:hover {
-      color: #fff; }
-    .navbar-default .navbar-nav > li > a div {
-      display: inline-block;
-      vertical-align: top; }
-    .navbar-default .navbar-nav > li > a svg {
-      display: none; }
+      .navbar-default .navbar-nav > li:nth-child(-n+6) {
+        display: none; } }
+    .navbar-default .navbar-nav > li > a {
+      color: #8727d7;
+      transition: color 0.2s ease;
+      font-size: 16px; }
+      .navbar-default .navbar-nav > li > a:hover {
+        color: #fff; }
       @media (min-width: 768px) {
-        .navbar-default .navbar-nav > li > a svg {
-          position: absolute;
-          left: -15px;
-          top: 13px;
-          display: inline-block; } }
-  .navbar-default .navbar-nav > .open > a {
-    background-color: transparent;
-    color: #fff; }
-    .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
-      color: #fff;
-      background-color: transparent; }
+        .navbar-default .navbar-nav > li > a {
+          color: #fff; } }
+      .navbar-default .navbar-nav > li > a div {
+        display: inline-block;
+        vertical-align: top; }
+      .navbar-default .navbar-nav > li > a svg {
+        display: none; }
+        @media (min-width: 768px) {
+          .navbar-default .navbar-nav > li > a svg {
+            display: inline-block;
+            position: absolute;
+            top: 13px;
+            right: auto;
+            bottom: auto;
+            left: -15px; } }
+    .navbar-default .navbar-nav > .open > a {
+      background-color: transparent;
+      color: #fff; }
+      .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+        color: #fff;
+        background-color: transparent; }
   .navbar-default .navbar-right {
     margin: 0; }
 
@@ -662,24 +667,25 @@ body {
   .home__scroll-mouse {
     background: url("./images/mouse.svg") 50%;
     background-size: cover;
-    bottom: 60px;
-    height: 40px;
-    left: 0;
     margin: auto;
+    height: 40px;
+    width: 40px;
     position: absolute;
+    top: auto;
     right: 0;
-    width: 40px; }
+    bottom: 0;
+    left: 60px; }
 
 video {
-  height: auto;
   left: 50%;
   min-height: 100%;
   min-width: 100%;
   position: absolute;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: auto;
-  z-index: -1; }
+  z-index: -1;
+  height: auto;
+  width: auto; }
 
 .contact {
   padding-top: 50px;
@@ -759,41 +765,45 @@ video {
   @media (min-width: 1200px) {
     .navigation__dot {
       display: block;
-      width: 16px;
-      height: 16px;
       background: #eee1fa;
       border-radius: 50%;
       position: relative;
       z-index: 1;
       transform: scale(0.7);
-      transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      height: 16px;
+      width: 16px; }
       .navigation__dot--border {
         content: '';
         display: block;
-        position: absolute;
-        width: 40px;
-        height: 40px;
         border: 1px solid #8727d7;
         border-radius: 50%;
         transform: scale(0);
         transition: transform 0.2s ease;
+        height: 16px;
+        width: 16px;
+        position: absolute;
         top: -12px;
-        right: -12px; }
+        right: -12px;
+        bottom: auto;
+        left: auto; }
     .navigation__section-name {
-      position: absolute;
-      right: 40px;
+      display: none;
+      color: #fff;
       min-width: 60px;
       text-align: right;
+      position: absolute;
       top: -3px;
-      display: none;
-      color: #fff; } }
+      right: 40px;
+      bottom: auto;
+      left: auto; } }
 
 @media (min-width: 1200px) {
   .navigation__href--active .navigation__dot--border, .navigation__href:hover .navigation__dot--border {
     transform: scale(1); }
   .navigation__href--active .navigation__dot, .navigation__href:hover .navigation__dot {
-    transform: scale(1);
-    box-shadow: 0 0 20px 3px #8727d7; }
+    box-shadow: 0 0 20px 3px #8727d7;
+    transform: scale(1); }
   .navigation__href--active .navigation__section-name, .navigation__href:hover .navigation__section-name {
     display: block; } }
 
@@ -1023,13 +1033,13 @@ video {
       .products .swiper-container .swiper-pagination-fraction .swiper-pagination-current {
         font-size: 42px; }
     .products .swiper-container .swiper-button-next, .products .swiper-container .swiper-button-prev {
-      height: 40px;
-      width: 40px;
       background-position-x: 50%;
       background-size: 50%;
       top: auto;
       margin-top: 20px;
-      border: 1px solid #8727d7; }
+      border: 1px solid #8727d7;
+      height: 40px;
+      width: 40px; }
     .products .swiper-container .swiper-button-next {
       right: auto;
       left: 50px; }

@@ -1,13 +1,12 @@
 @import "../../node_modules/normalize.css/normalize";
-
+@import "../../node_modules/bourbon/app/assets/stylesheets/_bourbon.scss";
 @import "round-item";
 
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   line-height: 22px;
-  height: 100%;
-  width: 100%;
+  @include size(100%);
 }
 
 .container-fluid {

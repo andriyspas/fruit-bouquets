@@ -24,13 +24,11 @@
 
     svg {
       display: inline-block;
-      height: 46px;
       vertical-align: middle;
-      width: 46px;
+      @include size(46px);
 
       @media(min-width: 576px) {
-        width: 56px;
-        height: 56px;
+        @include size(56px);
       }
     }
 
@@ -58,14 +56,10 @@
 
   .navbar-toggle {
     border: none;
-    bottom: 0;
     margin: auto 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+    @include position(absolute, 0 0 0 auto);
 
-    &:focus,
-    &:hover {
+    &:focus, &:hover {
       background: transparent;
     }
 
@@ -75,6 +69,8 @@
   }
 
   .navbar-nav {
+    padding: 3px 0;
+
     & > li {
       .dropdown-menu {
         min-width: 0;
@@ -97,11 +93,11 @@
         transition: color 0.2s ease;
         font-size: 16px;
 
-        @media (min-width: 768px) {
+        &:hover {
           color: #fff;
         }
 
-        &:hover {
+        @media (min-width: 768px) {
           color: #fff;
         }
 
@@ -114,10 +110,8 @@
           display: none;
 
           @media (min-width: 768px) {
-            position: absolute;
-            left: -15px;
-            top: 13px;
             display: inline-block;
+            @include position(absolute, 13px auto auto -15px);
           }
         }
       }
