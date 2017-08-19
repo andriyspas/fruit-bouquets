@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import {Header, Home, Contact, Navigation, Reviews, Sales, Products, AboutUs} from './components/index'
+import React, { Component } from 'react'
+import { Header, Navigation, Home, Contact, Reviews, Sales, Products, AboutUs } from './components/index'
 
 import Scroll from 'react-scroll'
-import {IntlProvider} from 'react-intl';
-import {addLocaleData} from 'react-intl';
+import { IntlProvider } from 'react-intl';
+import { addLocaleData } from 'react-intl';
 import uk from 'react-intl/locale-data/uk';
 import pl from 'react-intl/locale-data/pl';
 
@@ -27,10 +27,10 @@ class App extends Component {
             locale: localeUa,
             messages: messagesUa
         };
-    }
+    };
 
-    handleLanguageChange = (lan) => {
-        switch (lan) {
+    handleLanguageChange = (lang) => {
+        switch(lang) {
             case 'ua':
                 this.setState({messages: messagesUa, locale: localeUa});
                 break;
@@ -54,33 +54,33 @@ class App extends Component {
 
                     <Navigation/>
 
-                    <Element name="home">
+                    <Element name="section_home">
                         <Home/>
                     </Element>
 
-                    <Element name="products">
+                    <Element name="section_products">
                         <Products/>
                     </Element>
 
-                    <Element name="about-us">
+                    <Element name="section_about-us">
                         <AboutUs/>
                     </Element>
 
-                    <Element name="reviews">
+                    <Element name="section_testimonials">
                         <Reviews/>
                     </Element>
 
-                    <Element name="sales">
+                    <Element name="section_sales">
                         <Sales/>
                     </Element>
 
-                    <Element name="contact">
+                    <Element name="section_contact">
                         <Contact/>
                     </Element>
                 </div>
             </IntlProvider>
         )
-    }
+    };
 }
 
 export default App;

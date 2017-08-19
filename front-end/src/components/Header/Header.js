@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from "prop-types";
 import { FormattedMessage } from 'react-intl';
 import Scroll from 'react-scroll';
-import { Navbar, NavItem, NavDropdown, MenuItem, OverlayTrigger } from  'react-bootstrap';
-
-import PopoverPhone from './Popover/Popover';
+import { Navbar, NavDropdown, MenuItem } from  'react-bootstrap';
 
 let Link = Scroll.Link;
 
@@ -45,8 +43,7 @@ class Header extends Component {
                 <Navbar.Header>
                     <Navbar.Brand>
                         <Link
-                            href=""
-                            to="home"
+                            to="section_home"
                             spy={ true }
                             smooth={ true }
                             duration={ 500 }
@@ -67,7 +64,7 @@ class Header extends Component {
                     <ul className="nav navbar-nav navbar-right">
                         <li role="presentation">
                             <Link
-                                to="home"
+                                to="section_home"
                                 activeClass="navigation__href--active"
                                 spy={ true }
                                 smooth={ true }
@@ -81,21 +78,7 @@ class Header extends Component {
 
                         <li role="presentation">
                             <Link
-                                to="about-me"
-                                activeClass="navigation__href--active"
-                                spy={ true }
-                                smooth={ true }
-                                duration={ 500 }
-                                onSetActive={ this.handleSetActive }
-                                className="navigation__href"
-                            >
-                                About Me
-                            </Link>
-                        </li>
-
-                        <li role="presentation">
-                            <Link
-                                to="products"
+                                to="section_products"
                                 activeClass="navigation__href--active"
                                 spy={ true }
                                 smooth={ true }
@@ -109,7 +92,21 @@ class Header extends Component {
 
                         <li role="presentation">
                             <Link
-                                to="reviews"
+                                to="section_about-us"
+                                activeClass="navigation__href--active"
+                                spy={ true }
+                                smooth={ true }
+                                duration={ 500 }
+                                onSetActive={ this.handleSetActive }
+                                className="navigation__href"
+                            >
+                                About Us
+                            </Link>
+                        </li>
+
+                        <li role="presentation">
+                            <Link
+                                to="section_testimonials"
                                 activeClass="navigation__href--active"
                                 spy={ true }
                                 smooth={ true }
@@ -123,7 +120,21 @@ class Header extends Component {
 
                         <li role="presentation">
                             <Link
-                                to="contact"
+                                to="section_sales"
+                                activeClass="navigation__href--active"
+                                spy={ true }
+                                smooth={ true }
+                                duration={ 500 }
+                                onSetActive={ this.handleSetActive }
+                                className="navigation__href"
+                            >
+                                Sales
+                            </Link>
+                        </li>
+
+                        <li role="presentation">
+                            <Link
+                                to="section_contact"
                                 activeClass="navigation__href--active"
                                 spy={ true }
                                 smooth={ true }
@@ -135,27 +146,22 @@ class Header extends Component {
                             </Link>
                         </li>
 
+                        <li role="presentation">
+                            <a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 473.806 473.806" width="20" height="20">
+                                    <g fill="#FFF">
+                                        <path d="M374.456 293.506c-9.7-10.1-21.4-15.5-33.8-15.5-12.3 0-24.1 5.3-34.2 15.4l-31.6 31.5c-2.6-1.4-5.2-2.7-7.7-4-3.6-1.8-7-3.5-9.9-5.3-29.6-18.8-56.5-43.3-82.3-75-12.5-15.8-20.9-29.1-27-42.6 8.2-7.5 15.8-15.3 23.2-22.8 2.8-2.8 5.6-5.7 8.4-8.5 21-21 21-48.2 0-69.2l-27.3-27.3c-3.1-3.1-6.3-6.3-9.3-9.5-6-6.2-12.3-12.6-18.8-18.6-9.7-9.6-21.3-14.7-33.5-14.7s-24 5.1-34 14.7l-.2.2-34 34.3c-12.8 12.8-20.1 28.4-21.7 46.5-2.4 29.2 6.2 56.4 12.8 74.2 16.2 43.7 40.4 84.2 76.5 127.6 43.8 52.3 96.5 93.6 156.7 122.7 23 10.9 53.7 23.8 88 26 2.1.1 4.3.2 6.3.2 23.1 0 42.5-8.3 57.7-24.8.1-.2.3-.3.4-.5 5.2-6.3 11.2-12 17.5-18.1 4.3-4.1 8.7-8.4 13-12.9 9.9-10.3 15.1-22.3 15.1-34.6 0-12.4-5.3-24.3-15.4-34.3l-54.9-55.1zm35.8 105.3c-.1 0-.1.1 0 0-3.9 4.2-7.9 8-12.2 12.2-6.5 6.2-13.1 12.7-19.3 20-10.1 10.8-22 15.9-37.6 15.9-1.5 0-3.1 0-4.6-.1-29.7-1.9-57.3-13.5-78-23.4-56.6-27.4-106.3-66.3-147.6-115.6-34.1-41.1-56.9-79.1-72-119.9-9.3-24.9-12.7-44.3-11.2-62.6 1-11.7 5.5-21.4 13.8-29.7l34.1-34.1c4.9-4.6 10.1-7.1 15.2-7.1 6.3 0 11.4 3.8 14.6 7l.3.3c6.1 5.7 11.9 11.6 18 17.9 3.1 3.2 6.3 6.4 9.5 9.7l27.3 27.3c10.6 10.6 10.6 20.4 0 31-2.9 2.9-5.7 5.8-8.6 8.6-8.4 8.6-16.4 16.6-25.1 24.4-.2.2-.4.3-.5.5-8.6 8.6-7 17-5.2 22.7l.3.9c7.1 17.2 17.1 33.4 32.3 52.7l.1.1c27.6 34 56.7 60.5 88.8 80.8 4.1 2.6 8.3 4.7 12.3 6.7 3.6 1.8 7 3.5 9.9 5.3.4.2.8.5 1.2.7 3.4 1.7 6.6 2.5 9.9 2.5 8.3 0 13.5-5.2 15.2-6.9l34.2-34.2c3.4-3.4 8.8-7.5 15.1-7.5 6.2 0 11.3 3.9 14.4 7.3l.2.2 55.1 55.1c10.3 10.2 10.3 20.7.1 31.3zM256.056 112.706c26.2 4.4 50 16.8 69 35.8s31.3 42.8 35.8 69c1.1 6.6 6.8 11.2 13.3 11.2.8 0 1.5-.1 2.3-.2 7.4-1.2 12.3-8.2 11.1-15.6-5.4-31.7-20.4-60.6-43.3-83.5s-51.8-37.9-83.5-43.3c-7.4-1.2-14.3 3.7-15.6 11s3.5 14.4 10.9 15.6zM473.256 209.006c-8.9-52.2-33.5-99.7-71.3-137.5s-85.3-62.4-137.5-71.3c-7.3-1.3-14.2 3.7-15.5 11-1.2 7.4 3.7 14.3 11.1 15.6 46.6 7.9 89.1 30 122.9 63.7 33.8 33.8 55.8 76.3 63.7 122.9 1.1 6.6 6.8 11.2 13.3 11.2.8 0 1.5-.1 2.3-.2 7.3-1.1 12.3-8.1 11-15.4z"/>
+                                    </g>
+                                </svg>
+                                <div>+88 888 888 88 88</div>
+                            </a>
+                        </li>
+
                         <NavDropdown eventKey={1} title={ <FormattedMessage id="language"/> } id="dropdown" onSelect={ this.handleSelect }>
                             <MenuItem eventKey='en'>ENG</MenuItem>
                             <MenuItem eventKey='pl'>POL</MenuItem>
                             <MenuItem eventKey='ua'>UKR</MenuItem>
                         </NavDropdown>
-
-                        <OverlayTrigger
-                            rootClose
-                            container={this}
-                            trigger="click"
-                            placement="bottom"
-                            overlay={ PopoverPhone }
-                        >
-                            <NavItem eventKey={2}>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.735 29.735" width="20" height="20">
-                                    <path d="M23.895 29.733c-1.237 0-2.73-.31-4.373-.93-3.603-1.358-7.52-4.042-11.035-7.556C4.973 17.733 2.29 13.814.93 10.21-.307 6.935-.31 4.247.92 3.017c.178-.178.36-.368.545-.563C2.588 1.274 3.887-.066 5.538.006c1.16.048 2.283.768 3.435 2.198 3.396 4.225 1.865 5.73.093 7.477l-.314.31c-.29.29-.84 1.633 4.26 6.73 1.666 1.666 3.084 2.884 4.217 3.62.714.465 1.99 1.165 2.513.642l.315-.318c1.744-1.77 3.25-3.296 7.474.1 1.43 1.15 2.15 2.272 2.198 3.433.07 1.682-1.27 2.954-2.453 4.076-.194.185-.384.364-.56.54-.614.613-1.59.92-2.822.92zM5.42 1.003c-1.195 0-2.275 1.135-3.23 2.14-.193.2-.38.398-.563.58-.916.916-.822 3.324.238 6.135 1.31 3.473 3.913 7.267 7.33 10.683s7.208 6.02 10.68 7.33c2.81 1.06 5.22 1.152 6.135.235.183-.182.378-.368.578-.558 1.028-.977 2.193-2.083 2.143-3.31-.034-.844-.648-1.75-1.825-2.696-3.52-2.827-4.503-1.827-6.135-.175l-.32.323c-.777.78-2.044.61-3.766-.51-1.19-.774-2.664-2.037-4.38-3.75-4.23-4.232-5.584-6.82-4.26-8.146l.32-.316c1.658-1.632 2.658-2.617-.17-6.137-.947-1.176-1.854-1.79-2.697-1.826l-.078-.002zM24.07 12.29c-.063 0-.126-.012-.188-.037-.256-.104-.38-.395-.275-.65.636-1.568.272-3.355-.924-4.552-1.23-1.228-3.118-1.57-4.703-.857-.25.113-.548.003-.66-.25-.115-.25-.004-.547.248-.66 1.96-.888 4.3-.46 5.822 1.062 1.48 1.48 1.93 3.692 1.143 5.634-.078.19-.266.31-.463.31z"/>
-                                    <path d="M28.534 14.102c-.063 0-.126-.012-.188-.037-.257-.104-.38-.395-.275-.65 1.366-3.367.59-7.202-1.98-9.77-2.638-2.64-6.695-3.38-10.095-1.842-.252.11-.548.002-.662-.25-.113-.253-.002-.55.25-.663C19.36-.816 23.866.005 26.797 2.936c2.854 2.854 3.718 7.114 2.2 10.854-.078.194-.266.312-.463.312z"/>
-                                </svg>
-                            </NavItem>
-                        </OverlayTrigger>
-
                     </ul>
                 </Navbar.Collapse>
 
@@ -165,12 +171,7 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-    // sticky: PropTypes.bool,
     onLanguageChange: PropTypes.func.isRequired,
 };
-
-// Header.defaultProps = {
-//     sticky: false,
-// };
 
 export default Header;

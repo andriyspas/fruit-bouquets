@@ -539,16 +539,28 @@ body {
       padding: 3px 16px;
       color: #8727d7; }
   @media (min-width: 768px) {
-    .navbar-default .navbar-nav > li:nth-child(-n+5) {
+    .navbar-default .navbar-nav > li:nth-child(-n+6) {
       display: none; } }
   .navbar-default .navbar-nav > li > a {
     color: #8727d7;
-    transition: color 0.2s ease; }
+    transition: color 0.2s ease;
+    font-size: 16px; }
     @media (min-width: 768px) {
       .navbar-default .navbar-nav > li > a {
         color: #fff; } }
     .navbar-default .navbar-nav > li > a:hover {
       color: #fff; }
+    .navbar-default .navbar-nav > li > a div {
+      display: inline-block;
+      vertical-align: top; }
+    .navbar-default .navbar-nav > li > a svg {
+      display: none; }
+      @media (min-width: 768px) {
+        .navbar-default .navbar-nav > li > a svg {
+          position: absolute;
+          left: -15px;
+          top: 13px;
+          display: inline-block; } }
   .navbar-default .navbar-nav > .open > a {
     background-color: transparent;
     color: #fff; }
@@ -565,11 +577,11 @@ body {
     .navbar-header {
       padding: 0; } }
 
-.navbar-collapse {
+.navbar-fixed-top .navbar-collapse {
   background-color: #fff;
   max-height: 100%; }
   @media (min-width: 768px) {
-    .navbar-collapse {
+    .navbar-fixed-top .navbar-collapse {
       background-color: transparent; } }
 
 .navbar-minimized {
@@ -589,16 +601,14 @@ body {
     color: #8727d7; }
     .navbar-minimized .navbar-nav > li > a:focus, .navbar-minimized .navbar-nav > li > a:hover {
       color: #8727d7; }
-  .navbar-minimized .navbar-nav > li.open > a {
+  .navbar-minimized .navbar-nav .open a, .navbar-minimized .navbar-nav .open a:hover {
+    color: #8727d7; }
+  .navbar-minimized .navbar-nav .open .dropdown-menu > li > a {
     background-color: transparent;
     color: #8727d7; }
-    .navbar-minimized .navbar-nav > li.open > a:focus, .navbar-minimized .navbar-nav > li.open > a:hover {
+    .navbar-minimized .navbar-nav .open .dropdown-menu > li > a:focus, .navbar-minimized .navbar-nav .open .dropdown-menu > li > a:hover {
       color: #8727d7;
       background-color: transparent; }
-
-.popover-content a {
-  color: #8727d7;
-  text-decoration: none; }
 
 .home {
   background: rgba(0, 0, 0, 0.6);
@@ -734,7 +744,7 @@ video {
 
 .navigation {
   position: fixed;
-  right: 50px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2; }
@@ -751,7 +761,7 @@ video {
       display: block;
       width: 16px;
       height: 16px;
-      background: #fff;
+      background: #eee1fa;
       border-radius: 50%;
       position: relative;
       z-index: 1;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Video from './Video/Video';
-import { Grid, Row, Col } from 'react-bootstrap';
 
 class Home extends Component {
     render() {

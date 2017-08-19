@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Parallax, Background} from 'react-parallax';
-import {Grid, Row, Col} from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Parallax, Background } from 'react-parallax';
+import { Grid, Row, Col } from 'react-bootstrap'
 
 class Sales extends Component {
     render() {

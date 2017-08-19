@@ -2,37 +2,29 @@ import React, { Component } from 'react';
 import Scroll from 'react-scroll';
 
 let Link = Scroll.Link;
-let scroll = Scroll.animateScroll;
 
 class Navigation extends Component {
     constructor() {
         super();
 
         this.state = {
-            active: 'home'
+            active: 'section_home'
         }
     }
 
-    scrollToTop = () => {
-        scroll.scrollToTop();
-    };
-
     handleSetActive = (to) => {
         this.setState({ active: to })
-    };
-
-    handelHeightViewport = () => {
-        return (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2 * (-1);
     };
 
     render() {
         return (
             <div className="navigation">
                 <Link
-                    to="home"
+                    to="section_home"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
+                    offset={ -70 }
                     duration={ 500 }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
@@ -43,10 +35,11 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
-                    to="products"
+                    to="section_products"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
+                    offset={ -70 }
                     duration={ 500 }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
@@ -57,10 +50,11 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
-                    to="about-us"
+                    to="section_about-us"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
+                    offset={ -70 }
                     duration={ 500 }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
@@ -71,10 +65,11 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
-                    to="reviews"
+                    to="section_testimonials"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
+                    offset={ -70 }
                     duration={ 500 }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
@@ -85,10 +80,11 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
-                    to="sales"
+                    to="section_sales"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
+                    offset={ -70 }
                     duration={ 500 }
                     className="navigation__href"
                     onSetActive={ this.handleSetActive }
@@ -99,10 +95,11 @@ class Navigation extends Component {
                 </Link>
 
                 <Link
-                    to="contact"
+                    to="section_contact"
                     activeClass="navigation__href--active"
                     spy={ true }
                     smooth={ true }
+                    offset={ -70 }
                     duration={ 500 }
                     className="navigation__href"
                     onSetActive={ this.handleSetActive }
