@@ -54,7 +54,7 @@
     background-size: cover;
     margin: auto;
     @include size(40px);
-    @include position(absolute, auto 0 0 60px);
+    @include position(absolute, auto 0 60px 0);
   }
 }
 
