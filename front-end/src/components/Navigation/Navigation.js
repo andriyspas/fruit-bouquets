@@ -5,7 +5,7 @@ let Link = Scroll.Link;
 let scroll = Scroll.animateScroll;
 
 class Navigation extends Component {
-    constructor(){
+    constructor() {
         super();
 
         this.state = {
@@ -76,7 +76,6 @@ class Navigation extends Component {
                     spy={ true }
                     smooth={ true }
                     duration={ 500 }
-                    offset={ this.handelHeightViewport() }
                     onSetActive={ this.handleSetActive }
                     className="navigation__href"
                 >
@@ -112,11 +111,6 @@ class Navigation extends Component {
                     <div className="navigation__dot--border"></div>
                     <div className="navigation__section-name">Contact</div>
                 </Link>
-
-                {/*<a onClick={ this.scrollTop } className="navigation__href">*/}
-                    {/*Top*/}
-                {/*</a>*/}
-
             </div>
         );
     }

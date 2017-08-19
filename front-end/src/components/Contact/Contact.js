@@ -234,7 +234,7 @@ class Contact extends Component {
                                         </Row>
 
                                         <Row className={ this.state.visibility ? 'button__hidden' : null }>
-                                            <script src='https://www.google.com/recaptcha/api.js' async></script>
+                                            <script src='https://www.google.com/recaptcha/api.js'></script>
 
                                             <ReCAPTCHA
                                                 className="recaptcha pull-right"

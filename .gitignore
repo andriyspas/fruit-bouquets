@@ -24,3 +24,6 @@ back-end/npm-debug.log
 /front-end/yarn.lock
 /front-end/package-lock.json
 /front-end/node_modules/
+/package-lock.json
+!/front-end/yarn.lock
+!/front-end/package-lock.json

@@ -597,7 +597,8 @@ body {
       background-color: transparent; }
 
 .popover-content a {
-  color: #8727d7; }
+  color: #8727d7;
+  text-decoration: none; }
 
 .home {
   background: rgba(0, 0, 0, 0.6);

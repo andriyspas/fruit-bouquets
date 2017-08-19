@@ -143,6 +143,7 @@ class Header extends Component {
 
                         <OverlayTrigger
                             rootClose
+                            container={this}
                             trigger="click"
                             placement="bottom"
                             overlay={ PopoverPhone }

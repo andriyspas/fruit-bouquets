@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import {Parallax, Background} from 'react-parallax';
-import {Grid, Row, Col}  from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Parallax, Background } from 'react-parallax';
+import { Grid, Row, Col }  from 'react-bootstrap'
 
 class AboutUs extends Component {
     render() {
         return (
-            <div className="about-us">
+            <section className="about-us">
                 <Parallax strength={300} bgHeight='100%'>
                     <Background>
                         <img src={require('../../images/bouquet.jpg')}/>
@@ -82,7 +82,7 @@ class AboutUs extends Component {
                         </Grid>
                     </div>
                 </Parallax>
-            </div>
+            </section>
         )
     }
 }

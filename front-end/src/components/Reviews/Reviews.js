@@ -73,6 +73,7 @@ class Reviews extends Component {
                             </div>
                         </Col>
                     </Row>
+
                     <Row>
                         <Col xs={12}>
                             <ModalStructure description={ Description } className={ ClassName } modalBody={ ModalWindow }/>

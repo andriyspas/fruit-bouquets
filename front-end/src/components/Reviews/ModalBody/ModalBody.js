@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-import {Modal, Form, FormGroup, FormControl, Row, Col} from 'react-bootstrap';
+import { Modal, Form, FormGroup, FormControl, Row, Col } from 'react-bootstrap';
 
 class ModalBody extends Component {
     constructor() {
@@ -9,27 +9,21 @@ class ModalBody extends Component {
         this.state = {
             captchaValue: '',
             name: '',
-            surname: '',
             city: '',
             message: ''
         }
     };
-
 
     validateField = (value) => {
         return value !== '' && value !== undefined;
     };
 
     fieldValid = () => {
-        return this.validateField(this.state.name) && this.validateField(this.state.message)
+        return this.validateField(this.state.name) && this.validateField(this.state.message) && this.state.captchaValue
     };
 
     handleNameChange = (event) => {
         this.setState({name: event.target.value})
-    };
-
-    handleCityChange = (event) => {
-        this.setState({city: event.target.value})
     };
 
     handleMessageChange = (event) => {
@@ -43,7 +37,6 @@ class ModalBody extends Component {
     submitReview = () => {
         let data = {
             name: this.state.name,
-            surname: this.state.surname,
             city: this.state.city,
             message: this.state.message,
             date_post: new Date(),
@@ -59,7 +52,7 @@ class ModalBody extends Component {
                 body: JSON.stringify(data)
             })
             .then(res => res.json())
-            .then(res => this.setState({captchaValid: res.success}))
+            .then(res => this.setState({ captchaValue: res.success }))
     };
 
     render() {
@@ -83,7 +76,6 @@ class ModalBody extends Component {
                                 <FormControl
                                     type="text"
                                     placeholder="City"
-                                    onChange={ this.handleCityChange }
                                 />
                             </FormGroup>
                         </Col>
@@ -116,6 +108,7 @@ class ModalBody extends Component {
                             <button
                                 className="button pull-right"
                                 type="submit"
+                                disabled={ !this.fieldValid() }
                             >
                                 { this.props.addReview }
                             </button>
