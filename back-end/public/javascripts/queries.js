@@ -9,8 +9,6 @@ var request = require('request');
 var connectionString = 'postgres://postgres:qwer1234@localhost:5432/bouquets_of_fruits';
 var db = pgp(connectionString);
 
-// add query functions
-
 module.exports = {
     getAllComments: getAllComments,
     createComment: createComment,
@@ -28,15 +26,14 @@ function getAllComments(req, res, next) {
                 })
         })
         .catch(function (err) {
-            return next(err)
+            return next(err);
         })
 }
 
 function createComment(req, res, next) {
     verifyCaptcha(req, function (success) {
         if (success) {
-            db.none('insert into reviews(name, surname, message, date_post, city)' +
-                'values(${name}, ${surname}, ${message}, ${date_post}, ${city})',
+            db.none('insert into reviews(name, city, date_post, message)' + ' ' + 'values(${name}, ${city}, ${date_post}, ${message})',
                 req.body)
                 .then(function () {
                     res.status(200)
@@ -46,7 +43,7 @@ function createComment(req, res, next) {
                         })
                 })
                 .catch(function (err) {
-                    return next(err)
+                    return next(err);
                 })
         }
         else {
@@ -64,6 +61,7 @@ function verifyCaptcha(req, callback) {
         callback(false);
         return;
     }
+
     var secretKey = '6LePfiwUAAAAAM1Iv_pV1zJpCif5bTmx6V1niFfn';
     var verificationUrl = 'https://www.google.com/recaptcha/api/siteverify?secret=' + secretKey + '&response=' + req.body['recaptcha'];
     request(verificationUrl, function (error, response, body) {
@@ -73,7 +71,6 @@ function verifyCaptcha(req, callback) {
 }
 
 function captchaVerification(req, res) {
-    console.log(req.body);
     verifyCaptcha(req, function (success) {
         res.json({success: success});
     })
