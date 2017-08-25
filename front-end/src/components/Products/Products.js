@@ -22,7 +22,7 @@ class Products extends Component {
             paginationType: 'fraction',
             spaceBetween: 15,
             slidesPerView: 3,
-            slidesPerColumn: 3,
+            slidesPerColumn: 2,
             breakpoints: {
                 1200: {
                     slidesPerView: 2,
