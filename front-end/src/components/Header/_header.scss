@@ -72,6 +72,10 @@
     padding: 3px 0;
 
     & > li {
+      &.dropdown {
+        width: 84px;
+      }
+
       .dropdown-menu {
         min-width: 0;
         background: #fff;
@@ -90,10 +94,9 @@
 
       & > a {
         color: #8727d7;
-        transition: color 0.2s ease;
         font-size: 16px;
 
-        &:hover {
+        &:focus, &:hover {
           color: #fff;
         }
 
@@ -117,13 +120,21 @@
       }
     }
 
-    & > .open > a {
-      background-color: transparent;
-      color: #fff;
+    & > .open {
+      & > a {
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        background-color: #fff;
+        color: #8727d7;
 
-      &:focus, &:hover {
-        color: #fff;
-        background-color: transparent;
+        &:focus, &:hover {
+          color: #8727d7;
+          background-color: #fff;
+        }
+      }
+
+      & > ul {
+        width: 100%;
       }
     }
   }
@@ -182,7 +193,7 @@
     }
 
     .open {
-      a, a:hover {
+      a, a:hover, a:focus {
         color: #8727d7;
       }
 
