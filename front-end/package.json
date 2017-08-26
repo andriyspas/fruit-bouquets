@@ -19,7 +19,8 @@
     "react-notification-system": "^0.2.14",
     "react-parallax": "^1.4.4",
     "react-scripts": "1.0.10",
-    "react-scroll": "^1.5.4"
+    "react-scroll": "^1.5.4",
+    "react-moment": "^0.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
