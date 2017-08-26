@@ -4,8 +4,27 @@
   text-align: center;
 
   &__details {
+    overflow: hidden;
     padding-bottom: 50px;
+    position: relative;
     text-align: left;
+
+    &--left {
+      transition: 0.3s ease;
+      transform: translateX(-100%);
+    }
+
+    &--right {
+      transition: 0.3s ease;
+      transform: translateX(100%);
+    }
+
+    &--active {
+      .contact__details--left,
+      .contact__details--right {
+        transform:  none;
+      }
+    }
   }
 
   &__title {

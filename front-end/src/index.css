@@ -711,8 +711,19 @@ video {
   position: relative;
   text-align: center; }
   .contact__details {
+    overflow: hidden;
     padding-bottom: 50px;
+    position: relative;
     text-align: left; }
+    .contact__details--left {
+      transition: 0.3s ease;
+      transform: translateX(-100%); }
+    .contact__details--right {
+      transition: 0.3s ease;
+      transform: translateX(100%); }
+    .contact__details--active .contact__details--left,
+    .contact__details--active .contact__details--right {
+      transform: none; }
   .contact__title {
     line-height: 46px;
     font-size: 38px;

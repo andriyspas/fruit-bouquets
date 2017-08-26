@@ -3,6 +3,7 @@ import Map from './Map/Map';
 import Notification from '../Notification/Notification';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { Grid, Row, Col, Form, FormGroup, FormControl } from 'react-bootstrap';
+import VisibilitySensor from "react-visibility-sensor";
 
 class Contact extends Component {
     constructor() {
@@ -18,7 +19,8 @@ class Contact extends Component {
             success: false,
             error: false,
             submitted: false,
-            captchaValid: false
+            captchaValid: false,
+            sectionVisible: false
         }
     }
 
@@ -116,6 +118,10 @@ class Contact extends Component {
             .then(res => this.setState({captchaValid: res.success}))
     };
 
+    handleOnChangeSectionVisible = (isVisible) => {
+        this.setState({ sectionVisible : isVisible});
+    };
+
     render() {
         return (
             <section className="contact">
@@ -126,10 +132,10 @@ class Contact extends Component {
                         </Col>
                     </Row>
 
-                    <Row bsClass="row contact__details">
+                    <Row bsClass={"row contact__details " + (this.state.sectionVisible ? "contact__details--active" : "contact__details--inactive")}>
                         <Col xs={12}>
                             <Row>
-                                <Col xs={12} sm={6}>
+                                <Col xs={12} sm={6} className="contact__details--left">
                                     <div className="contact__subtitle">Contact us</div>
 
                                     <div className="contact__information">
@@ -170,7 +176,7 @@ class Contact extends Component {
                                     </Row>
                                 </Col>
 
-                                <Col xs={12} sm={6}>
+                                <Col xs={12} sm={6} className="contact__details--right">
                                     <div className="contact__subtitle">Contact Form</div>
 
                                     <Form autoComplete="off" className="form contact__form" onSubmit={ this.sendEmail }>
@@ -257,6 +263,10 @@ class Contact extends Component {
                                 </Col>
                             </Row>
                         </Col>
+
+                        <VisibilitySensor onChange={ this.handleOnChangeSectionVisible }>
+                            <div className="detect__position col-xs-12"></div>
+                        </VisibilitySensor>
                     </Row>
                 </Grid>
 
