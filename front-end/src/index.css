@@ -670,7 +670,8 @@ body {
   .home__name {
     font-size: 30px;
     line-height: 38px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    animation: scroll-down 2s ease; }
     @media (min-width: 576px) {
       .home__name {
         font-size: 50px;
@@ -678,7 +679,8 @@ body {
   .home__title {
     font-size: 18px;
     line-height: 26px;
-    margin-top: 20px; }
+    margin-top: 20px;
+    animation: scroll-down 2s ease; }
     @media (min-width: 576px) {
       .home__title {
         font-size: 24px;
@@ -705,6 +707,15 @@ video {
   z-index: -1;
   height: auto;
   width: auto; }
+
+@keyframes scroll-down {
+  from {
+    transform: translateY(40%) scale(0.6);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0; }
+  to {
+    visibility: visible;
+    transform: none; } }
 
 .contact {
   padding-top: 50px;
