@@ -8,7 +8,7 @@ class ModalStructure extends Component {
         this.state = {
             show: false
         }
-    }
+    };
 
     close = () => {
         this.setState({ show: false });

@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import Swiper from 'react-id-swiper'
+import React, { Component } from 'react';
+import Swiper from 'react-id-swiper';
 import { Grid, Row, Col } from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
-import ModalBody from './ModalBody/ModalBody'
+import ModalBody from './ModalBody/ModalBody';
 import Moment from 'react-moment';
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -24,7 +24,7 @@ class Reviews extends Component {
         };
 
         this.getReviews();
-    }
+    };
 
     handleOnChange = (isVisible) => {
         this.setState({ visibility : isVisible});

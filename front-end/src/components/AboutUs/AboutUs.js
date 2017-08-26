@@ -11,7 +11,7 @@ class AboutUs extends Component {
         this.state = {
             visibility: false
         }
-    }
+    };
 
     handleOnChange = (isVisible) => {
         this.setState({visibility: isVisible});

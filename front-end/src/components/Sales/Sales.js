@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import {Parallax, Background} from 'react-parallax';
-import {Grid, Row, Col} from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Parallax, Background } from 'react-parallax';
+import { Grid, Row, Col } from 'react-bootstrap'
 
 import VisibilitySensor from 'react-visibility-sensor';
 
@@ -11,7 +11,7 @@ class Sales extends Component {
         this.state = {
             visibility: false
         }
-    }
+    };
 
     handleOnChange = (isVisible) => {
         this.setState({visibility: isVisible});

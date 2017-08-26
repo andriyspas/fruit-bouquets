@@ -64,9 +64,9 @@ class ModalBody extends Component {
 
                 <div className="products__details">
                     <div>
-                        <div className="products__details--title">{this.props.productsDetails.title}</div>
+                        <div className="products__details--title">{ this.props.productsDetails.title }</div>
                         <div className="products__details--desription">
-                            {this.props.productsDetails.description}
+                            { this.props.productsDetails.description }
                         </div>
                     </div>
                 </div>

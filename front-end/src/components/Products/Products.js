@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import Swiper from "react-id-swiper"
+import Swiper from "react-id-swiper";
 import {Grid, Row, Col} from "react-bootstrap";
 import ModalStructure from  "../Modal/Modal";
-import ModalBody from "./ModalBody/ModalBody"
+import ModalBody from "./ModalBody/ModalBody";
 import ProductsData from "../../constants/ProductsData";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -17,7 +17,7 @@ class Products extends Component {
         this.state = {
             visibility: false
         }
-    }
+    };
 
     handleOnChange = (isVisible) => {
         this.setState({ visibility : isVisible});

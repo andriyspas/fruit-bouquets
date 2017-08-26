@@ -22,7 +22,7 @@ class Contact extends Component {
             captchaValid: false,
             sectionVisible: false
         }
-    }
+    };
 
     validateField = (value) => {
         return value !== '' && value !== undefined;

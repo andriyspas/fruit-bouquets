@@ -13,7 +13,7 @@ class Header extends Component {
         this.state = {
             minimized: false,
         };
-    }
+    };
 
     handleScroll = (event) => {
         const scrollTop = event.srcElement.body.scrollTop;
@@ -25,11 +25,11 @@ class Header extends Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
-    }
+    };
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
-    }
+    };
 
     handleSelect = (eventKey) => {
         this.props.onLanguageChange(eventKey);

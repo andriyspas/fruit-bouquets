@@ -10,7 +10,7 @@ class Navigation extends Component {
         this.state = {
             active: 'section_home'
         }
-    }
+    };
 
     handleSetActive = (to) => {
         this.setState({ active: to })

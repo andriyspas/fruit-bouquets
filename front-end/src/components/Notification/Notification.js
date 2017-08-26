@@ -6,11 +6,11 @@ class Notification extends Component {
         super(props);
 
         this._notificationSystem = null;
-    }
+    };
 
     componentDidMount() {
         this._notificationSystem = this.refs.notificationSystem;
-    }
+    };
 
     addNotification = (level, message) => {
         this._notificationSystem.addNotification({
