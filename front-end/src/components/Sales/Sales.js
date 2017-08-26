@@ -1,11 +1,25 @@
-import React, { Component } from 'react';
-import { Parallax, Background } from 'react-parallax';
-import { Grid, Row, Col } from 'react-bootstrap'
+import React, {Component} from 'react';
+import {Parallax, Background} from 'react-parallax';
+import {Grid, Row, Col} from 'react-bootstrap'
+
+import VisibilitySensor from 'react-visibility-sensor';
 
 class Sales extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            visibility: false
+        }
+    }
+
+    handleOnChange = (isVisible) => {
+        this.setState({visibility: isVisible});
+    };
+
     render() {
         return (
-            <div className="sales">
+            <section className={"sales " + (this.state.visibility ? 'active' : 'inactive')}>
                 <Parallax strength={300} bgHeight='100%'>
                     <Background>
                         <img src={require('../../images/bouquet.jpg')}/>
@@ -29,10 +43,12 @@ class Sales extends Component {
                                                 </div>
                                             </div>
 
-                                            <div className="round-item__description">
-                                                <div className="round-item__name">Lorem ipsum</div>
-                                                <div className="round-item__details">Lorem ipsum doloresm test big
-                                                    name
+                                            <div className="round-item__description--wrapper">
+                                                <div className="round-item__description">
+                                                    <div className="round-item__name">Lorem ipsum</div>
+                                                    <div className="round-item__details">
+                                                        Lorem ipsum doloresm test big name
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -46,10 +62,12 @@ class Sales extends Component {
                                                 </div>
                                             </div>
 
-                                            <div className="round-item__description">
-                                                <div className="round-item__name">Lorem ipsum</div>
-                                                <div className="round-item__details">Lorem ipsum doloresm test big
-                                                    name
+                                            <div className="round-item__description--wrapper">
+                                                <div className="round-item__description">
+                                                    <div className="round-item__name">Lorem ipsum</div>
+                                                    <div className="round-item__details">
+                                                        Lorem ipsum doloresm test big name
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -63,10 +81,12 @@ class Sales extends Component {
                                                 </div>
                                             </div>
 
-                                            <div className="round-item__description">
-                                                <div className="round-item__name">Lorem ipsum</div>
-                                                <div className="round-item__details">Lorem ipsum doloresm test big
-                                                    name
+                                            <div className="round-item__description--wrapper">
+                                                <div className="round-item__description">
+                                                    <div className="round-item__name">Lorem ipsum</div>
+                                                    <div className="round-item__details">
+                                                        Lorem ipsum doloresm test big name
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -76,7 +96,11 @@ class Sales extends Component {
                         </Grid>
                     </div>
                 </Parallax>
-            </div>
+
+                <VisibilitySensor onChange={ this.handleOnChange } intervalDelay={ 0 }>
+                    <div className="detect__position"></div>
+                </VisibilitySensor>
+            </section>
         )
     }
 }

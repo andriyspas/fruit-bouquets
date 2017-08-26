@@ -966,11 +966,15 @@ video {
       background: #fff;
       width: calc(100% - 60px);
       margin: 6px auto 0; }
+  .sales.active .round-item__image,
+  .sales.active .round-item__description {
+    transform: none; }
 
 .products {
   margin: 0 auto;
   max-width: 480px;
   padding: 40px 0;
+  position: relative;
   text-align: center; }
   @media (min-width: 768px) {
     .products {
@@ -1174,10 +1178,9 @@ video {
     margin: 0 auto 80px;
     max-width: 768px;
     width: 100%; }
-
-.about-us.active .round-item__image,
-.about-us.active .round-item__description {
-  transform: none; }
+  .about-us.active .round-item__image,
+  .about-us.active .round-item__description {
+    transform: none; }
 
 .modal-header {
   border: none;

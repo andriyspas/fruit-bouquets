@@ -31,11 +31,11 @@
     max-width: 768px;
     width: 100%;
   }
-}
 
-.about-us.active {
-  .round-item__image,
-  .round-item__description {
-    transform: none;
+  &.active {
+    .round-item__image,
+    .round-item__description {
+      transform: none;
+    }
   }
 }

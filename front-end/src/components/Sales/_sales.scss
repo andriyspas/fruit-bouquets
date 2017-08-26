@@ -24,4 +24,11 @@
     @include title(#fff);
     margin-bottom: 60px;
   }
+
+  &.active {
+    .round-item__image,
+    .round-item__description {
+      transform: none;
+    }
+  }
 }
