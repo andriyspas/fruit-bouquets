@@ -586,7 +586,7 @@ video {
       position: absolute;
       width: 70px;
       height: 70px;
-      background: url("./images/quote.svg");
+      background: url("./images/elements/quote.svg");
       background-size: contain;
       opacity: 0.2;
       left: 0;
@@ -597,7 +597,7 @@ video {
       position: absolute;
       width: 70px;
       height: 70px;
-      background: url("./images/quote.svg");
+      background: url("./images/elements/quote.svg");
       background-size: contain;
       opacity: 0.2;
       bottom: 0;

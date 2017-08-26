@@ -45,7 +45,7 @@ class AboutUs extends Component {
                                         <div className="round-item">
                                             <div className="round-item__image--wrapper">
                                                 <div className="round-item__image">
-                                                    <img src={require('../../images/money-bag.svg')} alt=""/>
+                                                    <img src={require('../../images/elements/money-bag.svg')} alt=""/>
                                                 </div>
                                             </div>
 
@@ -65,7 +65,7 @@ class AboutUs extends Component {
                                         <div className="round-item">
                                             <div className="round-item__image--wrapper">
                                                 <div className="round-item__image">
-                                                    <img src={require('../../images/idea.svg')} alt=""/>
+                                                    <img src={require('../../images/elements/idea.svg')} alt=""/>
                                                 </div>
                                             </div>
 
@@ -85,7 +85,7 @@ class AboutUs extends Component {
                                         <div className="round-item">
                                             <div className="round-item__image--wrapper">
                                                 <div className="round-item__image">
-                                                    <img src={require('../../images/money-bag.svg')} alt=""/>
+                                                    <img src={require('../../images/elements/money-bag.svg')} alt=""/>
                                                 </div>
                                             </div>
 

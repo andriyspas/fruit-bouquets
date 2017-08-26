@@ -688,7 +688,7 @@ body {
         font-size: 24px;
         line-height: 30px; } }
   .home__scroll-mouse {
-    background: url("./images/mouse.svg") 50%;
+    background: url("./images/elements/mouse.svg") 50%;
     background-size: cover;
     margin: auto;
     height: 40px;
@@ -905,7 +905,7 @@ video {
       content: '';
       display: block;
       position: absolute;
-      background: url("./images/quote.svg");
+      background: url("./images/elements/quote.svg");
       background-size: contain;
       opacity: 0.2;
       width: 50px;
@@ -920,7 +920,7 @@ video {
       content: '';
       display: block;
       position: absolute;
-      background: url("./images/quote.svg");
+      background: url("./images/elements/quote.svg");
       background-size: contain;
       opacity: 0.2;
       width: 50px;
@@ -1107,7 +1107,7 @@ video {
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
   background-color: #fff;
-  background-image: url("./images/arrow.svg");
+  background-image: url("./images/elements/arrow.svg");
   background-position-x: 100%;
   background-size: 70%;
   height: 100%;

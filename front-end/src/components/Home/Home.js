@@ -8,7 +8,7 @@ class Home extends Component {
                 <Video/>
 
                 <div className="home__logo">
-                    <img src={require('../../images/flower-bouquet.svg')} alt="" width='50px'/>
+                    <img src={require('../../images/elements/flower-bouquet.svg')} alt="" width='50px'/>
                     <div className="home__name">bouquets of fruits</div>
                     <div className="home__title">When an unknown printer. Took a galley of type</div>
                 </div>
