@@ -1,11 +1,25 @@
-import React, { Component } from 'react';
-import { Parallax, Background } from 'react-parallax';
-import { Grid, Row, Col }  from 'react-bootstrap'
+import React, {Component} from 'react';
+import {Parallax, Background} from 'react-parallax';
+import {Grid, Row, Col}  from 'react-bootstrap';
+
+import VisibilitySensor from 'react-visibility-sensor';
 
 class AboutUs extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            visibility: false
+        }
+    }
+
+    handleOnChange = (isVisible) => {
+        this.setState({visibility: isVisible});
+    };
+
     render() {
         return (
-            <section className="about-us">
+            <section className={ "about-us " + (this.state.visibility ? 'active' : 'inactive')}>
                 <Parallax strength={300} bgHeight='100%'>
                     <Background>
                         <img src={require('../../images/bouquet.jpg')}/>
@@ -35,10 +49,13 @@ class AboutUs extends Component {
                                                 </div>
                                             </div>
 
-                                            <div className="round-item__description">
-                                                <div className="round-item__name">Unique Design</div>
-                                                <div className="round-item__details">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            <div className="round-item__description--wrapper">
+                                                <div className="round-item__description">
+                                                    <div className="round-item__name">Unique Design</div>
+                                                    <div className="round-item__details">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                        eiusmod
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -52,10 +69,13 @@ class AboutUs extends Component {
                                                 </div>
                                             </div>
 
-                                            <div className="round-item__description">
-                                                <div className="round-item__name">Great Ideas</div>
-                                                <div className="round-item__details">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            <div className="round-item__description--wrapper">
+                                                <div className="round-item__description">
+                                                    <div className="round-item__name">Great Ideas</div>
+                                                    <div className="round-item__details">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                        eiusmod
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -69,10 +89,13 @@ class AboutUs extends Component {
                                                 </div>
                                             </div>
 
-                                            <div className="round-item__description">
-                                                <div className="round-item__name">24/7 Support</div>
-                                                <div className="round-item__details">
-                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            <div className="round-item__description--wrapper">
+                                                <div className="round-item__description">
+                                                    <div className="round-item__name">24/7 Support</div>
+                                                    <div className="round-item__details">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                        eiusmod
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,6 +105,10 @@ class AboutUs extends Component {
                         </Grid>
                     </div>
                 </Parallax>
+
+                <VisibilitySensor onChange={ this.handleOnChange } intervalDelay={ 0 }>
+                    <div className="detect__position"></div>
+                </VisibilitySensor>
             </section>
         )
     }

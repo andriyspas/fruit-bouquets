@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
-import Swiper from 'react-id-swiper'
-import {Grid, Row, Col} from 'react-bootstrap';
-import ModalStructure from  '../Modal/Modal';
-import ModalBody from './ModalBody/ModalBody'
-import ProductsData from '../../constants/ProductsData';
-import VisibilitySensor from 'react-visibility-sensor';
+import React, {Component} from "react";
+import Swiper from "react-id-swiper"
+import {Grid, Row, Col} from "react-bootstrap";
+import ModalStructure from  "../Modal/Modal";
+import ModalBody from "./ModalBody/ModalBody"
+import ProductsData from "../../constants/ProductsData";
+import VisibilitySensor from "react-visibility-sensor";
 
-const Description = { openModal: 'View details' };
-const ClassName = 'products__tile--plug';
-const size = 'large';
+const Description = { openModal: "View details" };
+const ClassName = "products__tile--plug";
+const size = "large";
 
 class Products extends Component {
     constructor() {
@@ -26,14 +26,14 @@ class Products extends Component {
 
     render() {
         const params = {
-            nextButton: '.swiper-button-next',
-            prevButton: '.swiper-button-prev',
-            pagination: '.swiper-pagination',
+            nextButton: ".swiper-button-next",
+            prevButton: ".swiper-button-prev",
+            pagination: ".swiper-pagination",
             paginationClickable: true,
             paginationBulletRender: (swiper, index, className) => {
                 return '<span class="' + className + '">' + (index + 1) + '</span>';
             },
-            paginationType: 'fraction',
+            paginationType: "fraction",
             spaceBetween: 15,
             slidesPerView: 3,
             slidesPerColumn: 2,
@@ -50,7 +50,7 @@ class Products extends Component {
         };
 
         return (
-            <section className={ 'products ' + (this.state.visibility ? 'active' : 'inactive') } style={{position: 'relative'}}>
+            <section className={"products " + (this.state.visibility ? "active" : "inactive")}>
                 <Grid>
                     <Row>
                         <Col xs={12}>
@@ -65,7 +65,7 @@ class Products extends Component {
                                         <div key={ index }>
                                             <div className="products__tile">
                                                 <div className="products__thumb--wrapper">
-                                                    <div className="products__thumb" style={{backgroundImage: 'url(' + item.image + ')'}}></div>
+                                                    <div className="products__thumb" style={{backgroundImage: "url(" + item.image + ")"}}></div>
                                                 </div>
 
                                                 <ModalStructure
@@ -83,19 +83,8 @@ class Products extends Component {
                     </Row>
                 </Grid>
 
-                <VisibilitySensor partialVisibility={ true } onChange={ this.handleOnChange }>
-                    <div
-                        className="detect__position"
-                        style={{
-                            position: 'absolute',
-                            width: '100%',
-                            height: '6px',
-                            background: 'red',
-                            top: '0',
-                            bottom: '0',
-                            margin: 'auto 0'}}
-                    >
-                    </div>
+                <VisibilitySensor onChange={ this.handleOnChange }>
+                    <div className="detect__position"></div>
                 </VisibilitySensor>
             </section>
         )

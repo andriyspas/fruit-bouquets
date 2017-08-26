@@ -412,12 +412,17 @@ template {
     @media (min-width: 768px) {
       .round-item__wrapper:nth-of-type(even) {
         top: -20px; } }
+    .round-item__wrapper:nth-of-type(odd) .round-item__image,
+    .round-item__wrapper:nth-of-type(odd) .round-item__description {
+      transition: transform 0.4s 0.2s; }
   .round-item__image {
     background-color: #fff;
     border-radius: 50%;
     color: #8727d7;
     display: inline-block;
     height: 120px;
+    transform: translateY(100%);
+    transition: transform 0.4s;
     width: 120px; }
     @media (min-width: 576px) {
       .round-item__image {
@@ -440,15 +445,24 @@ template {
         .round-item__image img {
           max-width: 80px;
           margin: 30px; } }
+  .round-item__description {
+    padding-top: 10px;
+    transform: translateY(-100%);
+    transition: transform 0.4s; }
+    @media (min-width: 768px) {
+      .round-item__description {
+        padding-top: 20px; } }
+    .round-item__description--wrapper {
+      overflow: hidden; }
   .round-item__name {
     font-size: 16px;
     font-weight: 500;
-    margin: 10px 0;
+    margin-bottom: 10px;
     text-transform: uppercase; }
     @media (min-width: 768px) {
       .round-item__name {
         font-size: 18px;
-        margin: 20px 0; } }
+        margin-bottom: 20px; } }
   .round-item__details {
     font-size: 14px; }
     @media (min-width: 768px) {
@@ -1161,6 +1175,10 @@ video {
     max-width: 768px;
     width: 100%; }
 
+.about-us.active .round-item__image,
+.about-us.active .round-item__description {
+  transform: none; }
+
 .modal-header {
   border: none;
   padding: 30px; }
@@ -1183,3 +1201,12 @@ video {
     background-color: rgba(135, 39, 215, 0.5); }
   .button__hidden {
     visibility: hidden; }
+
+.detect__position {
+  background: red;
+  bottom: 0;
+  height: 6px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 100%; }
