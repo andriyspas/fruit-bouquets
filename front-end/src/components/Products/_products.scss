@@ -192,3 +192,26 @@
     }
   }
 }
+
+.products__tile--wrapper {
+  .swiper-slide {
+    visibility: hidden;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  @for $i from 1 through 6 {
+    .swiper-slide:nth-of-type(#{$i}) {
+      transition: opacity 0.5s $i * 0.2s, transform 0.5s $i * 0.2s;
+    }
+  }
+
+  &.active {
+    .swiper-slide {
+      visibility: visible;
+      transform: none;
+      opacity: 1;
+    }
+  }
+}

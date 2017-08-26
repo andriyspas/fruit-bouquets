@@ -40,17 +40,15 @@ class Products extends Component {
             breakpoints: {
                 1200: {
                     slidesPerView: 2,
-                    slidesPerColumn: 2,
                 },
                 767: {
                     slidesPerView: 1,
-                    slidesPerColumn: 2,
                 },
             }
         };
 
         return (
-            <section className={"products " + (this.state.visibility ? "active" : "inactive")}>
+            <section className="products">
                 <Grid>
                     <Row>
                         <Col xs={12}>
@@ -58,7 +56,7 @@ class Products extends Component {
                         </Col>
                     </Row>
                     <Row>
-                        <Col sm={12}>
+                        <Col sm={12} className={"products__tile--wrapper " + (this.state.visibility ? "active" : "inactive")}>
                             <Swiper { ...params }>
                                 {
                                     ProductsData.map((item, index) => (
