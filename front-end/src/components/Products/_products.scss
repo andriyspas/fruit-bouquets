@@ -195,10 +195,12 @@
 
 .products__tile--wrapper {
   .swiper-slide {
-    visibility: hidden;
-    transition: opacity 0.5s, transform 0.5s;
-    transform: translateX(100%);
-    opacity: 0;
+    @media (min-width: 768px) {
+      visibility: hidden;
+      transition: opacity 0.5s, transform 0.5s;
+      transform: translateX(100%);
+      opacity: 0;
+    }
   }
 
   @for $i from 1 through 6 {
@@ -209,9 +211,11 @@
 
   &.active {
     .swiper-slide {
-      visibility: visible;
-      transform: none;
-      opacity: 1;
+      @media (min-width: 768px) {
+        visibility: visible;
+        transform: none;
+        opacity: 1;
+      }
     }
   }
 }
