@@ -25,7 +25,6 @@ class Products extends Component {
 
     render() {
         const params = {
-            // direction: "vertical",
             nextButton: ".swiper-button-next",
             prevButton: ".swiper-button-prev",
             pagination: ".swiper-pagination",

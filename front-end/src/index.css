@@ -670,19 +670,19 @@ body {
         .home__logo img {
           width: 200px; } }
   .home__name {
+    animation: scroll-down 2s ease;
     font-size: 30px;
     line-height: 38px;
-    margin-top: 20px;
-    animation: scroll-down 2s ease; }
+    margin-top: 20px; }
     @media (min-width: 576px) {
       .home__name {
         font-size: 50px;
         line-height: 50px; } }
   .home__title {
+    animation: scroll-down 2s ease;
     font-size: 18px;
     line-height: 26px;
-    margin-top: 20px;
-    animation: scroll-down 2s ease; }
+    margin-top: 20px; }
     @media (min-width: 576px) {
       .home__title {
         font-size: 24px;
@@ -790,9 +790,9 @@ video {
   .contact h4 {
     margin: 20px 0; }
   .contact .recaptcha {
+    margin: 0 15px 10px 0;
     transform: scale(0.95);
-    transform-origin: top right;
-    margin: 0 15px 10px 0; }
+    transform-origin: top right; }
 
 .navigation {
   position: fixed;
@@ -1086,23 +1086,23 @@ video {
   .products .swiper-container {
     padding-bottom: 60px; }
     .products .swiper-container .swiper-pagination-fraction {
-      text-align: right;
+      bottom: 0;
       color: #8727d7;
       font-size: 22px;
-      bottom: 0; }
+      text-align: right; }
       .products .swiper-container .swiper-pagination-fraction .swiper-pagination-current {
         font-size: 42px; }
     .products .swiper-container .swiper-button-next, .products .swiper-container .swiper-button-prev {
       background-position-x: 50%;
       background-size: 50%;
-      top: auto;
-      margin-top: 20px;
       border: 1px solid #8727d7;
+      margin-top: 20px;
+      top: auto;
       height: 40px;
       width: 40px; }
     .products .swiper-container .swiper-button-next {
-      right: auto;
-      left: 50px; }
+      left: 50px;
+      right: auto; }
 
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
