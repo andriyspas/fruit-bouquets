@@ -4,12 +4,26 @@ import {Grid, Row, Col} from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
 import ProductsData from '../../constants/ProductsData';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const Description = { openModal: 'View details' };
 const ClassName = 'products__tile--plug';
 const size = 'large';
 
 class Products extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            visibility: false
+        }
+    }
+
+    handleOnChange = (isVisible) => {
+        this.setState({ visibility : isVisible});
+    };
+
+
     render() {
         const params = {
             nextButton: '.swiper-button-next',
@@ -36,7 +50,7 @@ class Products extends Component {
         };
 
         return (
-            <section className="products">
+            <section className={ 'products ' + (this.state.visibility ? 'active' : 'inactive') } style={{position: 'relative'}}>
                 <Grid>
                     <Row>
                         <Col xs={12}>
@@ -69,6 +83,20 @@ class Products extends Component {
                     </Row>
                 </Grid>
 
+                <VisibilitySensor partialVisibility={ true } onChange={ this.handleOnChange }>
+                    <div
+                        className="detect__position"
+                        style={{
+                            position: 'absolute',
+                            width: '100%',
+                            height: '6px',
+                            background: 'red',
+                            top: '0',
+                            bottom: '0',
+                            margin: 'auto 0'}}
+                    >
+                    </div>
+                </VisibilitySensor>
             </section>
         )
     }

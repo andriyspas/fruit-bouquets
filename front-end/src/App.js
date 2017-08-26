@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import { Header, Navigation, Home, Contact, Reviews, Sales, Products, AboutUs } from './components/index'
+import React, {Component} from 'react';
+import {Header, Navigation, Home, Contact, Reviews, Sales, Products, AboutUs} from './components/index';
 
 import Scroll from 'react-scroll'
-import { IntlProvider } from 'react-intl';
-import { addLocaleData } from 'react-intl';
+import {IntlProvider} from 'react-intl';
+import {addLocaleData} from 'react-intl';
 import uk from 'react-intl/locale-data/uk';
 import pl from 'react-intl/locale-data/pl';
 
@@ -30,7 +30,7 @@ class App extends Component {
     };
 
     handleLanguageChange = (lang) => {
-        switch(lang) {
+        switch (lang) {
             case 'ua':
                 this.setState({messages: messagesUa, locale: localeUa});
                 break;
@@ -77,6 +77,7 @@ class App extends Component {
                     <Element name="section_contact">
                         <Contact/>
                     </Element>
+
                 </div>
             </IntlProvider>
         )
