@@ -23,9 +23,9 @@ class Products extends Component {
         this.setState({ visibility : isVisible});
     };
 
-
     render() {
         const params = {
+            // direction: "vertical",
             nextButton: ".swiper-button-next",
             prevButton: ".swiper-button-prev",
             pagination: ".swiper-pagination",
@@ -55,6 +55,7 @@ class Products extends Component {
                             <div className="products__title">Our Production</div>
                         </Col>
                     </Row>
+
                     <Row>
                         <Col sm={12} className={"products__tile--wrapper " + (this.state.visibility ? "active" : "inactive")}>
                             <Swiper { ...params }>

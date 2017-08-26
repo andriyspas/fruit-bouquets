@@ -4,6 +4,7 @@ import { Grid, Row, Col } from 'react-bootstrap';
 import ModalStructure from  '../Modal/Modal';
 import ModalBody from './ModalBody/ModalBody'
 import Moment from 'react-moment';
+import VisibilitySensor from "react-visibility-sensor";
 
 const Description = {
     addReview: 'Submit review',
@@ -18,11 +19,16 @@ class Reviews extends Component {
         super();
 
         this.state = {
-            reviews: []
+            reviews: [],
+            visibility: false
         };
 
         this.getReviews();
     }
+
+    handleOnChange = (isVisible) => {
+        this.setState({ visibility : isVisible});
+    };
 
     getReviews = () => {
         fetch('http://localhost:8080/api/reviews',
@@ -42,13 +48,14 @@ class Reviews extends Component {
         };
 
         return (
-            <section className="reviews">
+            <section className={"reviews " + (this.state.visibility ? "reviews--active" : "reviews--inactive")}>
                 <Grid>
                     <Row>
                         <Col xs={12}>
                             <div className="reviews__title">Testimonials</div>
                         </Col>
                     </Row>
+
                     <Row>
                         <Col sm={12}>
                             <div className="reviews__slider">
@@ -80,6 +87,10 @@ class Reviews extends Component {
                         </Col>
                     </Row>
                 </Grid>
+
+                <VisibilitySensor onChange={ this.handleOnChange }>
+                    <div className="detect__position"></div>
+                </VisibilitySensor>
             </section>
         )
     }

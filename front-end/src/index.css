@@ -564,7 +564,7 @@ body {
       color: #8727d7;
       font-size: 16px; }
       .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
-        color: #fff; }
+        color: #8727d7; }
       @media (min-width: 768px) {
         .navbar-default .navbar-nav > li > a {
           color: #fff; } }
@@ -877,7 +877,10 @@ video {
   .reviews__slider {
     margin: 0 auto;
     max-width: 768px;
-    position: relative; }
+    position: relative;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s; }
   .reviews__single {
     padding: 20px 0; }
     .reviews__single:before {
@@ -917,6 +920,9 @@ video {
     padding: 12px 60px; }
   .reviews .swiper-wrapper {
     align-items: center; }
+  .reviews--active .reviews__slider {
+    transform: none;
+    opacity: 1; }
 
 .modal button {
   margin-top: -5px; }
