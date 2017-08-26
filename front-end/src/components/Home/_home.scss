@@ -28,10 +28,10 @@
   }
 
   &__name {
+    animation: scroll-down 2s ease;
     font-size: 30px;
     line-height: 38px;
     margin-top: 20px;
-    animation: scroll-down 2s ease;
 
     @media (min-width: 576px) {
       font-size: 50px;
@@ -40,10 +40,10 @@
   }
 
   &__title {
+    animation: scroll-down 2s ease;
     font-size: 18px;
     line-height: 26px;
     margin-top: 20px;
-    animation: scroll-down 2s ease;
 
     @media (min-width: 576px) {
       font-size: 24px;
@@ -65,7 +65,7 @@
 @keyframes scroll-down {
   from {
     transform: translateY(40%) scale(0.6);
-    transition: transform 0.5s ease, opacity 0.5s ease ;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
   }
 

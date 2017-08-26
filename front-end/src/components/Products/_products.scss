@@ -91,10 +91,10 @@
     padding-bottom: 60px;
 
     .swiper-pagination-fraction {
-      text-align: right;
+      bottom: 0;
       color: #8727d7;
       font-size: 22px;
-      bottom: 0;
+      text-align: right;
 
       .swiper-pagination-current {
         font-size: 42px;
@@ -104,15 +104,15 @@
     .swiper-button-next, .swiper-button-prev {
       background-position-x: 50%;
       background-size: 50%;
-      top: auto;
-      margin-top: 20px;
       border: 1px solid #8727d7;
+      margin-top: 20px;
+      top: auto;
       @include size(40px);
     }
 
     .swiper-button-next {
-      right: auto;
       left: 50px;
+      right: auto;
     }
   }
 }

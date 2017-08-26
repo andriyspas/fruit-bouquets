@@ -30,7 +30,7 @@
     }
 
     &:nth-of-type(odd) {
-      .round-item__image ,
+      .round-item__image,
       .round-item__description {
         transition: transform 0.4s 0.2s;
       }
