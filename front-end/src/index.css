@@ -819,7 +819,7 @@ video {
         left: auto; }
     .navigation__section-name {
       display: none;
-      color: #fff;
+      color: #eee1fa;
       min-width: 60px;
       text-align: right;
       position: absolute;
