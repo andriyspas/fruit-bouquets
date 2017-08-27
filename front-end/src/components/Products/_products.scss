@@ -35,7 +35,7 @@
       opacity: 0;
       position: absolute;
       top: 0;
-      transition: visibility 0s 0.2s, opacity 0.2s ease;
+      transition: visibility 0s 0.2s, opacity $transition_a_third_of_a_second;
       visibility: hidden;
       width: 100%;
 
@@ -54,7 +54,7 @@
     &:hover {
       .products__tile--plug {
         opacity: 1;
-        transition: opacity 0.2s ease;
+        transition: opacity $transition_a_third_of_a_second;
         visibility: visible;
       }
     }
@@ -167,7 +167,7 @@
     height: 100%;
     opacity: 0.5;
     text-align: center;
-    transition: opacify 0.2s ease;
+    transition: opacify $transition_a_third_of_a_second;
     width: 50%;
 
     @media (min-width: 576px) {

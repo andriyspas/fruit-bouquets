@@ -11,14 +11,14 @@
 
     &--left {
       @media (min-width: 768px) {
-        transition: 0.3s ease;
+        transition: transform $transition_half_a_second;
         transform: translateX(-100%);
       }
     }
 
     &--right {
       @media (min-width: 768px) {
-        transition: 0.3s ease;
+        transition: transform $transition_half_a_second;
         transform: translateX(100%);
       }
     }

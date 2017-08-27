@@ -522,7 +522,7 @@ video {
       position: relative;
       z-index: 1;
       transform: scale(0.7);
-      transition: transform 0.2s ease, box-shadow 0.2s ease; }
+      transition: transform $transition_a_third_of_a_second, box-shadow $transition_a_third_of_a_second; }
       .navigation__dot--border {
         content: '';
         display: block;
@@ -532,7 +532,7 @@ video {
         border: 1px solid $base_color_hover;
         border-radius: 50%;
         transform: scale(0);
-        transition: transform 0.2s ease;
+        transition: transform $transition_a_third_of_a_second;
         top: -12px;
         right: -12px; }
     .navigation__section-name {
@@ -692,7 +692,7 @@ video {
       left: 0;
       opacity: 0;
       visibility: hidden;
-      transition: visibility 0s 0.2s, opacity 0.2s ease; }
+      transition: visibility 0s 0.2s, opacity $transition_a_third_of_a_second; }
       .products__tile--plug button {
         font-weight: 500;
         font-size: 14px;
@@ -704,7 +704,7 @@ video {
         margin: 0 auto; }
     .products__tile:hover .products__tile--plug {
       opacity: 1;
-      transition: opacity 0.2s ease;
+      transition: opacity $transition_a_third_of_a_second;
       visibility: visible; }
   .products__modal {
     height: 100%; }
@@ -722,7 +722,7 @@ video {
   cursor: pointer;
   font-size: 12px;
   padding: 10px 20px;
-  transition: background-color 0.2s ease; }
+  transition: background-color $transition_a_third_of_a_second; }
   .button:hover {
     background-color: $base_color_hover; }
   .button:disabled {

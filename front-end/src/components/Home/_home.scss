@@ -65,7 +65,7 @@
 @keyframes scroll-down {
   from {
     transform: translateY(40%) scale(0.6);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform $transition_half_a_second, opacity $transition_half_a_second;
     opacity: 0;
   }
 

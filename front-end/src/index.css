@@ -502,14 +502,14 @@ body {
     .navbar-default {
       padding: 15px 0;
       box-shadow: none;
-      transition: box-shadow 0.2s ease, padding 0.2s ease, background 0.2s ease;
+      transition: box-shadow 0.3s ease-in-out, padding 0.3s ease-in-out, background 0.3s ease-in-out;
       background: transparent; } }
   .navbar-default .navbar-brand {
     height: auto;
     padding: 0 15px;
     transform: scale(0.7);
     transform-origin: left;
-    transition: padding 0.2s ease, transform 0.2s ease; }
+    transition: padding 0.3s ease-in-out, transform 0.3s ease-in-out; }
     @media (min-width: 768px) {
       .navbar-default .navbar-brand {
         transform: scale(1); } }
@@ -527,12 +527,12 @@ body {
       display: inline-block;
       font-size: 18px;
       margin-left: 10px;
-      transition: color 0.2s ease; }
+      transition: color 0.3s ease-in-out; }
       @media (min-width: 768px) {
         .navbar-default .navbar-brand div {
           color: #fff; } }
   .navbar-default svg path {
-    transition: fill 0.2s ease;
+    transition: fill 0.3s ease-in-out;
     fill: #8727d7; }
     @media (min-width: 768px) {
       .navbar-default svg path {
@@ -713,7 +713,7 @@ video {
 @keyframes scroll-down {
   from {
     transform: translateY(40%) scale(0.6);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     opacity: 0; }
   to {
     visibility: visible;
@@ -730,11 +730,11 @@ video {
     text-align: left; }
     @media (min-width: 768px) {
       .contact__details--left {
-        transition: 0.3s ease;
+        transition: transform 0.5s ease-in-out;
         transform: translateX(-100%); } }
     @media (min-width: 768px) {
       .contact__details--right {
-        transition: 0.3s ease;
+        transition: transform 0.5s ease-in-out;
         transform: translateX(100%); } }
     @media (min-width: 768px) {
       .contact__details--active .contact__details--left,
@@ -816,7 +816,7 @@ video {
       position: relative;
       z-index: 1;
       transform: scale(0.7);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       height: 16px;
       width: 16px; }
       .navigation__dot--border {
@@ -825,7 +825,7 @@ video {
         border: 1px solid #8727d7;
         border-radius: 50%;
         transform: scale(0);
-        transition: transform 0.2s ease;
+        transition: transform 0.3s ease-in-out;
         height: 40px;
         width: 40px;
         position: absolute;
@@ -1049,7 +1049,7 @@ video {
       opacity: 0;
       position: absolute;
       top: 0;
-      transition: visibility 0s 0.2s, opacity 0.2s ease;
+      transition: visibility 0s 0.2s, opacity 0.3s ease-in-out;
       visibility: hidden;
       width: 100%; }
       .products__tile--plug button {
@@ -1063,7 +1063,7 @@ video {
         transform: translateY(-50%); }
     .products__tile:hover .products__tile--plug {
       opacity: 1;
-      transition: opacity 0.2s ease;
+      transition: opacity 0.3s ease-in-out;
       visibility: visible; }
   .products__modal {
     height: 100%; }
@@ -1141,7 +1141,7 @@ video {
     height: 100%;
     opacity: 0.5;
     text-align: center;
-    transition: opacify 0.2s ease;
+    transition: opacify 0.3s ease-in-out;
     width: 50%; }
     @media (min-width: 576px) {
       .swiper-thumbs .swiper-slide {
@@ -1266,7 +1266,7 @@ video {
   cursor: pointer;
   font-size: 12px;
   padding: 10px 20px;
-  transition: background-color 0.2s ease; }
+  transition: background-color 0.3s ease-in-out; }
   .button:hover {
     background-color: #7522ba; }
   .button:disabled {
@@ -1275,10 +1275,10 @@ video {
     visibility: hidden; }
 
 .detect__position {
-  z-index: 0;
   bottom: 0;
   height: 60px;
   margin: auto;
   position: absolute;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
