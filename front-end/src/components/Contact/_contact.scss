@@ -46,7 +46,7 @@
 
   &__information {
     a {
-      color: #7522ba;
+      color: $base_color_hover;
       display: inline-block;
     }
   }
@@ -63,7 +63,7 @@
     margin-bottom: 30px;
 
     a {
-      color: #7522ba;
+      color: $base_color_hover;
     }
   }
 

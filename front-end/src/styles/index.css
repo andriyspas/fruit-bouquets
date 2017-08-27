@@ -468,7 +468,7 @@ video {
     margin-bottom: 10px;
     text-align: left; }
   .contact__information a {
-    color: #7522ba;
+    color: $base_color_hover;
     display: inline-block; }
   .contact__address {
     margin-bottom: 10px; }
@@ -477,7 +477,7 @@ video {
   .contact__email {
     margin-bottom: 10px; }
     .contact__email a {
-      color: #7522ba; }
+      color: $base_color_hover; }
   .contact__form button {
     margin-bottom: 20px; }
   .contact__map {
@@ -529,7 +529,7 @@ video {
         position: absolute;
         width: 40px;
         height: 40px;
-        border: 1px solid #7522ba;
+        border: 1px solid $base_color_hover;
         border-radius: 50%;
         transform: scale(0);
         transition: transform 0.2s ease;
@@ -549,7 +549,7 @@ video {
     transform: scale(1); }
   .navigation__href--active .navigation__dot, .navigation__href:hover .navigation__dot {
     transform: scale(1);
-    box-shadow: 0 0 20px 3px #7522ba; }
+    box-shadow: 0 0 20px 3px $base_color_hover; }
   .navigation__href--active .navigation__section-name, .navigation__href:hover .navigation__section-name {
     display: block; } }
 
@@ -656,7 +656,7 @@ video {
     background-color: #fff;
     border-radius: 50%;
     margin-bottom: 20px;
-    color: #8727d7; }
+    color: $base_color; }
   .sales__name {
     font-size: 22px;
     margin-bottom: 5px;
@@ -715,7 +715,7 @@ video {
     transform: translateX(-50%); }
 
 .button {
-  background-color: #8727d7;
+  background-color: $base_color;
   border: none;
   border-radius: 3px;
   color: #fff;
@@ -724,6 +724,6 @@ video {
   padding: 10px 20px;
   transition: background-color 0.2s ease; }
   .button:hover {
-    background-color: #7522ba; }
+    background-color: $base_color_hover; }
   .button:disabled {
     background-color: rgba(64, 181, 114, 0.5); }

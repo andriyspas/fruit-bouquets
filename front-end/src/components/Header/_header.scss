@@ -33,7 +33,7 @@
     }
 
     div {
-      color: #8727d7;
+      color: $base_color;
       display: inline-block;
       font-size: 18px;
       margin-left: 10px;
@@ -47,7 +47,7 @@
 
   svg path {
     transition: fill 0.2s ease;
-    fill: #8727d7;
+    fill: $base_color;
 
     @media (min-width: 768px) {
       fill: #fff;
@@ -64,7 +64,7 @@
     }
 
     .icon-bar {
-      background: #8727d7;
+      background: $base_color;
     }
   }
 
@@ -82,7 +82,7 @@
 
         & > li > a {
           padding: 3px 16px;
-          color: #8727d7;
+          color: $base_color;
         }
       }
 
@@ -93,11 +93,11 @@
       }
 
       & > a {
-        color: #8727d7;
+        color: $base_color;
         font-size: 16px;
 
         &:focus, &:hover {
-          color: #8727d7;
+          color: $base_color;
         }
 
         @media (min-width: 768px) {
@@ -125,10 +125,10 @@
         border-top-right-radius: 4px;
         border-top-left-radius: 4px;
         background-color: #fff;
-        color: #8727d7;
+        color: $base_color;
 
         &:focus, &:hover {
-          color: #8727d7;
+          color: $base_color;
           background-color: #fff;
         }
       }
@@ -175,34 +175,34 @@
     transform: scale(0.7);
 
     div {
-      color: #8727d7;
+      color: $base_color;
     }
   }
 
   svg path {
-    fill: #8727d7
+    fill: $base_color;
   }
 
   .navbar-nav {
     & > li > a {
-      color: #8727d7;
+      color: $base_color;
 
       &:focus, &:hover {
-        color: #8727d7;
+        color: $base_color;
       }
     }
 
     .open {
       a, a:hover, a:focus {
-        color: #8727d7;
+        color: $base_color;
       }
 
       .dropdown-menu > li > a {
         background-color: transparent;
-        color: #8727d7;
+        color: $base_color;
 
         &:focus, &:hover {
-          color: #8727d7;
+          color: $base_color;
           background-color: transparent;
         }
       }

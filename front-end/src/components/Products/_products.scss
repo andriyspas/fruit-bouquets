@@ -92,7 +92,7 @@
 
     .swiper-pagination-fraction {
       bottom: 0;
-      color: #8727d7;
+      color: $base_color;
       font-size: 22px;
       text-align: right;
 
@@ -104,7 +104,7 @@
     .swiper-button-next, .swiper-button-prev {
       background-position-x: 50%;
       background-size: 50%;
-      border: 1px solid #8727d7;
+      border: 1px solid $base_color;
       margin-top: 20px;
       top: auto;
       @include size(40px);
