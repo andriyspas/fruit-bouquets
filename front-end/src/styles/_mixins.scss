@@ -1,0 +1,49 @@
+@mixin triangle($border-color, $border-width, $top, $right, $bottom, $left) {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $border-width;
+  border-color: $border-color;
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: 1;
+}
+
+@mixin quote {
+  content: '';
+  display: block;
+  position: absolute;
+  background: url("./images/elements/quote.svg");
+  background-size: contain;
+  opacity: 0.2;
+  width: 50px;
+  height: 50px;
+
+  @media (min-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@mixin title($background) {
+  line-height: 46px;
+  font-size: 38px;
+  display: inline-block;
+  font-weight: 400;
+  margin-bottom: 40px;
+
+  &:after {
+    content: '';
+    display: block;
+    height:2px;
+    background: $background;
+    width: calc(100% - 60px);
+    margin: 6px auto 0;
+  }
+}
+

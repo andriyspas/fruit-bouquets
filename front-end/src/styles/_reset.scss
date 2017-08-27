@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  line-height: 22px;
+  @include size(100%);
+}
+
+.container-fluid {
+  margin: 0 auto;
+  max-width: 1920px;
+  width: 100%;
+}
+
+a:focus {
+  outline: none;
+}
+
+.form {
+  .form-control {
+    border: 1px solid $border_color;
+    border-radius: 3px;
+    box-shadow: none;
+    font-size: 12px;
+  }
+
+  textarea {
+    height: 160px;
+    resize: none;
+  }
+}
