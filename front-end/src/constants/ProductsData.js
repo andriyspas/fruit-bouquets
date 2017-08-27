@@ -4,7 +4,8 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg'
+                'images/products/1.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
             ],
             title: 'Lorem ipsum dolor',
             description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
@@ -15,9 +16,8 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg',
+                'images/products/2.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
             description: 'Lorem ipsum dolor sit amet, consectetur adipi'
@@ -28,7 +28,7 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg',
+                'images/products/3.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
@@ -40,8 +40,7 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'images/products/4.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
@@ -53,7 +52,7 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg',
+                'images/products/5.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
@@ -65,9 +64,8 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg',
+                'images/products/6.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
             description: 'Lorem ipsum dolor sit amet, consectetur adipi'
@@ -78,7 +76,7 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'images/products/1.jpg',
+                'images/products/7.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
@@ -92,10 +90,9 @@ const ProductsData = [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
                 'images/products/1.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
         }
     },
     {
@@ -103,10 +100,11 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
+                'images/products/2.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
             ],
             title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
         }
     },
     {
@@ -114,11 +112,11 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'images/products/3.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
         }
     },
     {
@@ -126,10 +124,11 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'images/products/4.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
         }
     },
     {
@@ -137,11 +136,11 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'images/products/5.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
         }
     },
     {
@@ -149,10 +148,11 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
+                'images/products/6.jpg',
+                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
             ],
             title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
+            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
         }
     },
     {
@@ -160,34 +160,11 @@ const ProductsData = [
         modal: {
             gallery: [
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
-            ],
-            title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
-        }
-    },
-    {
-        image: 'images/products/1.jpg',
-        modal: {
-            gallery: [
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
+                'images/products/7.jpg',
                 'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
             ],
             title: 'Lorem ipsum dolor',
             description: 'Lorem ipsum dolor sit amet, consectetur adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi  adipi ipsum dolor sit amet, consectetur adipi'
-        }
-    },
-    {
-        image: 'images/products/2.jpg',
-        modal: {
-            gallery: [
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg',
-                'https://rus-buket.ru/files/1556-serdtse-okeana-3399.jpg'
-            ],
-            title: 'Lorem ipsum dolor',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipi'
         }
     }
 ];
