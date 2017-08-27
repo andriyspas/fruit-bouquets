@@ -33,10 +33,10 @@
     }
 
     div {
+      color: $base_color;
       display: inline-block;
       font-size: 18px;
       margin-left: 10px;
-      color: $base_color;
       transition: color $transition_a_third_of_a_second;
 
       @media (min-width: 768px) {
@@ -79,24 +79,24 @@
           width: 84px;
         }
 
-          &.open {
+        &.open {
           span {
-            transition: none;
             color: $base_color;
+            transition: none;
           }
 
           & > a {
-            border-top-right-radius: 4px;
-            border-top-left-radius: 4px;
             background-color: #fff;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
           }
         }
       }
 
       .dropdown-menu {
+        background: #fff;
         min-width: 0;
         width: 100%;
-        background: #fff;
       }
 
       &:nth-child(-n+6) {
@@ -110,11 +110,11 @@
       }
 
       span {
-        transition: color $transition_a_third_of_a_second;
-        display: inline-block;
-        vertical-align: middle;
         color: $base_color;
+        display: inline-block;
         font-size: 16px;
+        transition: color $transition_a_third_of_a_second;
+        vertical-align: middle;
 
         @media (min-width: 768px) {
           color: #fff;
@@ -123,8 +123,8 @@
       }
 
       svg {
-        vertical-align: middle;
         margin-right: 15px;
+        vertical-align: middle;
 
         @media (min-width: 768px) {
           @include position(absolute, 13px auto auto -15px);
