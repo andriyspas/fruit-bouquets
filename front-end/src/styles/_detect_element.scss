@@ -1,9 +1,9 @@
 .detect__position {
-  z-index: 0;
   bottom: 0;
   height: 60px;
   margin: auto;
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: -1;
 }
